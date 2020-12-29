@@ -1,15 +1,15 @@
 # M_calcomp
   _This is an old Calcomp-compatible graphics library that requires
-  `fpm(Fortran Package Manager) to build properly. If you were not
+  `fpm(Fortran Package Manager)` to build properly. If you were not
   specifically looking for a Calcomp look-alike this is not recommended
   for general use._
 ## USER DOCUMENTATION
-   - a simple [index](https://urbanjost.github.io/M_draw/) to
+   - a simple [index](https://urbanjost.github.io/M_calcomp/man3.html) to
      the individual manpages in HTML form
 
    - A single page that uses javascript to combine all the HTML
      descriptions of the manpages is at 
-     [BOOK_M_draw](https://urbanjost.github.io/M_draw/BOOK_M_draw.html).
+     [BOOK_M_draw](https://urbanjost.github.io/M_calcomp/BOOK_M_calcomp.html).
 <?
   <blockquote>
     <b>M_calcomp</b>(3fm) - [M_calcomp::INTRO] emulate old Calcomp graphics library (LICENSE:PD)
