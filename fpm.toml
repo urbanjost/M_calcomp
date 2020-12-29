@@ -1,0 +1,32 @@
+name = "M_calcomp"
+version = "0.1.0"
+license = "Public Domain"
+maintainer = "urbanjost@comcast.net"
+author = "John S. Urban"
+copyright = "Copyright 2020 John S. Urban"
+description = "an old Calcomp look-alike graphics library. Not for new large code development"
+categories = ["graphics"]
+keywords = ["fortran", "Calcomp"]
+homepage = "https://github.com/urbanjost/M_calcomp"
+
+[install] 
+library = true
+
+[build] 
+link = "X11"
+
+[library]
+source-dir="src"
+
+[dependencies]
+M_draw = { git = "https://github.com/urbanjost/M_draw.git" }
+M_strings = { git = "https://github.com/urbanjost/M_strings.git" }
+
+[dev-dependencies]
+
+[[test]]
+name="test_suite_M_calcomp"
+source-dir="test"
+main="test_suite_M_calcomp.f90"
+[test.dependencies]
+M_msg = { git = "https://github.com/urbanjost/M_msg.git" }
