@@ -799,9 +799,11 @@
     </table><!-- .nf -->
     <pre>
     07/01/91   The first release of the documentation on UNICOS.
+    <!--
                Output file goes to default filename "pdf". User
                may specify the output filename with the environment
                variable CALCOMP_PDF.
+    -->
 <br />
 </pre>
   </blockquote><a name="21" id="21">
