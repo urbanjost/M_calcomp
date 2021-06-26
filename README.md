@@ -71,52 +71,52 @@
   <blockquote>
     <table cellpadding="3">
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">PLOT</td>
-        <td valign="bottom">- Move or draw to specified point, establish plot origin, update pen position and terminate plotting</td>
+       <td class="c1" width="6%" nowrap="nowrap">PLOT</td>
+       <td valign="bottom">- Move or draw to specified point, establish plot origin, update pen position and terminate plotting</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">PLOTS</td>
-        <td valign="bottom">- Initialization, specify output file unit number</td>
+       <td class="c1" width="6%" nowrap="nowrap">PLOTS</td>
+       <td valign="bottom">- Initialization, specify output file unit number</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">FACTOR</td>
-        <td valign="bottom">- Adjusts the overall size of the plot</td>
+       <td class="c1" width="6%" nowrap="nowrap">FACTOR</td>
+       <td valign="bottom">- Adjusts the overall size of the plot</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">WHERE</td>
-        <td valign="bottom">- Returns current pen location</td>
+       <td class="c1" width="6%" nowrap="nowrap">WHERE</td>
+       <td valign="bottom">- Returns current pen location</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">NFRAME</td>
-        <td valign="bottom">- Ends current frame and re-origins pen position</td>
+       <td class="c1" width="6%" nowrap="nowrap">NFRAME</td>
+       <td valign="bottom">- Ends current frame and re-origins pen position</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">SYMBOL</td>
-        <td valign="bottom">- Plots annotation (text) and special symbols</td>
+       <td class="c1" width="6%" nowrap="nowrap">SYMBOL</td>
+       <td valign="bottom">- Plots annotation (text) and special symbols</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">NUMBER</td>
-        <td valign="bottom">- Plot decimal equivalent of a floating point number</td>
+       <td class="c1" width="6%" nowrap="nowrap">NUMBER</td>
+       <td valign="bottom">- Plot decimal equivalent of a floating point number</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">SCALE</td>
-        <td valign="bottom">- Determine starting value and scale for an array to be plotted on a graph</td>
+       <td class="c1" width="6%" nowrap="nowrap">SCALE</td>
+       <td valign="bottom">- Determine starting value and scale for an array to be plotted on a graph</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">AXIS</td>
-        <td valign="bottom">- Draws an annotated linear graph axis</td>
+       <td class="c1" width="6%" nowrap="nowrap">AXIS</td>
+       <td valign="bottom">- Draws an annotated linear graph axis</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">LINE</td>
-        <td valign="bottom">- Scale and plot a set of X,Y values</td>
+       <td class="c1" width="6%" nowrap="nowrap">LINE</td>
+       <td valign="bottom">- Scale and plot a set of X,Y values</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">NEWPEN</td>
-        <td valign="bottom">- Select new pen color</td>
+       <td class="c1" width="6%" nowrap="nowrap">NEWPEN</td>
+       <td valign="bottom">- Select new pen color</td>
       </tr>
       <tr valign="top">
-        <td class="c1" width="6%" nowrap="nowrap">WIDTH</td>
-        <td valign="bottom">- Set line thickness</td>
+       <td class="c1" width="6%" nowrap="nowrap">WIDTH</td>
+       <td valign="bottom">- Set line thickness</td>
       </tr>
       <tr>
         <td></td>

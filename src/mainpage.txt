@@ -1,0 +1,10 @@
+'mainpage.txt
+/**
+         @mainpage M_calcomp Fortran Library
+
+         @section Introduction
+
+     M_calcomp - Fortran module for a CALCOMP look-alike using M_draw
+
+         @image html html/images/yarnball.gif
+*/'

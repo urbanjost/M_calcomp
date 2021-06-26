@@ -19,6 +19,7 @@ FFLAGS := -O
 LDFLAGS := 
 F90=gfortran
 F90FLAGS := -g -O -Wall -std=f2018 -Wextra -Wno-maybe-uninitialized -Wno-uninitialized
+F90FLAGS := -g -O -Wall -Wextra -Wno-maybe-uninitialized -Wno-uninitialized
 all: $(PROG) 
 	@echo built with $(F90)
 	@echo "That's All Folks!"
