@@ -3,7 +3,8 @@
   `fpm(Fortran Package Manager)` to build properly. If you were not
   specifically looking for a Calcomp look-alike this is not recommended
   for general use._
-## USER DOCUMENTATION
+## DOCUMENTATION   ![docs](docs/images/docs.gif)
+### USER
    - a simple [index](https://urbanjost.github.io/M_calcomp/man3.html) to
      the individual manpages in HTML form
 
