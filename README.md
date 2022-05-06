@@ -6,10 +6,10 @@
 ## DOCUMENTATION   ![docs](docs/images/docs.gif)
 ### USER
    - a simple [index](https://urbanjost.github.io/M_calcomp/man3.html) to
-     the individual manpages in HTML form
+     the individual man-pages in HTML form
 
    - A single page that uses javascript to combine all the HTML
-     descriptions of the manpages is at 
+     descriptions of the man-pages is at 
      [BOOK_M_calcomp](https://urbanjost.github.io/M_calcomp/BOOK_M_calcomp.html).
 <?
   <blockquote>
@@ -32,7 +32,7 @@
     <a href="#13">Calcomp General Functional Software</a><br />
     <a href="#14">Calcomp Scientific Functional Software</a><br />
     <a href="#15">Application Routines</a><br />
-    <a href="#16">Calcomp Manpages</a><br />
+    <a href="#16">Calcomp Man-pages</a><br />
     <a href="#17">Calcomp Setup</a><br />
     <a href="#18">Calcomp Supplement</a><br />
     <a href="#19">Moving Existing Calcomp Code</a><br />
@@ -445,9 +445,9 @@
     subroutines.</p>
   </blockquote><a name="">
   <h4>CNTOUR</h4></a> <a name="16" id="16">
-  <h3>CALCOMP MANPAGES</h3></a>
+  <h3>CALCOMP MAN-PAGES</h3></a>
   <blockquote>
-    <p>If the manpages have been installed properly, you should be able
+    <p>If the man-pages have been installed properly, you should be able
     to list all the CALCOMP-related pages by entering</p>
     <pre>
    man -s 3m_calcomp -k .
@@ -459,7 +459,7 @@
     <pre>
    PROGRAMS/CALCOMP
 <br />
-</pre>You can list all the manpages sorted by section using
+</pre>You can list all the man-pages sorted by section using
     <pre>
    #!/bin/bash
    export MANWIDTH=80
