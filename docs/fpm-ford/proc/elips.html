@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="General Purpose Fortran project">
+    
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>elips &ndash; M_calcomp</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">M_calcomp </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>elips
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 2.6% of total for procedures.">67 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/M_calcomp.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.f90</a></li>
+    
+     <li><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+    
+  
+     <li class="active">elips</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-ab">ab</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-absq">absq</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-alp">alp</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-bsq">bsq</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-d~3">d</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-dthe">dthe</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-dummyx~2">dummyx</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-dummyy~2">dummyy</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-fctr~2">fctr</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-i~6">i</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-n~5">n</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-st~2">st</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-the0">the0</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-thef">thef</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-then">then</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-xc~2">xc</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-xf~2">xf</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-yc">yc</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-yf~2">yf</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/elips.html#src">elips</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine elips(x0, y0, a, b, alpha, thet0, thetf, iv)
+    
+    
+   
+</h2>
+    
+  
+
+
+    
+    <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code>elips(3f) - [M_calcomp:general] draw an elliptical arc
+(LICENSE:PD)
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code>    subroutine elips(xpage,ypage,rmaj,rmin,angle,tho,thf,ipen)
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>ELIPS is a FORTRAN subroutine which draws an ellipse or elliptical arc.</p>
+<h2 id="options">OPTIONS</h2>
+<div class="codehilite"><pre><span></span><code> <span class="nt">XPAGE</span><span class="o">,</span><span class="nt">YPAGE</span>     <span class="nt">are</span> <span class="nt">the</span> <span class="nt">coordinates</span><span class="o">,</span> <span class="nt">in</span> <span class="nt">inches</span><span class="o">,</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">starting</span> <span class="nt">point</span> <span class="nt">of</span>
+                 <span class="nt">the</span> <span class="nt">ellipse</span> <span class="nt">or</span> <span class="nt">arc</span><span class="o">.</span>
+
+ <span class="nt">RMAJ</span><span class="o">,</span><span class="nt">RMIN</span>       <span class="nt">are</span> <span class="nt">the</span> <span class="nt">lengths</span><span class="o">,</span> <span class="nt">in</span> <span class="nt">inches</span><span class="o">,</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">semi-major</span> <span class="nt">and</span>
+                 <span class="nt">semi-minor</span> <span class="nt">axes</span><span class="o">,</span> <span class="nt">respectively</span><span class="o">.</span>
+
+ <span class="nt">ANGLE</span>           <span class="nt">is</span> <span class="nt">the</span> <span class="nt">angle</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">major</span> <span class="nt">axis</span><span class="o">,</span> <span class="nt">in</span> <span class="nt">degrees</span><span class="o">.</span>
+
+ <span class="nt">THO</span><span class="o">,</span><span class="nt">THF</span>         <span class="nt">are</span> <span class="nt">the</span> <span class="nt">angles</span><span class="o">,</span> <span class="nt">in</span> <span class="nt">degrees</span> <span class="nt">with</span> <span class="nt">respect</span> <span class="nt">to</span> <span class="nt">ANGLE</span><span class="o">,</span> <span class="nt">of</span> <span class="nt">the</span>
+                 <span class="nt">arc</span><span class="s1">&#39;s starting and ending points.</span>
+<span class="s1"> IPEN            is the code that moves the pen to the arc&#39;</span><span class="nt">s</span> <span class="nt">starting</span>
+                 <span class="nt">point</span><span class="o">.</span> <span class="nt">If</span> <span class="nt">the</span> <span class="nt">value</span> <span class="nt">of</span> <span class="nt">IPEN</span> <span class="nt">is</span><span class="o">:</span>
+
+                    <span class="nt">3</span><span class="o">,</span> <span class="nt">the</span> <span class="nt">pen</span> <span class="nt">is</span> <span class="nt">up</span> <span class="nt">for</span> <span class="nt">the</span> <span class="nt">move</span><span class="o">;</span>
+                    <span class="nt">2</span><span class="o">,</span> <span class="nt">the</span> <span class="nt">pen</span> <span class="nt">is</span> <span class="nt">down</span> <span class="nt">for</span> <span class="nt">the</span> <span class="nt">move</span><span class="o">.</span>
+</code></pre></div>
+
+<p>COMMENTS</p>
+<p>THO and THF may be positive or negative. If THO is less than THF, the arc is
+  drawn in a counterclockwise direction; if THO is greater than THF, the arc is
+  drawn in a clockwise direction.</p>
+<h2 id="example">EXAMPLE</h2>
+<p>Sample program:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">program</span> <span class="n">demo_elips</span>
+<span class="n">use</span> <span class="n">M_calcomp</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="n">plots</span><span class="p">,</span> <span class="n">plot</span><span class="p">,</span> <span class="n">newpen</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">nframe</span><span class="p">,</span> <span class="n">elips</span>
+<span class="n">implicit</span> <span class="n">none</span>
+<span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=</span><span class="p">:),</span><span class="n">allocatable</span> <span class="p">::</span> <span class="n">lines</span><span class="p">(:)</span>
+<span class="n">integer</span>                  <span class="p">::</span> <span class="n">i</span>
+<span class="n">real</span>                     <span class="p">::</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+<span class="n">real</span>                     <span class="p">::</span> <span class="n">a</span>
+<span class="n">real</span>                     <span class="p">::</span> <span class="n">major_axis_length</span><span class="p">,</span> <span class="n">minor_axis_length</span>
+<span class="n">real</span>                     <span class="p">::</span> <span class="n">start_angle</span><span class="p">,</span> <span class="n">finish_angle</span>
+<span class="n">integer</span>                  <span class="p">::</span> <span class="n">ipen</span>
+<span class="n">integer</span><span class="p">,</span><span class="n">parameter</span>        <span class="p">::</span> <span class="kr">END</span><span class="o">=</span><span class="mi">999</span><span class="p">,</span> <span class="n">MOVE</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">DRAW</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">lines</span><span class="o">=</span><span class="p">[</span><span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span> <span class="p">::</span> <span class="o">&amp;</span>
+<span class="s">&#39;#---------------------------------------------------------------------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#  move over in the x direction the same amount you change axis length  &#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------#---------#---------#---------#---------#---------#---------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|6.5      !8.0      !0.5      !0.7      ! 0.0     ! 0.0     ! 360.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|6.6      !8.0      !0.6      !0.6      ! 0.0     ! 0.0     ! 360.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|6.7      !8.0      !0.7      !0.5      ! 0.0     ! 0.0     ! 360.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|6.8      !8.0      !0.8      !0.4      ! 0.0     ! 0.0     ! 360.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|6.9      !8.0      !0.9      !0.3      ! 0.0     ! 0.0     ! 360.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|7.0      !8.0      !1.0      !0.2      ! 0.0     ! 0.0     ! 360.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------#---------#---------#---------#---------#---------#---------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#  different end angles of different signs                              &#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------#---------#---------#---------#---------#---------#---------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|5.0      !8.0      !1.0      !0.2      ! 0.0     ! 0.0     !  45.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;|3.0      !8.0      !1.0      !0.2      ! 0.0     ! 0.0     ! -60.0   !3&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------#---------#---------#---------#---------#---------#---------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;# circles                                                               &#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------#---------#---------#---------#---------#---------#---------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------#---------#---------#---------#---------#---------#---------#-&#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#  end of values to call ELIPS(3f) with                                 &#39;</span><span class="p">,</span><span class="o">&amp;</span>
+<span class="s">&#39;#---------------------------------------------------------------------#-&#39;</span><span class="p">]</span>
+   <span class="n">call</span> <span class="n">plots</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">10.0</span><span class="p">)</span>
+   <span class="n">do</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">size</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+      <span class="n">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s">&#39;(a)&#39;</span><span class="p">)</span><span class="n">lines</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+      <span class="n">if</span><span class="p">(</span> <span class="n">lines</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="s">&#39; &#39;</span> <span class="p">.</span><span class="n">or</span><span class="p">.</span> <span class="n">index</span><span class="p">(</span><span class="n">lines</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="s">&#39;#&#39;</span><span class="p">).</span><span class="n">ne</span><span class="p">.</span><span class="mi">0</span> <span class="p">)</span><span class="n">cycle</span>
+      <span class="n">read</span><span class="p">(</span><span class="n">lines</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="mi">9012</span><span class="p">)</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">major_axis_length</span><span class="p">,</span><span class="n">minor_axis_length</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">start_angle</span><span class="p">,</span><span class="n">finish_angle</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">ipen</span>
+      <span class="mi">9012</span> <span class="n">format</span><span class="p">(</span><span class="mi">7</span><span class="p">(</span><span class="mh">1X</span><span class="p">,</span><span class="n">F9</span><span class="p">.</span><span class="mi">3</span><span class="p">),</span><span class="mh">1X</span><span class="p">,</span><span class="n">I1</span><span class="p">)</span>
+      <span class="n">call</span> <span class="n">elips</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">major_axis_length</span><span class="p">,</span><span class="n">minor_axis_length</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">start_angle</span><span class="p">,</span><span class="n">finish_angle</span><span class="p">,</span> <span class="o">&amp;</span>
+                      <span class="o">&amp;</span> <span class="n">ipen</span><span class="p">)</span>
+   <span class="n">enddo</span>
+   <span class="n">call</span> <span class="n">nframe</span><span class="p">()</span>
+   <span class="n">call</span> <span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="kr">END</span><span class="p">)</span>
+<span class="n">end</span> <span class="n">program</span> <span class="n">demo_elips</span>
+</code></pre></div>
+
+<h2 id="license">LICENSE</h2>
+<p>Public Domain</p>
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x0~2"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>x0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-y0~2"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>y0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-a~4"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-b~3"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>b</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alpha"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alpha</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thet0"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>thet0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thetf"></span>real,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>thetf</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iv~4"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iv</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-ab">ab</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-absq">absq</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-alp">alp</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-bsq">bsq</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-d~3">d</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-dthe">dthe</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-dummyx~2">dummyx</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-dummyy~2">dummyy</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-fctr~2">fctr</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-i~6">i</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-n~5">n</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-st~2">st</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-the0">the0</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-thef">thef</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-then">then</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-xc~2">xc</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-xf~2">xf</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-yc">yc</a>
+      
+      <a class="list-group-item" href="../proc/elips.html#variable-yf~2">yf</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/elips.html#src">elips</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>    
+      <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ab"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ab</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-absq"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>absq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alp"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>alp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bsq"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bsq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-d~3"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dthe"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dthe</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummyx~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dummyx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dummyy~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dummyy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fctr~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>fctr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-i~6"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>i</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n~5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-st~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>st</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-the0"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>the0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thef"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>thef</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-then"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>then</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xc~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xf~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-yc"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>yc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-yf~2"></span>real,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>yf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">elips</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">thet0</span><span class="p">,</span> <span class="n">thetf</span><span class="p">,</span> <span class="n">iv</span><span class="p">)</span>
+<span class="k">implicit none</span>
+
+<span class="c">! ident_4=&quot;@(#)M_calcomp::elips(3f): draw an elliptical arc&quot;</span>
+
+<span class="kt">real</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span>
+<span class="kt">real</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">a</span>
+<span class="kt">real</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">b</span>
+<span class="kt">real</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">alpha</span>
+<span class="kt">real</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">thet0</span>
+<span class="kt">real</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">thetf</span>
+<span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">iv</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">dummyx</span><span class="p">,</span><span class="n">dummyy</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">ab</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">absq</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">alp</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">bsq</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">d</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">dthe</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">fctr</span>
+<span class="kt">integer</span>             <span class="kd">::</span> <span class="n">i</span>
+<span class="kt">integer</span>             <span class="kd">::</span> <span class="n">n</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">st</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">the0</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">thef</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="k">then</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">xc</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">xf</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">yc</span>
+<span class="kt">real</span>                <span class="kd">::</span> <span class="n">yf</span>
+
+   <span class="k">if</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="mi">4</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">4</span>
+<span class="mi">4</span>  <span class="k">continue</span>
+<span class="k">   </span><span class="n">alp</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">/</span><span class="mi">5</span><span class="mf">7.2958</span>
+   <span class="n">the0</span> <span class="o">=</span> <span class="n">thet0</span>  <span class="o">/</span> <span class="mi">5</span><span class="mf">7.2958</span>
+   <span class="n">thef</span> <span class="o">=</span> <span class="n">thetf</span>  <span class="o">/</span> <span class="mi">5</span><span class="mf">7.2958</span>
+   <span class="n">d</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">the0</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">the0</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+   <span class="n">xc</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">-</span> <span class="n">d</span> <span class="o">*</span> <span class="nb">cos</span><span class="p">(</span><span class="n">the0</span> <span class="o">+</span> <span class="n">alp</span><span class="p">)</span>
+   <span class="n">yc</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">-</span> <span class="n">d</span> <span class="o">*</span> <span class="nb">sin</span><span class="p">(</span><span class="n">the0</span> <span class="o">+</span> <span class="n">alp</span><span class="p">)</span>
+   <span class="n">bsq</span><span class="o">=</span><span class="n">b</span><span class="o">*</span><span class="n">b</span>
+   <span class="n">absq</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">-</span><span class="n">bsq</span>
+   <span class="n">ab</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
+   <span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">iv</span><span class="p">)</span>
+   <span class="k">call where</span><span class="p">(</span><span class="n">dummyx</span><span class="p">,</span><span class="n">dummyy</span><span class="p">,</span><span class="n">fctr</span><span class="p">)</span>
+   <span class="n">dthe</span> <span class="o">=</span> <span class="mf">0.03</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="n">fctr</span>
+   <span class="n">n</span>  <span class="o">=</span><span class="nb">int</span><span class="p">((</span><span class="n">thef</span> <span class="o">-</span> <span class="n">the0</span><span class="p">)</span><span class="o">/</span><span class="n">dthe</span><span class="p">)</span>
+   <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span>
+<span class="mi">5</span>  <span class="k">continue</span>
+<span class="k">   </span><span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="mi">6</span>  <span class="k">continue</span>
+<span class="k">   </span><span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="n">n</span>
+   <span class="n">dthe</span> <span class="o">=</span> <span class="o">-</span><span class="n">dthe</span>
+<span class="mi">7</span>  <span class="k">continue</span>
+<span class="k">   then</span> <span class="o">=</span> <span class="n">the0</span> <span class="o">+</span> <span class="n">dthe</span>
+   <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span>
+      <span class="n">st</span><span class="o">=</span><span class="nb">sin</span><span class="p">(</span><span class="k">then</span><span class="p">)</span>
+      <span class="n">d</span><span class="o">=</span><span class="n">ab</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">absq</span><span class="o">*</span><span class="n">st</span><span class="o">*</span><span class="n">st</span><span class="o">+</span><span class="n">bsq</span><span class="p">)</span>
+      <span class="n">xf</span><span class="o">=</span><span class="n">xc</span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="k">then</span><span class="o">+</span><span class="n">alp</span><span class="p">)</span>
+      <span class="n">yf</span><span class="o">=</span><span class="n">yc</span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="k">then</span><span class="o">+</span><span class="n">alp</span><span class="p">)</span>
+      <span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+      <span class="k">then</span> <span class="o">=</span> <span class="k">then</span> <span class="o">+</span> <span class="n">dthe</span>
+   <span class="k">enddo</span>
+<span class="k">   </span><span class="n">st</span><span class="o">=</span><span class="nb">sin</span><span class="p">(</span><span class="n">thef</span><span class="p">)</span>
+   <span class="n">d</span><span class="o">=</span><span class="n">ab</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">absq</span><span class="o">*</span><span class="n">st</span><span class="o">*</span><span class="n">st</span><span class="o">+</span><span class="n">bsq</span><span class="p">)</span>
+   <span class="n">xf</span><span class="o">=</span><span class="n">xc</span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">thef</span><span class="o">+</span><span class="n">alp</span><span class="p">)</span>
+   <span class="n">yf</span><span class="o">=</span><span class="n">yc</span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">thef</span><span class="o">+</span><span class="n">alp</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+   <span class="k">return</span>
+<span class="mi">20</span> <span class="k">continue</span>
+<span class="k">   call </span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">,</span><span class="n">iv</span><span class="p">)</span>
+<span class="k">end subroutine </span><span class="n">elips</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2022 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2022-05-05 23:18  
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_calcomp was developed by John S. Urban</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
