@@ -1147,9 +1147,8 @@ contains
 !!##LICENSE
 !!   Public Domain
 subroutine circl(startx,starty,start_angle,end_angle,start_radius,end_radius,dash_code)
-implicit none
 
-! ident_1="@(#)M_calcomp::circl(3f): draws an arc or spiral"
+! ident_1="@(#) M_calcomp circl(3f) draws an arc or spiral"
 
 real,intent(in) :: startx
 real,intent(in) :: starty
@@ -1329,9 +1328,8 @@ end subroutine circl
 !!##LICENSE
 !!   Public Domain
 SUBROUTINE DASHL  (X,Y,N,K)
-implicit none
 
-! ident_2="@(#)M_calcomp::dashl(3f): draws a polyline with dashed lines"
+! ident_2="@(#) M_calcomp dashl(3f) draws a polyline with dashed lines"
 
 real    :: x(*)
 real    :: y(*)
@@ -1446,9 +1444,8 @@ end subroutine dashl
 !!##LICENSE
 !!   Public Domain
 SUBROUTINE DASHP  (X,Y,DL)
-implicit none
 
-! ident_3="@(#)M_calcomp::dashp(3f): draw from current position to new point with dashed line"
+! ident_3="@(#) M_calcomp dashp(3f) draw from current position to new point with dashed line"
 
 !     A DASHED LINE IS DRAWN IN INCHES FROM THE CURRENT PEN POSITION TO
 !     THE SPECIFIED XPAGE, YPAGE. THE SIZE OF THE DASH WILL BE AS CALLED
@@ -1609,9 +1606,8 @@ end subroutine dashp
 !!##LICENSE
 !!   Public Domain
 subroutine elips(x0,y0,a,b,alpha,thet0, thetf, iv)
-implicit none
 
-! ident_4="@(#)M_calcomp::elips(3f): draw an elliptical arc"
+! ident_4="@(#) M_calcomp elips(3f) draw an elliptical arc"
 
 real,intent(in)     :: x0, y0
 real,intent(in)     :: a
@@ -1759,9 +1755,8 @@ end subroutine elips
 !!##LICENSE
 !!   Public Domain
 subroutine fit (xa,ya,xb,yb,xc,yc)
-implicit none
 
-! ident_5="@(#)m_calcomp::fit(3f): draws a semi-hyperbolic curve through three points"
+! ident_5="@(#) m_calcomp fit(3f) draws a semi-hyperbolic curve through three points"
 
 real      :: xa
 real      :: ya
@@ -1913,9 +1908,8 @@ end subroutine fit
 !!##LICENSE
 !!   Public Domain
 subroutine grid (x,y,xs,ys,m,n)
-implicit none
 
-! ident_6="@(#)M_calcomp::grid(3f): draws a linear grid"
+! ident_6="@(#) M_calcomp grid(3f) draws a linear grid"
 
 real,intent(in)    :: x,y ! (x,y) is the starting position of grid
 real,intent(in)    :: xs  ! xs    is the space of grid in x direction.
@@ -2017,9 +2011,8 @@ end subroutine grid
 !!##LICENSE
 !!   Public Domain
 subroutine poly (x,y,side_length,rn,th)
-implicit none
 
-! ident_7="@(#)M_calcomp::poly(3f): draw an equilateral polygon"
+! ident_7="@(#) M_calcomp poly(3f) draw an equilateral polygon"
 
 real,intent(in) :: x,y
 real,intent(in) :: side_length
@@ -2129,9 +2122,8 @@ end subroutine poly
 !!##LICENSE
 !!   Public Domain
 SUBROUTINE RECT (X,Y,H,W,TH,IV)
-implicit none
 
-! ident_8="@(#)M_calcomp::rect(3f): draw a rectangle"
+! ident_8="@(#) M_calcomp rect(3f) draw a rectangle"
 
 real    :: h
 integer :: iv
@@ -2163,7 +2155,6 @@ end subroutine rect
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 subroutine solut  (x,n)
-implicit none
 
 ! EARLIER VERSION OF THIS SUBROUTINE WAS
 !     SUBROUTINE  SOLUTN (X,N)
@@ -2302,9 +2293,8 @@ end subroutine solut
 !!##LICENSE
 !!   Public Domain
 subroutine curvx  (x0,xf,a,e,b,f,c,g,d,h)
-implicit none
 
-! ident_9="@(#)M_calcomp::curvx(3f): plots a function of X over a given range"
+! ident_9="@(#) M_calcomp curvx(3f) plots a function of X over a given range"
 
 !     CALL CURVX
 !      (XO, XF, COEFF1, EXP1, COEFF2, EXP2, COEFF3, EXP3, COEFF4, EXP4)
@@ -2450,9 +2440,8 @@ end subroutine curvx
 !!##LICENSE
 !!    Public Domain
 subroutine curvy  (y0,yf,a,e,b,f,c,g,d,h)
-implicit none
 
-! ident_10="@(#)M_calcomp::curvy(3f): plots a function of Y over a given range"
+! ident_10="@(#) M_calcomp curvy(3f) plots a function of Y over a given range"
 
 !     CALL CURVY
 !      (YO, YF, COEFF1, EXP1, COEFF2, EXP2, COEFF3, EXP3, COEFF4, EXP4)
@@ -2515,7 +2504,6 @@ end subroutine curvy
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 subroutine fit4(px1,py1,px2,py2,vecx1,vecy1,vecx3,vecy3)
-implicit none
 
 real    :: ax
 real    :: ay
@@ -2730,9 +2718,8 @@ end subroutine fit4
 !!##LICENSE
 !!    Public Domain
 subroutine fline (x,y,nn,k,j,l)
-implicit none
 
-! ident_11="@(#)M_calcomp::fline(3f): plot a polyline with optional fit"
+! ident_11="@(#) M_calcomp fline(3f) plot a polyline with optional fit"
 
 !             X  IS THE NAME OF THE ARRAY OF UNSCALED ORDINATE VALUES.
 !             Y  IS THE NAME OF THE ARRAY OF UNSCALED ABSCISSA VALUES.
@@ -3096,9 +3083,8 @@ end subroutine fline
 !!##LICENSE
 !!    Public Domain
 subroutine lgaxs(xo,yo,ibcd,n,dist,theta,vorg,delta)
-implicit none
 
-! ident_12="@(#)M_calcomp::lgaxs(3f): draw logarithmic axis"
+! ident_12="@(#) M_calcomp lgaxs(3f) draw logarithmic axis"
 
 ! EARLIER VERSION OF THIS SUBROUTINE WAS
 
@@ -3470,9 +3456,8 @@ end subroutine lgaxs
 !             LOGTYP=1 PRODUCES A SEMI-LOG PLOT LINEAR IN X.
 !             LOGTYP=-1 PRODUCES A SEMI-LOG PLOT LINEAR IN Y.
 subroutine lglin (xarra,yarra,nv,k,jtype,nsy,lgtyp)
-implicit none
 
-! ident_13="@(#)m_calcomp::lglin(3f): draw polyline in log-log or semi-log mode"
+! ident_13="@(#) m_calcomp lglin(3f) draw polyline in log-log or semi-log mode"
 
 !  THE VARIABLE IBCD HAS BEEN DECLARED AS CHARACTER TYPE FOR USE IN
 !  THE CALL TO THE 'SYMBOL' ROUTINE. SINCE 'IBCD' HAS NO MEANING IN
@@ -3775,9 +3760,8 @@ end subroutine lglin
 !!##LICENSE
 !!    Public Domain
 subroutine polar(radar,angar,npts,inc,ltyp,inteq,rmax,dr)
-implicit none
 
-! ident_14="@(#)M_calcomp::polar(3f): plot radial values versus angular variables (as polar coordinates)"
+! ident_14="@(#) M_calcomp polar(3f) plot radial values versus angular variables (as polar coordinates)"
 
 !
 !       RARRAY IS THE ARRAY CONTAINING THE RADIAL VALUES OF THE POINTS
@@ -3949,7 +3933,6 @@ end subroutine polar
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 subroutine reflx  (vx1,vy1,vx2,vy2)
-implicit none
 
 ! EARLIER VERSION OF THIS SUBROUTINE WAS
 !     SUBROUTINE REFLEX (VX1,VY1,VX2,VY2)
@@ -4179,9 +4162,8 @@ end subroutine reflx
 !!##LICENSE
 !!    Public Domain
 subroutine scalg(array,axlen,npts,inc)
-implicit none
 
-! ident_15="@(#)M_calcomp::scalg(3f): determine scale factors for a logarithmic scale"
+! ident_15="@(#) M_calcomp scalg(3f) determine scale factors for a logarithmic scale"
 
 !  IN THE CALCOMP CORP. ORIGINAL, HAS A BUG: IF ARRAY CONTAINED
 !  ANY VALUES .LT. 1.0, THE LOWER BOUND OF THE AXIS WOULD BE TOO
@@ -4353,9 +4335,8 @@ end subroutine scalg
 !!##LICENSE
 !!    Public Domain
 subroutine smoot(xn,yn,ic)
-implicit none
 
-! ident_16="@(#)M_calcomp::smoot(3f): draw a polyline using modified spline-fitting technique"
+! ident_16="@(#) M_calcomp smoot(3f) draw a polyline using modified spline-fitting technique"
 
 !     THE SMOOTH ROUTINE SIMULATES THE 'PLOT' ROUTINE WITH A NEW 'PLOT'
 !     MODE (DRAWING A SMOOTH CURVE TO THE NEW POINT). THE SMOOTH MODE
@@ -4724,9 +4705,8 @@ end subroutine smoot
 !!##LICENSE
 !!    Public Domain
 subroutine axis(xpage,ypage,ibcd,nchar,axlen,angle,firstv,deltav)
-implicit none
 
-! ident_17="@(#)M_calcomp::axis(3f): Draw linear axis with numeric scale and axis label"
+! ident_17="@(#) M_calcomp axis(3f) Draw linear axis with numeric scale and axis label"
 
 !          XPAGE,YPAGE  COORDINATES OF STARTING POINT OF AXIS, IN INCHES
 !          IBCD         AXIS TITLE.
@@ -4953,9 +4933,8 @@ end subroutine axis
 !!##LICENSE
 !!    Public Domain
 subroutine factor(fct)
-implicit none
 
-! ident_18="@(#)M_calcomp::factor(3f): rescale entire plot"
+! ident_18="@(#) M_calcomp factor(3f) rescale entire plot"
 
 real,intent(in) :: fct
    call plot(fct,fct,1001)
@@ -4964,9 +4943,8 @@ end subroutine factor
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 subroutine mset(mode)
-implicit none
 
-! ident_19="@(#)M_calcomp::mset(3f): this is a general mode setting routine."
+! ident_19="@(#) M_calcomp mset(3f) this is a general mode setting routine."
 
 ! FUNCTION: SET THE MODE ACCORDING TO THE CHARACTER VALUE PASSED
 !           AS MODE. THE MODES ARE SET IN COMMON WMODE
@@ -4995,7 +4973,6 @@ end subroutine mset
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 subroutine mpset(mode,value)
-implicit none
 !
 ! THIS ROUTINE SETS MODE SPECIFIC PARAMETER VALUES
 !
@@ -5153,9 +5130,8 @@ end subroutine mpset
 !!##LICENSE
 !!    Public Domain
 subroutine line(xarray,yarray,npts,inc,lintyp,inteq)
-implicit none
 
-! ident_20="@(#)M_calcomp::line(3f): Plot a polyline with optional rescaling"
+! ident_20="@(#) M_calcomp line(3f) Plot a polyline with optional rescaling"
 
 !          XARRAY  NAME OF ARRAY CONTAINING ABSCISSA OR X VALUES.
 !          YARRAY  NAME OF ARRAY CONTAINING ORDINATE OR Y VALUES.
@@ -5288,9 +5264,8 @@ end subroutine line
 !!##LICENSE
 !!    Public Domain
 subroutine width(iwidth)
-implicit none
 
-! ident_21="@(#)M_calcomp::width(3f): select new pen width"
+! ident_21="@(#) M_calcomp width(3f) select new pen width"
 
 integer,intent(in)    :: iwidth ! (positive integer) new pen width
 
@@ -5375,9 +5350,8 @@ end subroutine width
 !!##LICENSE
 !!    Public Domain
 subroutine newpen(index)
-implicit none
 
-! ident_22="@(#)M_calcomp::newpen(3f): select new pen color and move to origin"
+! ident_22="@(#) M_calcomp newpen(3f) select new pen color and move to origin"
 
 integer,intent(in)    :: index ! (positive integer) new pen color
 
@@ -5511,9 +5485,8 @@ end subroutine newpen
 !!##LICENSE
 !!    Public Domain
 subroutine nframe
-implicit none
 
-! ident_23="@(#)M_calcomp::nframe(3f): start new frame"
+! ident_23="@(#) M_calcomp nframe(3f) start new frame"
 
    call plot(0.0,0.0,1008)
 end subroutine nframe
@@ -5595,9 +5568,8 @@ end subroutine nframe
 !!##LICENSE
 !!    Public Domain
 subroutine number(xpage,ypage,height,fpn,angle,ndec)
-implicit none
 
-! ident_24="@(#)M_calcomp::number(3f): plots a floating-point number"
+! ident_24="@(#) M_calcomp number(3f) plots a floating-point number"
 
 !     XPAGE,YPAGE COORDINATES OF LOWER LEFT CORNER OF NUMBER.
 !     HEIGHT   HEIGHT OF PLOTTED NUMBER.
@@ -5866,9 +5838,8 @@ end subroutine number
 !!##LICENSE
 !!    Public Domain
 subroutine plot(xpag, ypag, ipen)
-implicit none
 
-! ident_25="@(#)M_calcomp::plot(3f): move with pen up or down or start new origin or terminate plotting"
+! ident_25="@(#) M_calcomp plot(3f) move with pen up or down or start new origin or terminate plotting"
 
 !
 !  SUBROUTINE DESCRIPTION -
@@ -6174,9 +6145,8 @@ end subroutine plot
 !!##LICENSE
 !!    Public Domain
 subroutine plots(xmin,xmax,ymin,ymax)
-implicit none
 
-! ident_26="@(#)M_calcomp::plots(3f): initialize the CALCOMP package"
+! ident_26="@(#) M_calcomp plots(3f) initialize the CALCOMP package"
 
 real,intent(in) :: xmin, xmax, ymin, ymax
 !
@@ -6351,9 +6321,8 @@ end subroutine plots
 !!##LICENSE
 !!    Public Domain
 subroutine scale(array,axlen,npts,inc)
-implicit none
 
-! ident_27="@(#)M_calcomp::scale(3f): calculate scaling factors for producing XY plots with LINE(3f) and AXIS(3f) routines"
+! ident_27="@(#) M_calcomp scale(3f) calculate scaling factors for producing XY plots with LINE(3f) and AXIS(3f) routines"
 
 !     ARRAY   NAME OF ARRAY CONTAINING VALUES TO BE SCALED.
 !     AXLEN   LENGTH IN IN./CM. OVER WHICH ARRAY IS TO BE SCALED.
@@ -6629,9 +6598,8 @@ end subroutine scale
 !!##LICENSE
 !!    Public Domain
 subroutine symbol(xpage,ypage,height,string,inteq,angle,nchar)
-implicit none
 
-! ident_28="@(#)M_calcomp::symbol(3f): draw text string or marker"
+! ident_28="@(#) M_calcomp symbol(3f) draw text string or marker"
 
 !
 !  PROCEDURE DESCRIPTION -
@@ -7156,7 +7124,7 @@ end subroutine symbol
 !===================================================================================================================================
 function upper(str,begin,end) result (string)
 
-! ident_29="@(#)M_strings::upper(3f): Changes a string to uppercase"
+! ident_29="@(#) M_strings upper(3f) Changes a string to uppercase"
 
 character(*), intent(in)      :: str                 ! inpout string to convert to all uppercase
 integer, intent(in), optional :: begin,end
@@ -7230,9 +7198,8 @@ end function upper
 !!##LICENSE
 !!    Public Domain
 subroutine where(xpag,ypag,fct)
-implicit none
 
-! ident_30="@(#)M_calcomp::where(3f): return current position and current plot-scaling factor"
+! ident_30="@(#) M_calcomp where(3f) return current position and current plot-scaling factor"
 
 real,intent(out) :: xpag
 real,intent(out) :: ypag
@@ -7248,355 +7215,6 @@ end subroutine where
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 ! set of routines to make simple contour plots
-!===================================================================================================================================
-!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
-!===================================================================================================================================
-logical function primitive__newone (val)
-implicit none
-integer :: val
-! CONCOM
-integer l,m,u,d
-   if(nn_q.eq.0) goto 70
-   primitive__newone=.false.
-   if(alt_q) goto 10
-   l=1
-   u=nn_q
-   goto 20
-10 l=nn_q
-   u=limit_q
-20 d=u-l
-   if(val.eq.rec_q(l)) return
-   if(d.eq.0) goto 70
-   if(val.eq.rec_q(u)) return
-   if(d.eq.1) goto 70
-30 m=l+d/2
-   if(val-rec_q(m)) 40,80,50
-40 u=m
-   goto 60
-50 l=m
-60 d=u-l
-   if(d.ne.1) goto 30
-70 primitive__newone=.true.
-80 continue
-end function primitive__newone
-!===================================================================================================================================
-!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
-!===================================================================================================================================
-subroutine primitive__pass (x,z)
-implicit none
-!           MERGE PAIRS OF STRINGS OF LENGTH C_Q FROM X INTO Z
-!           WHERE X HAS NTRK_Q ELEMENTS
-!           X AND Z ARE PARAMS FOR SWITCHING ARRAYS
-   ! CONCOM
-integer x(*),z(*)
-integer k,p,q,r,s,t
-!           K IS INDEX INTO Z
-!           S, T ARE INDICES INTO X@  P.LE.S.LT.Q.LE.T.LT.R
-!           WITH C_Q.EQ.Q-P AND C_Q.EQ.R-Q
-   k=0
-   r=1
-! STEP THRU X PICKING OFF PAIRS OF C_Q-LENGTH STRINGS
-10 p=r
-   if(p.gt.ntrk_q) goto 70
-!                            ALL DONE
-   s=p
-   q=p+c_q
-   if(q.gt.ntrk_q) goto 60
-!                            NO MERGE, JUST TRANSFER THE STRING
-   r=q+c_q
-   if(r.gt.ntrk_q) r=ntrk_q+1
-!                            SHORT STRING TO MERGE
-   t=q
-! SELECT ELEMENT TO PASS TO Z
-20 k=k+1
-   if(x(s).gt.x(t)) goto 30
-   z(k)=x(s)
-   s=s+1
-   if(s-q) 20,40,40
-30 z(k)=x(t)
-   t=t+1
-   if(t-r) 20,50,50
-! FIRST STRING EMPTY, FLUSH THE SECOND
-40 k=k+1
-   z(k)=x(t)
-   t=t+1
-   if(t-r) 40,10,10
-! SECOND STRING EMPTY, FLUSH THE FIRST
-50 k=k+1
-   z(k)=x(s)
-   s=s+1
-   if(s-q) 50,10,10
-! FLUSH END OF X, NO MERGE NEEDED
-60 k=k+1
-   z(k)=x(s)
-   s=s+1
-   if(s-ntrk_q) 60,60,70
-! ALL DONE
-70 return
-!
-end subroutine primitive__pass
-!===================================================================================================================================
-!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
-!===================================================================================================================================
-subroutine primitive__recorx
-implicit none
-   ! CONCOM
-   oddpas_q=.false.
-   c_q=1
-10 if(c_q.ge.ntrk_q) goto 20
-   call primitive__pass(trk_q,trka_q)
-   oddpas_q=.true.
-   c_q=c_q+c_q
-   if(c_q.ge.ntrk_q) goto 20
-   call primitive__pass(trka_q,trk_q)
-   oddpas_q=.false.
-   c_q=c_q+c_q
-   goto 10
-20 if(oddpas_q) goto 30
-   call primitive__merger(trk_q)
-   return
-30 call primitive__merger(trka_q)
-!
-end subroutine primitive__recorx
-!===================================================================================================================================
-!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
-!===================================================================================================================================
-subroutine primitive__scan (am,totx,toty,nydim)
-implicit none
-integer :: nydim
-real    :: am(nydim,*),totx(*),toty(*)
-! CONCOM
-real    :: op
-integer :: jx
-integer :: jy
-   alt_q=.false.
-   edge_q=.true.
-   nn_q=0
-   ix_q=1
-   op=am(1,1)
-   do 10 iy_q=2,ny_q
-      if(am(1,iy_q).lt.cvv_q.or.op.ge.cvv_q) goto 10
-      direc_q=3
-      call primitive__tracer(am,totx,toty,nydim)
-10 op=am(1,iy_q)
-   ix_q=nx_q
-   op=am(nx_q,ny_q)
-   direc_q=1
-   iy_q=ny_q
-   do 20 jy=1,nym1_q
-      iy_q=iy_q-1
-      if(am(nx_q,iy_q).lt.cvv_q.or.op.ge.cvv_q) goto 20
-      call primitive__tracer(am,totx,toty,nydim)
-20 op=am(nx_q,iy_q)
-   iy_q=1
-   op=am(nx_q,1)
-   direc_q=4
-   ix_q=nx_q
-   do 30 jx=1,nxm1_q
-      ix_q=ix_q-1
-      if(am(ix_q,1).lt.cvv_q.or.op.ge.cvv_q) goto 30
-      call primitive__tracer(am,totx,toty,nydim)
-30 op=am(ix_q,1)
-   iy_q=ny_q
-   op=am(1,ny_q)
-   direc_q=2
-   do 40 ix_q=2,nx_q
-      if(am(ix_q,ny_q).lt.cvv_q.or.op.ge.cvv_q) goto 40
-      call primitive__tracer(am,totx,toty,nydim)
-40 op=am(ix_q,ny_q)
-   edge_q=.false.
-   iy_q=ny_q
-   do 50 jy=2,nym1_q
-      iy_q=iy_q-1
-      op=am(1,iy_q)
-      do 50 ix_q=2,nx_q
-         if(am(ix_q,iy_q).lt.cvv_q.or.op.ge.cvv_q) goto 50
-         if(primitive__newone(ix_q+(iy_q-1)*nx_q))then
-            call primitive__tracer(am,totx,toty,nydim)
-         endif
-50 op=am(ix_q,iy_q)
-!
-end subroutine primitive__scan
-!===================================================================================================================================
-!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
-!===================================================================================================================================
-subroutine primitive__tracer (am,totx,toty,nydim)
-implicit none
-integer :: nydim
-real    :: am(nydim,*),totx(*),toty(*)
-! CONCOM
-integer :: z
-real    :: tem,plotx,ploty,fplotx,fploty,amc,amw,amz,amq,ams,amd,amp
-logical :: first
-integer :: s,tix,tiy,cix,ciy,dix,diy,sub,pix,piy,swsd,swmq
-real    :: amm
-   first=.true.
-   ntrk_q=0
-   tix=ix_q
-   tiy=iy_q
-   s=direc_q
-   dix=ixd_q(s)
-   diy=iyd_q(s)
-   cix=tix+dix
-   ciy=tiy+diy
-10 continue
-   tem=am(tix,tiy)
-   amc=am(cix,ciy)
-   if(dix.ne.0) goto 20
-   sub=tiy
-   if(diy.lt.0) sub=sub-1
-   plotx=totx(tix)
-   ploty=toty(tiy)+diy*(tem-cvv_q)*hy_q(sub)/(tem-amc)
-   goto 30
-20 continue
-   sub=tix
-   if(dix.lt.0) sub=sub-1
-   ploty=toty(tiy)
-   plotx=totx(tix)+dix*(tem-cvv_q)*hx_q(sub)/(tem-amc)
-30 continue
-   if(first) goto 40
-   call plot(plotx*ratio_q,ploty*ratio_q,2)
-   goto 50
-40 continue
-   fplotx=plotx*ratio_q
-   fploty=ploty*ratio_q
-   call number(fplotx+.02, fploty-.15, 0.14, float(ii_q), 0.0, -1)
-   call plot(fplotx,fploty,3)
-   first=.false.
-50 continue
-   if(.not.(edge_q)) goto 60
-   if(tiy.eq.ny_q.and.s.eq.4.or.tix.eq.1.and.s.eq.1.or.tix.eq.nx_q.and.s .eq.3.or.tiy.eq.1.and.s.eq.2) goto 260
-60 continue
-   amm=(tem+amc)/2.0
-   z=s+1
-   if(z.gt.4) z=z-4
-   pix=ixd_q(z)
-   piy=iyd_q(z)
-   amw=am(tix+pix,tiy+piy)
-   amz=am(cix+pix,ciy+piy)
-   amq=(amw+amz)/2.0
-   ams=(tem+amw)/2.0
-   amd=(amc+amz)/2.0
-   amp=(amm+amq)/2.0
-   if(amm.ge.cvv_q) goto 110
-   if(ams.lt.cvv_q) goto 260
-   if(amp.ge.cvv_q) goto 90
-   assign 70 to swsd
-   goto 190
-70 continue
-   if(amw.lt.cvv_q) goto 260
-   if(amq.lt.cvv_q) goto 220
-   assign 80 to swmq
-   goto 160
-80 continue
-   if(amz.lt.cvv_q) goto 220
-   goto 240
-90 continue
-   assign 100 to swmq
-   goto 160
-100 continue
-   if(amd.ge.cvv_q) goto 240
-   assign 80 to swsd
-   goto 190
-110 continue
-   if(amp.ge.cvv_q) goto 140
-   assign 120 to swmq
-   goto 160
-120 continue
-   if(ams.lt.cvv_q) goto 260
-   assign 130 to swsd
-   goto 190
-130 continue
-   if(amw.lt.cvv_q) goto 260
-   goto 220
-140 continue
-   if(amd.ge.cvv_q) goto 240
-   assign 150 to swsd
-   goto 190
-150 continue
-   if(amq.ge.cvv_q) goto 80
-   assign 130 to swmq
-!      INTERPOLATE MQ
-160 continue
-   if(pix.ne.0) goto 170
-   sub=tiy
-   if(piy.lt.0) sub=sub-1
-   plotx=(totx(tix)+totx(cix))/2.0
-   ploty=toty(tiy)+piy*(amm-cvv_q)*hy_q(sub)/(amm-amq)
-   goto 180
-170 continue
-   sub=tix
-   if(pix.lt.0) sub=sub-1
-   ploty=(toty(tiy)+toty(ciy))/2.0
-   plotx=totx(tix)+pix*(amm-cvv_q)*hx_q(sub)/(amm-amq)
-180 continue
-   call plot(plotx*ratio_q,ploty*ratio_q,2)
-   goto swmq, (80,100,120,130)
-!      INTERPOLATE SD
-190 continue
-   if(dix.ne.0) goto 200
-   sub=tiy
-   if(diy.lt.0) sub=sub-1
-   plotx=(totx(tix)+totx(tix+pix))/2.0
-   ploty=toty(tiy)+diy*(ams-cvv_q)*hy_q(sub)/(ams-amd)
-   goto 210
-200 continue
-   sub=tix
-   if(dix.lt.0) sub=sub-1
-   ploty=(toty(tiy)+toty(tiy+piy))/2.0
-   plotx=totx(tix)+dix*(ams-cvv_q)*hx_q(sub)/(ams-amd)
-210 continue
-   call plot(plotx*ratio_q,ploty*ratio_q,2)
-   goto swsd (70,80,130,150)
-!      TRANSFER TO W
-220 continue
-   if(tix.eq.1) goto 230
-   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
-230 continue
-   tix=tix+pix
-   tiy=tiy+piy
-   goto 280
-!      TRANSFER TO Z
-240 continue
-   if(tix.eq.1) goto 250
-   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
-250 continue
-   s=s+3
-   tix=cix+pix
-   tiy=ciy+piy
-   goto 270
-!      ROTATE
-260 continue
-   s=s+1
-270 continue
-   if(s.gt.4) s=s-4
-   dix=ixd_q(s)
-   diy=iyd_q(s)
-280 continue
-   cix=tix+dix
-   ciy=tiy+diy
-   if(edge_q) goto 290
-   if((tix.ne.ix_q).or.(tiy.ne.iy_q).or.(direc_q.ne.s)) goto 300
-   call plot(fplotx,fploty,2)
-   goto 330
-290 continue
-   if((cix.lt.1).or.(ciy.lt.1).or.(cix.gt.nx_q).or.(ciy.gt.ny_q)) goto 320
-300 continue
-   if(am(cix,ciy).lt.cvv_q) goto 10
-   if(tix.eq.1) goto 310
-   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
-310 continue
-   s=s+3
-   tix=cix
-   tiy=ciy
-   goto 270
-320 continue
-   if(tix.eq.1) goto 330
-   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
-330 continue
-   call primitive__recorx
-!
-end subroutine primitive__tracer
 !===================================================================================================================================
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
@@ -7667,9 +7285,8 @@ end subroutine primitive__tracer
 !!##LICENSE
 !!    Public Domain
 subroutine cntour (am,xx,yy,totx,toty,hgt,cv,cvn,tab,ndimyy)
-implicit none
 
-! ident_31="@(#)m_calcomp::cntour(3f): draw a contour plot"
+! ident_31="@(#) m_calcomp cntour(3f) draw a contour plot"
 
 integer xx,yy,cvn
 character encxde*9
@@ -7898,8 +7515,351 @@ end subroutine cntour
 !===================================================================================================================================
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
+logical function primitive__newone (val)
+integer :: val
+! CONCOM
+integer l,m,u,d
+   if(nn_q.eq.0) goto 70
+   primitive__newone=.false.
+   if(alt_q) goto 10
+   l=1
+   u=nn_q
+   goto 20
+10 l=nn_q
+   u=limit_q
+20 d=u-l
+   if(val.eq.rec_q(l)) return
+   if(d.eq.0) goto 70
+   if(val.eq.rec_q(u)) return
+   if(d.eq.1) goto 70
+30 m=l+d/2
+   if(val-rec_q(m)) 40,80,50
+40 u=m
+   goto 60
+50 l=m
+60 d=u-l
+   if(d.ne.1) goto 30
+70 primitive__newone=.true.
+80 continue
+end function primitive__newone
+!===================================================================================================================================
+!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
+!===================================================================================================================================
+subroutine primitive__pass (x,z)
+!           MERGE PAIRS OF STRINGS OF LENGTH C_Q FROM X INTO Z
+!           WHERE X HAS NTRK_Q ELEMENTS
+!           X AND Z ARE PARAMS FOR SWITCHING ARRAYS
+   ! CONCOM
+integer x(*),z(*)
+integer k,p,q,r,s,t
+!           K IS INDEX INTO Z
+!           S, T ARE INDICES INTO X@  P.LE.S.LT.Q.LE.T.LT.R
+!           WITH C_Q.EQ.Q-P AND C_Q.EQ.R-Q
+   k=0
+   r=1
+! STEP THRU X PICKING OFF PAIRS OF C_Q-LENGTH STRINGS
+10 p=r
+   if(p.gt.ntrk_q) goto 70
+!                            ALL DONE
+   s=p
+   q=p+c_q
+   if(q.gt.ntrk_q) goto 60
+!                            NO MERGE, JUST TRANSFER THE STRING
+   r=q+c_q
+   if(r.gt.ntrk_q) r=ntrk_q+1
+!                            SHORT STRING TO MERGE
+   t=q
+! SELECT ELEMENT TO PASS TO Z
+20 k=k+1
+   if(x(s).gt.x(t)) goto 30
+   z(k)=x(s)
+   s=s+1
+   if(s-q) 20,40,40
+30 z(k)=x(t)
+   t=t+1
+   if(t-r) 20,50,50
+! FIRST STRING EMPTY, FLUSH THE SECOND
+40 k=k+1
+   z(k)=x(t)
+   t=t+1
+   if(t-r) 40,10,10
+! SECOND STRING EMPTY, FLUSH THE FIRST
+50 k=k+1
+   z(k)=x(s)
+   s=s+1
+   if(s-q) 50,10,10
+! FLUSH END OF X, NO MERGE NEEDED
+60 k=k+1
+   z(k)=x(s)
+   s=s+1
+   if(s-ntrk_q) 60,60,70
+! ALL DONE
+70 return
+!
+end subroutine primitive__pass
+!===================================================================================================================================
+!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
+!===================================================================================================================================
+subroutine primitive__recorx
+   ! CONCOM
+   oddpas_q=.false.
+   c_q=1
+10 if(c_q.ge.ntrk_q) goto 20
+   call primitive__pass(trk_q,trka_q)
+   oddpas_q=.true.
+   c_q=c_q+c_q
+   if(c_q.ge.ntrk_q) goto 20
+   call primitive__pass(trka_q,trk_q)
+   oddpas_q=.false.
+   c_q=c_q+c_q
+   goto 10
+20 if(oddpas_q) goto 30
+   call primitive__merger(trk_q)
+   return
+30 call primitive__merger(trka_q)
+!
+end subroutine primitive__recorx
+!===================================================================================================================================
+!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
+!===================================================================================================================================
+subroutine primitive__scan (am,totx,toty,nydim)
+integer :: nydim
+real    :: am(nydim,*),totx(*),toty(*)
+! CONCOM
+real    :: op
+integer :: jx
+integer :: jy
+   alt_q=.false.
+   edge_q=.true.
+   nn_q=0
+   ix_q=1
+   op=am(1,1)
+   do 10 iy_q=2,ny_q
+      if(am(1,iy_q).lt.cvv_q.or.op.ge.cvv_q) goto 10
+      direc_q=3
+      call primitive__tracer(am,totx,toty,nydim)
+10 op=am(1,iy_q)
+   ix_q=nx_q
+   op=am(nx_q,ny_q)
+   direc_q=1
+   iy_q=ny_q
+   do 20 jy=1,nym1_q
+      iy_q=iy_q-1
+      if(am(nx_q,iy_q).lt.cvv_q.or.op.ge.cvv_q) goto 20
+      call primitive__tracer(am,totx,toty,nydim)
+20 op=am(nx_q,iy_q)
+   iy_q=1
+   op=am(nx_q,1)
+   direc_q=4
+   ix_q=nx_q
+   do 30 jx=1,nxm1_q
+      ix_q=ix_q-1
+      if(am(ix_q,1).lt.cvv_q.or.op.ge.cvv_q) goto 30
+      call primitive__tracer(am,totx,toty,nydim)
+30 op=am(ix_q,1)
+   iy_q=ny_q
+   op=am(1,ny_q)
+   direc_q=2
+   do 40 ix_q=2,nx_q
+      if(am(ix_q,ny_q).lt.cvv_q.or.op.ge.cvv_q) goto 40
+      call primitive__tracer(am,totx,toty,nydim)
+40 op=am(ix_q,ny_q)
+   edge_q=.false.
+   iy_q=ny_q
+   do 50 jy=2,nym1_q
+      iy_q=iy_q-1
+      op=am(1,iy_q)
+      do 50 ix_q=2,nx_q
+         if(am(ix_q,iy_q).lt.cvv_q.or.op.ge.cvv_q) goto 50
+         if(primitive__newone(ix_q+(iy_q-1)*nx_q))then
+            call primitive__tracer(am,totx,toty,nydim)
+         endif
+50 op=am(ix_q,iy_q)
+!
+end subroutine primitive__scan
+!===================================================================================================================================
+!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
+!===================================================================================================================================
+subroutine primitive__tracer (am,totx,toty,nydim)
+integer :: nydim
+real    :: am(nydim,*),totx(*),toty(*)
+! CONCOM
+integer :: z
+real    :: tem,plotx,ploty,fplotx,fploty,amc,amw,amz,amq,ams,amd,amp
+logical :: first
+integer :: s,tix,tiy,cix,ciy,dix,diy,sub,pix,piy,swsd,swmq
+real    :: amm
+   first=.true.
+   ntrk_q=0
+   tix=ix_q
+   tiy=iy_q
+   s=direc_q
+   dix=ixd_q(s)
+   diy=iyd_q(s)
+   cix=tix+dix
+   ciy=tiy+diy
+10 continue
+   tem=am(tix,tiy)
+   amc=am(cix,ciy)
+   if(dix.ne.0) goto 20
+   sub=tiy
+   if(diy.lt.0) sub=sub-1
+   plotx=totx(tix)
+   ploty=toty(tiy)+diy*(tem-cvv_q)*hy_q(sub)/(tem-amc)
+   goto 30
+20 continue
+   sub=tix
+   if(dix.lt.0) sub=sub-1
+   ploty=toty(tiy)
+   plotx=totx(tix)+dix*(tem-cvv_q)*hx_q(sub)/(tem-amc)
+30 continue
+   if(first) goto 40
+   call plot(plotx*ratio_q,ploty*ratio_q,2)
+   goto 50
+40 continue
+   fplotx=plotx*ratio_q
+   fploty=ploty*ratio_q
+   call number(fplotx+.02, fploty-.15, 0.14, float(ii_q), 0.0, -1)
+   call plot(fplotx,fploty,3)
+   first=.false.
+50 continue
+   if(.not.(edge_q)) goto 60
+   if(tiy.eq.ny_q.and.s.eq.4.or.tix.eq.1.and.s.eq.1.or.tix.eq.nx_q.and.s .eq.3.or.tiy.eq.1.and.s.eq.2) goto 260
+60 continue
+   amm=(tem+amc)/2.0
+   z=s+1
+   if(z.gt.4) z=z-4
+   pix=ixd_q(z)
+   piy=iyd_q(z)
+   amw=am(tix+pix,tiy+piy)
+   amz=am(cix+pix,ciy+piy)
+   amq=(amw+amz)/2.0
+   ams=(tem+amw)/2.0
+   amd=(amc+amz)/2.0
+   amp=(amm+amq)/2.0
+   if(amm.ge.cvv_q) goto 110
+   if(ams.lt.cvv_q) goto 260
+   if(amp.ge.cvv_q) goto 90
+   assign 70 to swsd
+   goto 190
+70 continue
+   if(amw.lt.cvv_q) goto 260
+   if(amq.lt.cvv_q) goto 220
+   assign 80 to swmq
+   goto 160
+80 continue
+   if(amz.lt.cvv_q) goto 220
+   goto 240
+90 continue
+   assign 100 to swmq
+   goto 160
+100 continue
+   if(amd.ge.cvv_q) goto 240
+   assign 80 to swsd
+   goto 190
+110 continue
+   if(amp.ge.cvv_q) goto 140
+   assign 120 to swmq
+   goto 160
+120 continue
+   if(ams.lt.cvv_q) goto 260
+   assign 130 to swsd
+   goto 190
+130 continue
+   if(amw.lt.cvv_q) goto 260
+   goto 220
+140 continue
+   if(amd.ge.cvv_q) goto 240
+   assign 150 to swsd
+   goto 190
+150 continue
+   if(amq.ge.cvv_q) goto 80
+   assign 130 to swmq
+!      INTERPOLATE MQ
+160 continue
+   if(pix.ne.0) goto 170
+   sub=tiy
+   if(piy.lt.0) sub=sub-1
+   plotx=(totx(tix)+totx(cix))/2.0
+   ploty=toty(tiy)+piy*(amm-cvv_q)*hy_q(sub)/(amm-amq)
+   goto 180
+170 continue
+   sub=tix
+   if(pix.lt.0) sub=sub-1
+   ploty=(toty(tiy)+toty(ciy))/2.0
+   plotx=totx(tix)+pix*(amm-cvv_q)*hx_q(sub)/(amm-amq)
+180 continue
+   call plot(plotx*ratio_q,ploty*ratio_q,2)
+   goto swmq, (80,100,120,130)
+!      INTERPOLATE SD
+190 continue
+   if(dix.ne.0) goto 200
+   sub=tiy
+   if(diy.lt.0) sub=sub-1
+   plotx=(totx(tix)+totx(tix+pix))/2.0
+   ploty=toty(tiy)+diy*(ams-cvv_q)*hy_q(sub)/(ams-amd)
+   goto 210
+200 continue
+   sub=tix
+   if(dix.lt.0) sub=sub-1
+   ploty=(toty(tiy)+toty(tiy+piy))/2.0
+   plotx=totx(tix)+dix*(ams-cvv_q)*hx_q(sub)/(ams-amd)
+210 continue
+   call plot(plotx*ratio_q,ploty*ratio_q,2)
+   goto swsd (70,80,130,150)
+!      TRANSFER TO W
+220 continue
+   if(tix.eq.1) goto 230
+   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
+230 continue
+   tix=tix+pix
+   tiy=tiy+piy
+   goto 280
+!      TRANSFER TO Z
+240 continue
+   if(tix.eq.1) goto 250
+   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
+250 continue
+   s=s+3
+   tix=cix+pix
+   tiy=ciy+piy
+   goto 270
+!      ROTATE
+260 continue
+   s=s+1
+270 continue
+   if(s.gt.4) s=s-4
+   dix=ixd_q(s)
+   diy=iyd_q(s)
+280 continue
+   cix=tix+dix
+   ciy=tiy+diy
+   if(edge_q) goto 290
+   if((tix.ne.ix_q).or.(tiy.ne.iy_q).or.(direc_q.ne.s)) goto 300
+   call plot(fplotx,fploty,2)
+   goto 330
+290 continue
+   if((cix.lt.1).or.(ciy.lt.1).or.(cix.gt.nx_q).or.(ciy.gt.ny_q)) goto 320
+300 continue
+   if(am(cix,ciy).lt.cvv_q) goto 10
+   if(tix.eq.1) goto 310
+   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
+310 continue
+   s=s+3
+   tix=cix
+   tiy=ciy
+   goto 270
+320 continue
+   if(tix.eq.1) goto 330
+   if(am(tix-1,tiy).lt.cvv_q) call primitive__addrec(tix+(tiy-1)*nx_q)
+330 continue
+   call primitive__recorx
+!
+end subroutine primitive__tracer
+!===================================================================================================================================
+!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
+!===================================================================================================================================
 subroutine primitive__addrec (val)
-implicit none
 integer,intent(in) ::  val
 ! CONCOM
    ntrk_q=ntrk_q+1
@@ -7911,7 +7871,6 @@ end subroutine primitive__addrec
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
 subroutine primitive__merger (x)
-implicit none
 integer x(*)
 ! CONCOM
 integer :: k,i,j
@@ -8053,7 +8012,6 @@ end subroutine primitive__merger
 !===================================================================================================================================
 subroutine primitive__draw_text(x,y,text,angle)
 use M_draw
-implicit none
 real,intent(in)             :: x,y      ! REAL4/REAL8
 character(len=*),intent(in) :: text
 real,intent(in)             :: angle    ! REAL4/REAL8
@@ -8067,7 +8025,6 @@ end subroutine primitive__draw_text
 !===================================================================================================================================
 subroutine primitive__end_plotting()       ! terminate graphics
 use M_draw
-implicit none
    call vexit()                            ! bugger on out of here, terminating graphics
 end subroutine primitive__end_plotting
 !===================================================================================================================================
@@ -8075,7 +8032,6 @@ end subroutine primitive__end_plotting
 !===================================================================================================================================
 subroutine primitive__draw_line(x1,y1,x2,y2)     ! draw line from <x1,y1> to <x2,y2>
 use M_draw, only : move2, draw2
-implicit none
 real,intent(in) :: x1,y1,x2,y2    ! REAL4/REAL8
    call move2(real(x1),real(y1))
    call draw2(real(x2),real(y2))
@@ -8085,7 +8041,6 @@ end subroutine primitive__draw_line
 !===================================================================================================================================
 subroutine primitive__width(iwidth8)
 use M_draw
-implicit none
 integer :: iwidth8  ! INTEGER4/INTEGER8
    if(iwidth8.ge.0)then
       call linewidth(int(iwidth8))
@@ -8096,7 +8051,6 @@ end subroutine primitive__width
 !===================================================================================================================================
 subroutine primitive__wpen(ipen8)
 use M_draw
-implicit none
 integer :: ipen8  ! INTEGER4/INTEGER8
 ! if negative, set to last color used.
 ! if positive, set to new color.
@@ -8109,7 +8063,6 @@ end subroutine primitive__wpen
 !===================================================================================================================================
 subroutine primitive__frend(next8) ! end graphics frame
 use M_draw
-implicit none
 integer          :: next8  ! INTEGER4/INTEGER8
 integer          :: next
 character(len=1) :: cjunk
@@ -8131,7 +8084,6 @@ end subroutine primitive__frend
 subroutine primitive__start_plotting(xmin,xmax,ymin,ymax)
 use M_strings,  only : string_to_value, v2s
 use M_draw
-implicit none
 real,intent(in),optional :: xmin, xmax, ymin, ymax
 real                     :: xmin_local, xmax_local, ymin_local, ymax_local
 character(len=80)        :: string
@@ -8179,7 +8131,6 @@ end subroutine primitive__start_plotting
 !===================================================================================================================================
 subroutine setpar(option,kvalue8)
 use m_draw
-implicit none
 character(len=4) :: option
 integer          :: kvalue8  ! INTEGER4/INTEGER8
 
@@ -8234,7 +8185,6 @@ end subroutine setpar
 !!##LICENSE
 !!    Public Domain
 character(len=80) function primitive__fgetvar(varname,default)
-implicit none
 character(len=*),intent(in) :: varname
 character(len=*),intent(in) :: default
    call get_environment_variable(varname,primitive__fgetvar)
@@ -8245,7 +8195,6 @@ end function primitive__fgetvar
 !===================================================================================================================================
 subroutine primitive__clear() ! clear graphics area and ensure in graphics mode
 use M_draw
-implicit none
    call color(D_BLACK)
    call clear()
    call color(D_WHITE)
