@@ -1,6 +1,7 @@
 PROGRAM QA3
 ! (LICENSE:Public Domain)
    USE M_calcomp
+   implicit none
    CHARACTER*28 ICHR1
    CHARACTER*26 ICHR2
    CHARACTER*4  ICHR3,ICHR4
@@ -8,7 +9,10 @@ PROGRAM QA3
    CHARACTER*21 ICHR6
    CHARACTER*17 ICHR8
    CHARACTER*10 LBCD1,LBCD2
+   real :: angle, height, xx, yy, deltax, age, rad, value, x, y
+   real :: xarray, yarray
    DIMENSION XARRAY(62),YARRAY(62)
+   integer :: i10,i,j, inteq
    ICHR1='PLOTTED ON A CALCOMP PLOTTER'
    ICHR2='USING  Y = X -0.7*X +0.1*X'
    ICHR3='ANG='

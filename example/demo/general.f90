@@ -1,8 +1,13 @@
 PROGRAM QA4
 ! (LICENSE:Public Domain)
    USE M_calcomp
+   implicit none
    ! 07/30/69
+   real :: x, y, d, dx, dy
    DIMENSION X(104), Y(104)
+   real :: XL,YL,RMA,RMI,A,THO, THF,DI,F,W,rf, ro, sl, sn, h
+   integer :: i, j, kin, ipn, klas, nrec, j1, j2, nx, ny, inc, nc, ipen
+   integer :: npts
    CHARACTER*40 MSG
    EQUIVALENCE(X(1),XL),(Y(1),YL)
 9001 FORMAT(2(1X,I2,7X),A40)
@@ -74,7 +79,7 @@ PROGRAM QA4
 !-----------------------------------------------------------------------
 500 continue
    DO I = 1,NREC
-      READ(KIN,9012) XL,YL,RMA,RMI,A,TH0,THF,IPEN
+      READ(KIN,9012) XL,YL,RMA,RMI,A,THO,THF,IPEN
       CALL ELIPS(XL,YL,RMA,RMI,A,THO,THF,IPEN)
    enddo
    GOTO 1

@@ -8,6 +8,9 @@ PROGRAM QA1
    CHARACTER*29 ICHR8
    CHARACTER*32 ICHR9,ICHR10,ICHR11,ICHR12
    CHARACTER*1 IBCD
+   integer :: i, j, inteq
+   real :: x, y, thick, wdth, tx, wx
+   real :: tsqr, wsqr, psi
    ICHR1='WIDTH (FT)'
    ICHR2='THICKNESS (IN)'
    ICHR3='PRESSURE (PSI)'

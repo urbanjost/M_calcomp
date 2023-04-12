@@ -3,7 +3,10 @@
      character(len=28) :: ichr1
      character(len=26) :: ichr2
      character(len=10) :: lbcd1,lbcd2
+     real :: xarray, yarray
      dimension xarray(62),yarray(62)
+     real :: deltax
+     integer :: j, inteq
      ichr1='PLOTTED ON A CALCOMP PLOTTER'
      ichr2='USING  Y = X -0.7*X +0.1*X'
      lbcd1='X-ABSCISSA'

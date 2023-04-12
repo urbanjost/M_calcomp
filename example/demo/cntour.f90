@@ -1,7 +1,9 @@
 program qa6
 ! (LICENSE:Public Domain)
    use m_calcomp
+   real :: totx, toty, am, cv
    dimension totx(10),toty(10),am(10,10),cv(10)
+   integer :: kin, nx, ny, ncv, i, j
    !
    kin=50
    call make_c_qa6()

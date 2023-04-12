@@ -2,9 +2,14 @@ PROGRAM QA5
 ! (LICENSE:Public Domain)
 ! MIT License
    USE M_calcomp
+   implicit none
+   real :: xar, yar
    DIMENSION XAR(10), YAR(10)
+   real :: r, angle
    DIMENSION R(19),ANGLE(19)
    CHARACTER*50 IBCD
+   real :: a, ANGL, x, theta, xa, ya, xb, yb, xc, yc, xd, yd, bang, beta, xx
+   integer :: i, k, kin, inteq
 100 FORMAT (A40,A2)
 200 FORMAT(2F4.2)
 !
@@ -84,10 +89,10 @@ PROGRAM QA5
    CALL SMOOT (5.75,4.75,-24)
 ! FLINE IS USED
    READ (KIN ,200)(XAR  (I),YAR  (I),I=1,8)
-   XAR  (9)=0.0
-   XAR  (10)=1.0
-   YAR  (9)=0.0
-   YAR  (10)=1.0
+   XAR(9)=0.0
+   XAR(10)=1.0
+   YAR(9)=0.0
+   YAR(10)=1.0
    CALL PLOT(0.75,3.25,3)
    CALL FLINE(XAR  ,YAR  ,-8,1,1,1)
 !     CALL PLOT(11.0,0.0,-3)
@@ -158,7 +163,7 @@ PROGRAM QA5
    CALL SYMBOL (3.75,3.5,0.09,IBCD,INTEQ,0.0,23)
    CALL PLOT(11.0,0.0,999)
    STOP
-END PROGRAM QA5
+contains
 subroutine make_c_qa5()
    integer,parameter :: io=40
    open(unit=io,file='qa5.dat')
@@ -195,3 +200,4 @@ subroutine make_c_qa5()
    write(io,'(a)')'RADIUS=2*(1-COS(ANGLE))'
    close(unit=io)
 end subroutine make_c_qa5
+END PROGRAM QA5

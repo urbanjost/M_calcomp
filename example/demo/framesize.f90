@@ -1,7 +1,10 @@
 PROGRAM QA7
 ! (LICENSE:Public Domain)
 USE M_calcomp
+real :: xarray, yarray
 DIMENSION XARRAY(20),YARRAY(20)
+integer :: i, k
+real :: x, y
 DATA XARRAY/0.0,2.5,5.0,10.0,16.0,20.0,23.0,28.0,35.0,40.0, 44.0,51.0,60.0,64.0,69.0,75.0,82.0,88.0,00.0,00.0/
 DATA YARRAY/0.0,-20.0,-48.0,-70.0,-98.0,-110.0,-125.0,-142.0, -130.0,-115.0,-80.0,-35.0,-10.0,5.0,22.0,35.0,42.0,58.0,00.0, 000.0/
 !    CHECK RELATIVE FRAME SIZING
