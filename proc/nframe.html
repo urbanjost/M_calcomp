@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="General Purpose Fortran project">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>nframe &ndash; M_calcomp</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+         <script src="../js/jquery-2.1.3.min.js"></script>
+         <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">M_calcomp </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+                 data-toggle="dropdown" role="button"
+                 aria-haspopup="true"
+                 aria-expanded="false">
+                 Contents <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                    <li><a href="../lists/files.html">Source Files</a></li>
+                  <li><a href="../lists/modules.html">Modules</a></li>
+                  <li><a href="../lists/procedures.html">Procedures</a></li>
+                  <li><a href="../lists/programs.html">Programs</a></li>
+              </ul>
+            </li>
+                <li class="visible-xs hidden-sm visible-lg">
+                  <a href="../lists/files.html">Source Files</a>
+                </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/modules.html">Modules</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/procedures.html">Procedures</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/programs.html">Programs</a>
+              </li>
+          </ul>
+            <form action="../search.html" class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+              </div>
+              <!--
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  -->
+            </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>nframe
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 0.1% of total for procedures.">3 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/M_calcomp.F90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.F90</a></li>
+              <li><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+          <li class="active">nframe</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/nframe.html#src">nframe</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine nframe()  
+</h2>
+    
+
+    <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code>nframe(3f) - [M_calcomp:basic] start new frame
+(LICENSE:PD)
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code>    subroutine nframe()
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>Terminates the current frame and resets the current pen position and
+  origin to zero (The lower left-hand corner of the new frame).</p>
+<p>NFRAME is a locally-developed routine.</p>
+<p>Subroutine NFRAME allows users to define the logical beginning
+  and ending of a plot. This capability is necessary if plots are to
+  be drawn on a graphics device with a limited display area (e.g.,
+  a graphics terminal or microfiche/ film). A call to NFRAME enters
+  a plot terminator in the user&rsquo;s metalanguage file. All plotting
+  data generated between calls to NFRAME is treated as a single plot
+  by the graphics post processing procedures. The absence of calls to
+  NFRAME results in all plotting data being processed as a single
+  plot by the post processor (e.g., all plotting data will be drawn
+  in a single frame on microfiche).</p>
+<p>The call to NFRAME should be placed before the call to subroutine
+  PLOT that is used to move the pen to the origin of the next plot.
+  Be aware that the area encompassed by moving the pen to
+  establish the origin of a plot is considered part of the plot and will
+  produce a visible bottom and left margin on plot frames if no negative
+  values are subsequently used.</p>
+<p>As mentioned previously, a plot frame is limited to a maximum size in
+  either the X or Y direction of 100 &ldquo;CALCOMP inches.&rdquo; Each plot frame is
+  initialized by a call to subroutine PLOT with the third argument
+  (IPEN) equal to -2 or -3. For example:</p>
+<div class="codehilite"><pre><span></span><code>    CALL PLOT(0.5,1.0,-3)
+</code></pre></div>
+
+<p>says to move 0.5 inches in the X-direction and 1.0 inch in the
+  Y-direction before establishing a new origin. When establishing a
+  new origin, all offsets are included inside the frame boundary and
+  are therefore part of the plot frame size. If any X or Y coordinate
+  value (plus the appropriate offset) exceeds the 100 inch limit,
+  results are unpredictable. In programs where X and Y coordinate values
+  exceed the scaling limit, a call to the CALCOMP routine FACTOR
+  may be used to scale down the plot size appropriately. No additional
+  offset is added by the call to NFRAME. Knowledge of the plot frame
+  size in the X and Y directions will be needed to scale pen plots to
+  actual inches with the device dependent post processing procedures.
+  The following example is provided to assist in understanding how the
+  frame size is determined.</p>
+<h2 id="example">EXAMPLE</h2>
+<p>Sample program</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">program</span><span class="w"> </span><span class="n">demo_nframe</span><span class="w"></span>
+<span class="w">    </span><span class="k">use</span><span class="w"> </span><span class="n">M_calcomp</span><span class="w"></span>
+<span class="w">    </span><span class="n">implicit</span><span class="w"> </span><span class="k">none</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Perform</span><span class="w"> </span><span class="n">initialization</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plots</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">10.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Establish</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="p">(</span><span class="n">Negative</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="w"> </span><span class="k">are</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">permitted</span><span class="w"> </span><span class="n">also</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Draw</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">box</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">appear</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">notice</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">includes</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="n">plus</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">box</span><span class="w"> </span><span class="k">size</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Plot</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maximum</span><span class="w"> </span><span class="n">coordinate</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Plot</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">direction</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">inches</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Plot</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Y</span><span class="o">-</span><span class="n">direction</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mf">9.5</span><span class="w"> </span><span class="n">inches</span><span class="w"> </span><span class="p">(</span><span class="mf">0.5</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">PLOT</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="n">above</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="w"> </span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mf">9.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">9.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Calls</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="n">here</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="k">Terminate</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">plot</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">nframe</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Establish</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">second</span><span class="w"> </span><span class="n">plot</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Plot</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">direction</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">inches</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Plot</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="k">size</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Y</span><span class="o">-</span><span class="n">direction</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">inches</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="n">Calls</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="k">second</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="n">here</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">!</span><span class="w"> </span><span class="k">Close</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="k">file</span><span class="w"></span>
+<span class="w">    </span><span class="k">call</span><span class="w"> </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="n">demo_nframe</span><span class="w"></span>
+</code></pre></div>
+
+<p>An inch drawn in frame 1 will not appear equal in length to an inch
+  drawn in frame 2 because their unit-less frame sizes are not equal (
+  8.5 x 9 versus 6 x 6 ) !</p>
+<p>The size of each frame is determined by the maximum value reached
+  in each frame relative to the ORIGINAL frame origin. Each frame, when
+  plotted, is stretched without distortion to the maximum size
+  it can obtain in the plotting area specified on post-processor calls
+  (Usually the SIZE, and XI and YI parameters as described in the DOCLIB
+  document GRPHDOC).</p>
+<h2 id="license">LICENSE</h2>
+<div class="codehilite"><pre><span></span><code>Public Domain
+</code></pre></div>
+
+    <h3>Arguments</h3>
+    <em>None</em>
+    <br>
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+        <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/nframe.html#src">nframe</a>
+      </div>
+    </div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    
+    
+
+    
+    
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">nframe</span><span class="w"></span>
+
+<span class="c">! ident_23=&quot;@(#) M_calcomp nframe(3f) start new frame&quot;</span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">1008</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">nframe</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-6"><p>M_calcomp was developed by John S. Urban<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <p class="text-right">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-04-12 06:15              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+         ================================================== -->
+         <!-- Placed at the end of the document so the pages load faster -->
+    <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+        <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

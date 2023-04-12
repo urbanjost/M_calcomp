@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="General Purpose Fortran project">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>QA3 &ndash; M_calcomp</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+         <script src="../js/jquery-2.1.3.min.js"></script>
+         <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">M_calcomp </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+                 data-toggle="dropdown" role="button"
+                 aria-haspopup="true"
+                 aria-expanded="false">
+                 Contents <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                    <li><a href="../lists/files.html">Source Files</a></li>
+                  <li><a href="../lists/modules.html">Modules</a></li>
+                  <li><a href="../lists/procedures.html">Procedures</a></li>
+                  <li><a href="../lists/programs.html">Programs</a></li>
+              </ul>
+            </li>
+                <li class="visible-xs hidden-sm visible-lg">
+                  <a href="../lists/files.html">Source Files</a>
+                </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/modules.html">Modules</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/procedures.html">Procedures</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/programs.html">Programs</a>
+              </li>
+          </ul>
+            <form action="../search.html" class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+              </div>
+              <!--
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  -->
+            </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>QA3      <small>Program</small>
+      
+    </h1>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title=" 4.5% of total for programs.">104 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/basic_scaled.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/basic_scaled.f90.html'>basic_scaled.f90</a></li>
+          <li class="active">QA3</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#vars-0">Variables</a>
+        </h3>
+      </div>
+      <div id="vars-0" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr1">ICHR1</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr2">ICHR2</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr3~2">ICHR3</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr4~2">ICHR4</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr5~2">ICHR5</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr6">ICHR6</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr7">ICHR7</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr8">ICHR8</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-lbcd1">LBCD1</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-lbcd2">LBCD2</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-age~2">age</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-angle~13">angle</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-deltax~6">deltax</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-height~5">height</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-i~40">i</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-i10">i10</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-inteq~28">inteq</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-j~15">j</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-rad~4">rad</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-value~3">value</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-x~34">x</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-xarray~7">xarray</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-xx~10">xx</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-y~28">y</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-yarray~7">yarray</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-yy~4">yy</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/qa3.html#src">QA3</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+          <li class="list-group-item">
+            <ul class="list-inline">
+                <li><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+
+    
+
+     <section class="visible-xs visible-sm hidden-md">
+         <h3>Contents</h3>
+  
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#vars-1">Variables</a>
+        </h3>
+      </div>
+      <div id="vars-1" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr1">ICHR1</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr2">ICHR2</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr3~2">ICHR3</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr4~2">ICHR4</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr5~2">ICHR5</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr6">ICHR6</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr7">ICHR7</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-ichr8">ICHR8</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-lbcd1">LBCD1</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-lbcd2">LBCD2</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-age~2">age</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-angle~13">angle</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-deltax~6">deltax</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-height~5">height</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-i~40">i</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-i10">i10</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-inteq~28">inteq</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-j~15">j</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-rad~4">rad</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-value~3">value</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-x~34">x</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-xarray~7">xarray</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-xx~10">xx</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-y~28">y</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-yarray~7">yarray</a>
+            <a class="list-group-item" href="../program/qa3.html#variable-yy~4">yy</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/qa3.html#src">QA3</a>
+      </div>
+    </div>
+
+
+     </section>
+     <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+<th></th><th>Initial</th>        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr1"></span>
+              character(len=28)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr2"></span>
+              character(len=26)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr3~2"></span>
+              character(len=4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr4~2"></span>
+              character(len=4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr5~2"></span>
+              character(len=19)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR5</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr6"></span>
+              character(len=21)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR6</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr7"></span>
+              character(len=19)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR7</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ichr8"></span>
+              character(len=17)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ICHR8</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lbcd1"></span>
+              character(len=10)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LBCD1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lbcd2"></span>
+              character(len=10)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>LBCD2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-age~2"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>age</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-angle~13"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>angle</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-deltax~6"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>deltax</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-height~5"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>height</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~40"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i10"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i10</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inteq~28"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>inteq</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~15"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rad~4"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>rad</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-value~3"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>value</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~34"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xarray~7"></span>
+              real,
+            </td>
+            <td>
+              dimension(62)
+            </td>
+            <td>::</td>
+            <td><strong>xarray</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xx~10"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~28"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yarray~7"></span>
+              real,
+            </td>
+            <td>
+              dimension(62)
+            </td>
+            <td>::</td>
+            <td><strong>yarray</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yy~4"></span>
+              real
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>yy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">PROGRAM </span><span class="n">QA3</span><span class="w"></span>
+<span class="c">! (LICENSE:Public Domain)</span>
+<span class="w">   </span><span class="k">USE </span><span class="n">M_calcomp</span><span class="w"></span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">28</span><span class="w"> </span><span class="n">ICHR1</span><span class="w"></span>
+<span class="w">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">26</span><span class="w"> </span><span class="n">ICHR2</span><span class="w"></span>
+<span class="w">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">4</span><span class="w">  </span><span class="n">ICHR3</span><span class="p">,</span><span class="n">ICHR4</span><span class="w"></span>
+<span class="w">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">19</span><span class="w"> </span><span class="n">ICHR5</span><span class="p">,</span><span class="n">ICHR7</span><span class="w"></span>
+<span class="w">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">21</span><span class="w"> </span><span class="n">ICHR6</span><span class="w"></span>
+<span class="w">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">17</span><span class="w"> </span><span class="n">ICHR8</span><span class="w"></span>
+<span class="w">   </span><span class="kt">CHARACTER</span><span class="o">*</span><span class="mi">10</span><span class="w"> </span><span class="n">LBCD1</span><span class="p">,</span><span class="n">LBCD2</span><span class="w"></span>
+<span class="w">   </span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">xx</span><span class="p">,</span><span class="w"> </span><span class="n">yy</span><span class="p">,</span><span class="w"> </span><span class="n">deltax</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">rad</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<span class="w">   </span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">xarray</span><span class="p">,</span><span class="w"> </span><span class="n">yarray</span><span class="w"></span>
+<span class="w">   </span><span class="k">DIMENSION </span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">62</span><span class="p">),</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">62</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i10</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">inteq</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR1</span><span class="o">=</span><span class="s1">&#39;PLOTTED ON A CALCOMP PLOTTER&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR2</span><span class="o">=</span><span class="s1">&#39;USING  Y = X -0.7*X +0.1*X&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR3</span><span class="o">=</span><span class="s1">&#39;ANG=&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR4</span><span class="o">=</span><span class="s1">&#39;, H=&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR5</span><span class="o">=</span><span class="s1">&#39;ANGULAR LETTER TEST&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR6</span><span class="o">=</span><span class="s1">&#39;CAR MODEL AGE (YEARS)&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR7</span><span class="o">=</span><span class="s1">&#39;CAR VALUE (DOLLARS)&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ICHR8</span><span class="o">=</span><span class="s1">&#39;AVERAGE CAR VALUE&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">LBCD1</span><span class="o">=</span><span class="s1">&#39;X-ABSCISSA&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">LBCD2</span><span class="o">=</span><span class="s1">&#39;Y-ORDINATE&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOTS</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">8.5</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">1</span><span class="mf">1.0</span><span class="p">)</span><span class="w"></span>
+<span class="c">! PLOT THREE GRAPHS ILLUSTRATING SCALE, AXIS, AND LINE</span>
+<span class="w">   </span><span class="n">DELTAX</span><span class="o">=</span><span class="mf">0.04</span><span class="w"></span>
+<span class="w">   </span><span class="k">DO </span><span class="mi">110</span><span class="w"> </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="w"></span>
+<span class="c">! AXIS DRAWS LABELS AS MUCH AS 0.4 INCHES TO THE NEGATIVE OF AXIS CENTER;</span>
+<span class="c">! EITHER USE AN ORIGIN OFFSET OF AT LEAST THIS VALUE OR DO NOT USE AN</span>
+<span class="c">! ORIGIN VALUE OF LESS THAN 0.4 OR CLIPPING WILL OCCUR</span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">DELTAX</span><span class="o">=</span><span class="mf">2.0</span><span class="o">*</span><span class="n">DELTAX</span><span class="w"></span>
+<span class="w">      </span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">DELTAX</span><span class="w"></span>
+<span class="w">      </span><span class="k">DO </span><span class="mi">105</span><span class="w"> </span><span class="n">J</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">60</span><span class="w"></span>
+<span class="w">         </span><span class="n">YARRAY</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="o">=</span><span class="n">XARRAY</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mf">0.7</span><span class="o">*</span><span class="n">XARRAY</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">+</span><span class="mf">0.1</span><span class="o">*</span><span class="n">XARRAY</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span><span class="w"></span>
+<span class="mi">105</span><span class="w">   </span><span class="n">XARRAY</span><span class="p">(</span><span class="n">J</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">XARRAY</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="o">+</span><span class="n">DELTAX</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="nb">SCALE</span><span class="p">(</span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mf">6.5</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="nb">SCALE</span><span class="p">(</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">AXIS</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="n">LBCD1</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">61</span><span class="p">),</span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">62</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">AXIS</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="n">LBCD2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">9</span><span class="mf">0.0</span><span class="p">,</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">61</span><span class="p">),</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">62</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NEWPEN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">LINE</span><span class="p">(</span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">60</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">I</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span><span class="n">I</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NEWPEN</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,.</span><span class="mi">14</span><span class="p">,</span><span class="n">ICHR1</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">28</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">9.7</span><span class="p">,.</span><span class="mi">14</span><span class="p">,</span><span class="n">ICHR2</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="mf">2.98</span><span class="p">,</span><span class="mf">9.8</span><span class="p">,.</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="mf">3.96</span><span class="p">,</span><span class="mf">9.8</span><span class="p">,.</span><span class="mi">1</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="mf">4.94</span><span class="p">,</span><span class="mf">9.8</span><span class="p">,.</span><span class="mi">1</span><span class="p">,</span><span class="mf">4.0</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="c">!110     CALL PLOT(10.0,0.0,-3)</span>
+<span class="mi">110</span><span class="w"> </span><span class="k">CALL </span><span class="n">NFRAME</span><span class="p">()</span><span class="w"></span>
+<span class="c">! PLOT ANGULAR LETTER TEST</span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">5.5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">ANGLE</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">   </span><span class="n">HEIGHT</span><span class="o">=</span><span class="mf">0.105</span><span class="w"></span>
+<span class="w">   </span><span class="k">DO </span><span class="mi">120</span><span class="w">  </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NEWPEN</span><span class="p">(</span><span class="n">I</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">RAD</span><span class="o">=</span><span class="mf">0.0174533</span><span class="o">*</span><span class="n">ANGLE</span><span class="w"></span>
+<span class="w">      </span><span class="n">XX</span><span class="o">=</span><span class="mf">0.5</span><span class="o">*</span><span class="nb">COS</span><span class="w"> </span><span class="p">(</span><span class="n">RAD</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">YY</span><span class="o">=</span><span class="mf">0.5</span><span class="o">*</span><span class="nb">SIN</span><span class="w"> </span><span class="p">(</span><span class="n">RAD</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="w"> </span><span class="n">XX</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="n">YY</span><span class="w">  </span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span><span class="n">ICHR3</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="n">ANGLE</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="mi">99</span><span class="mf">9.0</span><span class="p">,</span><span class="mi">99</span><span class="mf">9.0</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span><span class="n">ANGLE</span><span class="w"> </span><span class="p">,</span><span class="n">ANGLE</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mi">99</span><span class="mf">9.0</span><span class="p">,</span><span class="mi">99</span><span class="mf">9.0</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span><span class="n">ICHR4</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="n">ANGLE</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="mi">99</span><span class="mf">9.0</span><span class="p">,</span><span class="mi">99</span><span class="mf">9.0</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span><span class="n">HEIGHT</span><span class="p">,</span><span class="n">ANGLE</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">HEIGHT</span><span class="o">=</span><span class="n">HEIGHT</span><span class="o">+</span><span class="mf">0.035</span><span class="w"></span>
+<span class="w">      </span><span class="n">ANGLE</span><span class="o">=</span><span class="n">ANGLE</span><span class="o">+</span><span class="mi">4</span><span class="mf">5.0</span><span class="w"></span>
+<span class="mi">120</span><span class="w"> </span><span class="k">CONTINUE</span>
+<span class="k">   CALL </span><span class="n">NEWPEN</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="o">-</span><span class="mf">1.4</span><span class="p">,</span><span class="mf">4.0</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="n">ICHR5</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="w"> </span><span class="mf">4.5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="o">-</span><span class="mf">4.5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="o">-</span><span class="mf">4.5</span><span class="p">,</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="w"> </span><span class="mf">4.5</span><span class="p">,</span><span class="o">-</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="w"> </span><span class="mf">4.5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="c">!     CALL PLOT( 6.5,-5.5,-3)</span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">NFRAME</span><span class="p">()</span><span class="w"></span>
+<span class="c">!     CALL TO SYMBOL USES -0.5Y, -0.8-.14  X</span>
+<span class="c">!     (-.14 FOR CHARACTER HEIGHT)</span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="c">! PLOT CAR VALUE CHART WITHOUT USING SCALE,AXIS,OR LINE</span>
+<span class="w">   </span><span class="n">X</span><span class="o">=</span><span class="mf">1.0</span><span class="w"></span>
+<span class="c">! PLOT X-AXIS</span>
+<span class="w">   </span><span class="k">DO </span><span class="mi">130</span><span class="w"> </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="n">X</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="n">X</span><span class="w">   </span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="n">X</span><span class="w">   </span><span class="p">,</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="n">X</span><span class="o">-</span><span class="p">.</span><span class="mi">02</span><span class="p">,</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="mi">130</span><span class="w"> </span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="o">+</span><span class="mf">1.0</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="n">ICHR6</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span><span class="w"></span>
+<span class="c">! PLOT Y-AXIS</span>
+<span class="w">   </span><span class="k">VALUE</span><span class="o">=</span><span class="mi">100</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">   </span><span class="k">DO </span><span class="mi">140</span><span class="w">  </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="w"></span>
+<span class="w">      </span><span class="n">Y</span><span class="o">=</span><span class="mf">0.0015</span><span class="o">*</span><span class="k">VALUE</span>
+<span class="k">      CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="n">Y</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="n">Y</span><span class="o">-</span><span class="p">.</span><span class="mi">75</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="o">-</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="n">Y</span><span class="o">-</span><span class="p">.</span><span class="mi">75</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="n">Y</span><span class="o">-</span><span class="p">.</span><span class="mi">75</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="n">Y</span><span class="w">    </span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="o">-</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="n">Y</span><span class="w">    </span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">NUMBER</span><span class="p">(</span><span class="o">-</span><span class="mf">0.7</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="k">VALUE</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="mi">140</span><span class="w"> </span><span class="k">VALUE</span><span class="o">=</span><span class="k">VALUE</span><span class="o">+</span><span class="mi">100</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="n">ICHR7</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="mi">9</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">19</span><span class="p">)</span><span class="w"></span>
+<span class="c">! PLOT CURVES</span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">NEWPEN</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">DO </span><span class="mi">150</span><span class="w">  </span><span class="n">I</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span><span class="mi">6000</span><span class="p">,</span><span class="mi">500</span><span class="w"></span>
+<span class="w">      </span><span class="k">VALUE</span><span class="o">=</span><span class="n">I</span><span class="w"></span>
+<span class="w">      </span><span class="n">AGE</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="n">AGE</span><span class="p">,</span><span class="mf">0.0015</span><span class="o">*</span><span class="k">VALUE</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">DO </span><span class="mi">150</span><span class="w">  </span><span class="n">J</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">84</span><span class="w"></span>
+<span class="w">         </span><span class="k">VALUE</span><span class="o">=</span><span class="k">VALUE</span><span class="o">*</span><span class="mf">0.972</span><span class="w"></span>
+<span class="w">         </span><span class="n">AGE</span><span class="o">=</span><span class="n">AGE</span><span class="o">+</span><span class="mf">0.08333</span><span class="w"></span>
+<span class="mi">150</span><span class="w"> </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="n">AGE</span><span class="p">,</span><span class="mf">0.0015</span><span class="o">*</span><span class="k">VALUE</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">NEWPEN</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="n">ICHR8</span><span class="p">,</span><span class="n">INTEQ</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">999</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">STOP</span>
+<span class="k">END PROGRAM </span><span class="n">QA3</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-6"><p>M_calcomp was developed by John S. Urban<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <p class="text-right">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-04-12 06:15              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+         ================================================== -->
+         <!-- Placed at the end of the document so the pages load faster -->
+    <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+        <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
