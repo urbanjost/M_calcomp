@@ -1,4 +1,4 @@
-# TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
+# TOML file for fpm as described at https://fpm.fortran-lang.org/en/spec/manifest.html
 name = "M_calcomp"
 version = "0.1.0"
 license = "Public Domain"
@@ -10,11 +10,12 @@ categories = ["graphics"]
 keywords = ["fortran", "Calcomp", "plot", "graph", "draw"]
 homepage = "https://github.com/urbanjost/M_calcomp"
 
-[install] 
+[install]
 library = true
 
-[build] 
+[build]
 link = "X11"
+#module-naming = true
 
 [library]
 source-dir="src"
@@ -30,4 +31,4 @@ name="test_suite_M_calcomp"
 source-dir="test"
 main="test_suite_M_calcomp.f90"
 [test.dependencies]
-M_msg = { git = "https://github.com/urbanjost/M_msg.git" }
+M_framework = { git = "https://github.com/urbanjost/M_framework.git" }
