@@ -8,7 +8,7 @@
     <meta name="author" content="John S. Urban" >
     <link rel="icon" href="../favicon.png">
 
-    <title>QA7 &ndash; M_calcomp</title>
+    <title>qa7 &ndash; M_calcomp</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
@@ -84,7 +84,7 @@
 
     <div class="container">
   <div class="row">
-    <h1>QA7      <small>Program</small>
+    <h1>qa7      <small>Program</small>
       
     </h1>
       <div class="row" id="info-bar">
@@ -95,7 +95,7 @@
           <li id="statements"><i class="fa fa-list-ol"></i>
             <a data-toggle="tooltip"
                data-placement="bottom" data-html="true"
-               title=" 3.6% of total for programs.">83 statements</a>
+               title=" 3.7% of total for programs.">84 statements</a>
           </li>
 
             <li id="source-file">
@@ -105,7 +105,7 @@
         </ul>
         <ol class="breadcrumb in-well text-right">
               <li><a href='../sourcefile/framesize.f90.html'>framesize.f90</a></li>
-          <li class="active">QA7</li>
+          <li class="active">qa7</li>
         </ol>
       </div>
     </div>
@@ -131,11 +131,11 @@
       </div>
       <div id="vars-0" class="panel-collapse collapse">
         <div class="list-group">
-            <a class="list-group-item" href="../program/qa7.html#variable-i~37">i</a>
-            <a class="list-group-item" href="../program/qa7.html#variable-k~13">k</a>
-            <a class="list-group-item" href="../program/qa7.html#variable-x~31">x</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-i~41">i</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-k~14">k</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-x~35">x</a>
             <a class="list-group-item" href="../program/qa7.html#variable-xarray~6">xarray</a>
-            <a class="list-group-item" href="../program/qa7.html#variable-y~26">y</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-y~29">y</a>
             <a class="list-group-item" href="../program/qa7.html#variable-yarray~6">yarray</a>
         </div>
       </div>
@@ -161,7 +161,7 @@
     <div class="panel panel-primary">
       <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
       <div class="list-group">
-        <a class="list-group-item" href="../program/qa7.html#src">QA7</a>
+        <a class="list-group-item" href="../program/qa7.html#src">qa7</a>
       </div>
     </div>
 
@@ -197,11 +197,11 @@
       </div>
       <div id="vars-1" class="panel-collapse collapse">
         <div class="list-group">
-            <a class="list-group-item" href="../program/qa7.html#variable-i~37">i</a>
-            <a class="list-group-item" href="../program/qa7.html#variable-k~13">k</a>
-            <a class="list-group-item" href="../program/qa7.html#variable-x~31">x</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-i~41">i</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-k~14">k</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-x~35">x</a>
             <a class="list-group-item" href="../program/qa7.html#variable-xarray~6">xarray</a>
-            <a class="list-group-item" href="../program/qa7.html#variable-y~26">y</a>
+            <a class="list-group-item" href="../program/qa7.html#variable-y~29">y</a>
             <a class="list-group-item" href="../program/qa7.html#variable-yarray~6">yarray</a>
         </div>
       </div>
@@ -227,7 +227,7 @@
     <div class="panel panel-primary">
       <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
       <div class="list-group">
-        <a class="list-group-item" href="../program/qa7.html#src">QA7</a>
+        <a class="list-group-item" href="../program/qa7.html#src">qa7</a>
       </div>
     </div>
 
@@ -250,7 +250,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-i~37"></span>
+              <span class="anchor" id="variable-i~41"></span>
               integer
             </td>
             <td>
@@ -266,7 +266,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~13"></span>
+              <span class="anchor" id="variable-k~14"></span>
               integer
             </td>
             <td>
@@ -282,7 +282,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~31"></span>
+              <span class="anchor" id="variable-x~35"></span>
               real
             </td>
             <td>
@@ -314,7 +314,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~26"></span>
+              <span class="anchor" id="variable-y~29"></span>
               real
             </td>
             <td>
@@ -359,86 +359,87 @@
     
     <section>
     <h2 id="src">Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">PROGRAM </span><span class="n">QA7</span><span class="w"></span>
+    <div class="highlight"><pre><span></span><span class="k">program </span><span class="n">qa7</span><span class="w"></span>
 <span class="c">! (LICENSE:Public Domain)</span>
-<span class="k">USE </span><span class="n">M_calcomp</span><span class="w"></span>
-<span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">xarray</span><span class="p">,</span><span class="w"> </span><span class="n">yarray</span><span class="w"></span>
-<span class="k">DIMENSION </span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
-<span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="k">DATA </span><span class="n">XARRAY</span><span class="o">/</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">1</span><span class="mf">6.0</span><span class="p">,</span><span class="mi">2</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">2</span><span class="mf">3.0</span><span class="p">,</span><span class="mi">2</span><span class="mf">8.0</span><span class="p">,</span><span class="mi">3</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">4</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="mf">4.0</span><span class="p">,</span><span class="mi">5</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">6</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">6</span><span class="mf">4.0</span><span class="p">,</span><span class="mi">6</span><span class="mf">9.0</span><span class="p">,</span><span class="mi">7</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">8</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">8</span><span class="mf">8.0</span><span class="p">,</span><span class="mi">0</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">0</span><span class="mf">0.0</span><span class="o">/</span><span class="w"></span>
-<span class="k">DATA </span><span class="n">YARRAY</span><span class="o">/</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="mf">8.0</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span><span class="mf">8.0</span><span class="p">,</span><span class="o">-</span><span class="mi">11</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">12</span><span class="mf">5.0</span><span class="p">,</span><span class="o">-</span><span class="mi">14</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">13</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">11</span><span class="mf">5.0</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="mf">5.0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">2</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">3</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">4</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">5</span><span class="mf">8.0</span><span class="p">,</span><span class="mi">0</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">00</span><span class="mf">0.0</span><span class="o">/</span><span class="w"></span>
+<span class="w">   </span><span class="k">use </span><span class="n">M_calcomp</span><span class="w"></span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">xarray</span><span class="p">,</span><span class="w"> </span><span class="n">yarray</span><span class="w"></span>
+<span class="w">   </span><span class="k">dimension </span><span class="n">xarray</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w"> </span><span class="n">yarray</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="w">   </span><span class="kt">real</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<span class="w">   </span><span class="k">data </span><span class="n">xarray</span><span class="o">/</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">6.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="mf">9.0</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="mf">8.0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="mf">0.0</span><span class="o">/</span><span class="w"></span>
+<span class="w">  </span><span class="k">data </span><span class="n">yarray</span><span class="o">/</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="mf">8.0</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span><span class="mf">8.0</span><span class="p">,</span><span class="o">-</span><span class="mi">11</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">12</span><span class="mf">5.0</span><span class="p">,</span><span class="o">-</span><span class="mi">14</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">13</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">11</span><span class="mf">5.0</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="mf">5.0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">2</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">3</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">4</span><span class="mf">2.0</span><span class="p">,</span><span class="mi">5</span><span class="mf">8.0</span><span class="p">,</span><span class="mi">0</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">00</span><span class="mf">0.0</span><span class="o">/</span><span class="w"></span>
 <span class="c">!    CHECK RELATIVE FRAME SIZING</span>
 <span class="c">!    USING 1 AND 2 MAKE SURE MAXIMUM VALUE BECOMES UPPER LEFT CORNER</span>
 <span class="c">!    OF PLOT AND USING 3 MAKE SURE LARGE ORIGIN OFFSETS ARE WORKING</span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOTS</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">8.5</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">1</span><span class="mf">1.0</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">DO </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="w"> </span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="nb">SCALE</span><span class="w"> </span><span class="p">(</span><span class="n">XARRAY</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="nb">SCALE</span><span class="w"> </span><span class="p">(</span><span class="n">YARRAY</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">IF</span><span class="p">(</span><span class="n">I</span><span class="p">.</span><span class="n">LE</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="k">THEN</span>
-<span class="k">         IF</span><span class="p">(</span><span class="n">I</span><span class="p">.</span><span class="n">EQ</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="k">THEN</span>
-<span class="k">            </span><span class="n">X</span><span class="o">=</span><span class="mf">6.0</span><span class="w"></span>
-<span class="w">            </span><span class="n">Y</span><span class="o">=</span><span class="mf">7.0</span><span class="w"></span>
-<span class="w">         </span><span class="k">ELSE</span>
-<span class="k">            </span><span class="n">X</span><span class="o">=</span><span class="mf">8.0</span><span class="w"></span>
-<span class="w">            </span><span class="n">Y</span><span class="o">=</span><span class="mf">9.5</span><span class="w"></span>
-<span class="w">         </span><span class="k">ENDIF</span>
-<span class="k">         CALL </span><span class="n">PLOT</span><span class="w"> </span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="k">CALL </span><span class="n">PLOT</span><span class="w"> </span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="k">CALL </span><span class="n">PLOT</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="k">CALL </span><span class="n">PLOT</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">ELSE</span>
-<span class="k">         CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">2</span><span class="mf">2.5</span><span class="p">,</span><span class="mi">1</span><span class="mf">3.5</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">ENDIF</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plots</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">8.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">1.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="nb">scale</span><span class="p">(</span><span class="n">xarray</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="nb">scale</span><span class="p">(</span><span class="n">yarray</span><span class="p">,</span><span class="w"> </span><span class="mf">6.0</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">.</span><span class="n">le</span><span class="p">.</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.0</span><span class="w"></span>
+<span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.0</span><span class="w"></span>
+<span class="w">         </span><span class="k">else</span>
+<span class="k">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.0</span><span class="w"></span>
+<span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.5</span><span class="w"></span>
+<span class="w">         </span><span class="k">endif</span>
+<span class="k">         call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         call </span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">endif</span><span class="w"></span>
 <span class="c">!CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">AXIS</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s1">&#39;TIME IN MILLISECONDS&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">19</span><span class="p">),</span><span class="w"> </span><span class="n">XARRAY</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">AXIS</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s1">&#39;VOLTAGE&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mi">9</span><span class="mf">0.0</span><span class="p">,</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">19</span><span class="p">),</span><span class="n">YARRAY</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">LINE</span><span class="w"> </span><span class="p">(</span><span class="n">XARRAY</span><span class="p">,</span><span class="n">YARRAY</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="w"> </span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">5.6</span><span class="p">,</span><span class="mf">0.21</span><span class="p">,</span><span class="s1">&#39;PERFORMANCE TST1&#39;</span><span class="p">,</span><span class="mi">999</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="w"> </span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">5.2</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="s1">&#39;REF. NO. 1623-46&#39;</span><span class="p">,</span><span class="mi">999</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">NFRAME</span><span class="p">()</span><span class="w"></span>
-<span class="w">   </span><span class="k">ENDDO</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">axis</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;TIME IN MILLISECONDS&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">xarray</span><span class="p">(</span><span class="mi">19</span><span class="p">),</span><span class="w"> </span><span class="n">xarray</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">axis</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;VOLTAGE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mf">6.0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">yarray</span><span class="p">(</span><span class="mi">19</span><span class="p">),</span><span class="w"> </span><span class="n">yarray</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">line</span><span class="p">(</span><span class="n">xarray</span><span class="p">,</span><span class="w"> </span><span class="n">yarray</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.21</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PERFORMANCE TST1&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.14</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;REF. NO. 1623-46&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">nframe</span><span class="p">()</span><span class="w"></span>
+<span class="w">   </span><span class="k">end do</span><span class="w"></span>
 <span class="c">!CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
 <span class="c">!</span>
 <span class="c">! CHECK OUT INTENSITY SETTINGS WITH HARDWARE CHARACTERS</span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;HARD&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;XLAR&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">Y</span><span class="o">=</span><span class="p">.</span><span class="mi">25</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">DO </span><span class="n">K</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">13</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">SETPAR</span><span class="p">(</span><span class="s1">&#39;INTE&#39;</span><span class="p">,</span><span class="n">K</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(.</span><span class="mi">5</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">5.</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">5.1</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mf">7.0</span><span class="p">,</span><span class="s1">&#39;AMR&#39;</span><span class="p">,</span><span class="mi">999</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="o">+</span><span class="p">.</span><span class="mi">5</span><span class="w"></span>
-<span class="w">   </span><span class="k">ENDDO</span>
-<span class="k">   CALL </span><span class="n">NFRAME</span><span class="p">()</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;HARD&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;XLAR&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="mi">25</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">setpar</span><span class="p">(</span><span class="s1">&#39;INTE&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">5.</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">5.1</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mf">7.0</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;AMR&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">.</span><span class="mi">5</span><span class="w"></span>
+<span class="w">   </span><span class="k">end do</span>
+<span class="k">   call </span><span class="n">nframe</span><span class="p">()</span><span class="w"></span>
 <span class="c">!CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
 <span class="c">!     TEST HARDWARE TEXT SIZES</span>
 <span class="c">!</span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;HARD&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;MEDI&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;HARD&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;MEDI&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 <span class="c">!</span>
-<span class="w">   </span><span class="n">Y</span><span class="o">=</span><span class="mf">0.</span><span class="w"></span>
-<span class="w">   </span><span class="k">DO </span><span class="n">I</span><span class="o">=</span><span class="mi">19</span><span class="p">,</span><span class="mi">30</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">MPSET</span><span class="p">(</span><span class="s1">&#39;TSIZ&#39;</span><span class="p">,</span><span class="nb">FLOAT</span><span class="p">(</span><span class="n">I</span><span class="p">))</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="n">Y</span><span class="p">,.</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;TEST @@@@@\\\\\ END &#39;</span><span class="w"> </span><span class="p">,</span><span class="mi">999</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="o">+</span><span class="p">.</span><span class="mi">31</span><span class="w"></span>
+<span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="w"></span>
+<span class="w">   </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">mpset</span><span class="p">(</span><span class="s1">&#39;TSIZ&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;TEST @@@@@\\\\\ END &#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">.</span><span class="mi">31</span><span class="w"></span>
 <span class="w">   </span><span class="k">enddo</span>
-<span class="k">   CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;SOFT&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.</span><span class="p">,.</span><span class="mi">50</span><span class="p">,</span><span class="s1">&#39;.50 INCH CHARACTERS &#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mi">1</span><span class="mf">1.</span><span class="p">,.</span><span class="mi">50</span><span class="p">,</span><span class="s1">&#39;.50 INCH CHARACTERS &#39;</span><span class="p">,</span><span class="mi">999</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">NFRAME</span><span class="p">()</span><span class="w"></span>
+<span class="k">   call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;SOFT&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;.50 INCH CHARACTERS &#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;.50 INCH CHARACTERS &#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">nframe</span><span class="p">()</span><span class="w"></span>
 <span class="c">!CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
 <span class="c">!</span>
 <span class="c">!        A COMPILED COPY OF THE FR80 DUMPER IS AVAILABLE; JUST MAKE</span>
@@ -452,23 +453,23 @@
 <span class="c">!        DUMP.</span>
 <span class="c">!     TEST THE USE OF HARDWARE CHARACTERS ON THE COM UNITS</span>
 <span class="c">!</span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;HARD&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">MSET</span><span class="p">(</span><span class="s2">&quot;MEDI&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;HARD&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">mset</span><span class="p">(</span><span class="s2">&quot;MEDI&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mi">2</span><span class="mf">8.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 <span class="c">!</span>
-<span class="w">   </span><span class="n">Y</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
-<span class="w">   </span><span class="k">DO </span><span class="n">I</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">64</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">MPSET</span><span class="p">(</span><span class="s1">&#39;TSIZ&#39;</span><span class="p">,</span><span class="nb">FLOAT</span><span class="p">(</span><span class="n">I</span><span class="p">))</span><span class="w"></span>
-<span class="w">      </span><span class="k">CALL </span><span class="n">SYMBOL</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="n">Y</span><span class="p">,.</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;TEST @@@@@\\\\\ END &#39;</span><span class="p">,</span><span class="mi">999</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">Y</span><span class="o">=</span><span class="n">Y</span><span class="o">+</span><span class="p">.</span><span class="mi">31</span><span class="w"></span>
+<span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">   </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">mpset</span><span class="p">(</span><span class="s1">&#39;TSIZ&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;TEST @@@@@\\\\\ END &#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">,</span><span class="w"> </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">.</span><span class="mi">31</span><span class="w"></span>
 <span class="w">   </span><span class="k">enddo</span><span class="w"></span>
 <span class="c">!CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</span>
-<span class="w">   </span><span class="k">CALL </span><span class="n">PLOT</span><span class="w"> </span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mi">999</span><span class="p">)</span><span class="w"></span>
-<span class="k">END PROGRAM </span><span class="n">QA7</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">)</span><span class="w"></span>
+<span class="k">end program </span><span class="n">qa7</span><span class="w"></span>
 </pre></div>
 
     </section>
@@ -488,7 +489,7 @@
             <p class="text-right">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-04-23 22:13              </p>
+ on 2023-05-28 00:43              </p>
           </div>
         </div>
         <br>

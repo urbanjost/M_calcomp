@@ -1,9 +1,9 @@
      program demo_scale
      use M_calcomp
      implicit none
-     character*28 ichr1
-     character*26 ichr2
-     character*10 lbcd1, lbcd2
+     character(len=28) :: ichr1
+     character(len=26) :: ichr2
+     character(len=10) :: lbcd1, lbcd2
      real :: xarray, yarray
      dimension xarray(62), yarray(62)
      real :: deltax

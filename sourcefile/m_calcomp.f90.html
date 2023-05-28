@@ -96,7 +96,7 @@
           <li id="statements"><i class="fa fa-list-ol"></i>
             <a data-toggle="tooltip"
                data-placement="bottom" data-html="true"
-               title="54.4% of total for source files.">2725 statements</a>
+               title="54.3% of total for source files.">2725 statements</a>
           </li>
 
             <li id="source-file">
@@ -1500,11 +1500,11 @@
 <a id="ln-1285" name="ln-1285" href="#ln-1285"></a><span class="c">!!</span>
 <a id="ln-1286" name="ln-1286" href="#ln-1286"></a><span class="c">!!    program demo_dashl</span>
 <a id="ln-1287" name="ln-1287" href="#ln-1287"></a><span class="c">!!    use m_calcomp</span>
-<a id="ln-1288" name="ln-1288" href="#ln-1288"></a><span class="c">!!    character(len=28) :: ichr1</span>
-<a id="ln-1289" name="ln-1289" href="#ln-1289"></a><span class="c">!!    character(len=26) :: ichr2</span>
-<a id="ln-1290" name="ln-1290" href="#ln-1290"></a><span class="c">!!    character(len=10) :: lbcd1,lbcd2</span>
-<a id="ln-1291" name="ln-1291" href="#ln-1291"></a><span class="c">!!    real :: xarray, yarray</span>
-<a id="ln-1292" name="ln-1292" href="#ln-1292"></a><span class="c">!!    dimension xarray(62),yarray(62)</span>
+<a id="ln-1288" name="ln-1288" href="#ln-1288"></a><span class="c">!!    implicit none</span>
+<a id="ln-1289" name="ln-1289" href="#ln-1289"></a><span class="c">!!    character(len=28) :: ichr1</span>
+<a id="ln-1290" name="ln-1290" href="#ln-1290"></a><span class="c">!!    character(len=26) :: ichr2</span>
+<a id="ln-1291" name="ln-1291" href="#ln-1291"></a><span class="c">!!    character(len=10) :: lbcd1,lbcd2</span>
+<a id="ln-1292" name="ln-1292" href="#ln-1292"></a><span class="c">!!    real :: xarray(62),yarray(62)</span>
 <a id="ln-1293" name="ln-1293" href="#ln-1293"></a><span class="c">!!    real :: deltax</span>
 <a id="ln-1294" name="ln-1294" href="#ln-1294"></a><span class="c">!!    integer :: j, inteq</span>
 <a id="ln-1295" name="ln-1295" href="#ln-1295"></a><span class="c">!!    ichr1=&#39;PLOTTED ON A CALCOMP PLOTTER&#39;</span>
@@ -5181,7 +5181,7 @@
 <a id="ln-4966" name="ln-4966" href="#ln-4966"></a><span class="c">! DATE: 3/85</span>
 <a id="ln-4967" name="ln-4967" href="#ln-4967"></a><span class="c">!</span>
 <a id="ln-4968" name="ln-4968" href="#ln-4968"></a><span class="w">   </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mode</span><span class="w"></span>
-<a id="ln-4969" name="ln-4969" href="#ln-4969"></a><span class="w">   </span><span class="kt">character </span><span class="n">l_mode</span><span class="o">*</span><span class="mi">8</span><span class="w"></span>
+<a id="ln-4969" name="ln-4969" href="#ln-4969"></a><span class="w">   </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">l_mode</span><span class="w"></span>
 <a id="ln-4970" name="ln-4970" href="#ln-4970"></a><span class="c">!</span>
 <a id="ln-4971" name="ln-4971" href="#ln-4971"></a><span class="w">   </span><span class="n">l_mode</span><span class="o">=</span><span class="n">mode</span><span class="w"></span>
 <a id="ln-4972" name="ln-4972" href="#ln-4972"></a><span class="c">!</span>
@@ -6517,9 +6517,9 @@
 <a id="ln-6302" name="ln-6302" href="#ln-6302"></a><span class="c">!!    program demo_scale</span>
 <a id="ln-6303" name="ln-6303" href="#ln-6303"></a><span class="c">!!    use M_calcomp</span>
 <a id="ln-6304" name="ln-6304" href="#ln-6304"></a><span class="c">!!    implicit none</span>
-<a id="ln-6305" name="ln-6305" href="#ln-6305"></a><span class="c">!!    character*28 ichr1</span>
-<a id="ln-6306" name="ln-6306" href="#ln-6306"></a><span class="c">!!    character*26 ichr2</span>
-<a id="ln-6307" name="ln-6307" href="#ln-6307"></a><span class="c">!!    character*10 lbcd1, lbcd2</span>
+<a id="ln-6305" name="ln-6305" href="#ln-6305"></a><span class="c">!!    character(len=28) :: ichr1</span>
+<a id="ln-6306" name="ln-6306" href="#ln-6306"></a><span class="c">!!    character(len=26) :: ichr2</span>
+<a id="ln-6307" name="ln-6307" href="#ln-6307"></a><span class="c">!!    character(len=10) :: lbcd1, lbcd2</span>
 <a id="ln-6308" name="ln-6308" href="#ln-6308"></a><span class="c">!!    real :: xarray, yarray</span>
 <a id="ln-6309" name="ln-6309" href="#ln-6309"></a><span class="c">!!    dimension xarray(62), yarray(62)</span>
 <a id="ln-6310" name="ln-6310" href="#ln-6310"></a><span class="c">!!    real :: deltax</span>
@@ -6728,7 +6728,7 @@
 <a id="ln-6513" name="ln-6513" href="#ln-6513"></a><span class="c">!!  For example, the following call to SYMBOL will result in the characters TITLE</span>
 <a id="ln-6514" name="ln-6514" href="#ln-6514"></a><span class="c">!!  10 being output beginning at the X and Y coordinates of 1.0 .</span>
 <a id="ln-6515" name="ln-6515" href="#ln-6515"></a><span class="c">!!</span>
-<a id="ln-6516" name="ln-6516" href="#ln-6516"></a><span class="c">!!     character grlbl*8</span>
+<a id="ln-6516" name="ln-6516" href="#ln-6516"></a><span class="c">!!     character(len=8) :: grlbl</span>
 <a id="ln-6517" name="ln-6517" href="#ln-6517"></a><span class="c">!!     grlbl=&#39;title 10&#39;</span>
 <a id="ln-6518" name="ln-6518" href="#ln-6518"></a><span class="c">!!     call symbol(1.0,1.0,0.14,grlbl,999,0.0,8)</span>
 <a id="ln-6519" name="ln-6519" href="#ln-6519"></a><span class="c">!!</span>
@@ -7531,7 +7531,7 @@
 <a id="ln-7316" name="ln-7316" href="#ln-7316"></a><span class="c">! ident_31=&quot;@(#) m_calcomp cntour(3f) draw a contour plot&quot;</span>
 <a id="ln-7317" name="ln-7317" href="#ln-7317"></a>
 <a id="ln-7318" name="ln-7318" href="#ln-7318"></a><span class="kt">integer </span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span><span class="n">cvn</span><span class="w"></span>
-<a id="ln-7319" name="ln-7319" href="#ln-7319"></a><span class="kt">character </span><span class="n">encxde</span><span class="o">*</span><span class="mi">9</span><span class="w"></span>
+<a id="ln-7319" name="ln-7319" href="#ln-7319"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">encxde</span><span class="w"></span>
 <a id="ln-7320" name="ln-7320" href="#ln-7320"></a><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ndimyy</span><span class="w"></span>
 <a id="ln-7321" name="ln-7321" href="#ln-7321"></a><span class="kt">real </span><span class="n">am</span><span class="p">(</span><span class="n">ndimyy</span><span class="p">,</span><span class="o">*</span><span class="p">),</span><span class="n">totx</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="n">toty</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="n">cv</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="n">hgt</span><span class="w"></span>
 <a id="ln-7322" name="ln-7322" href="#ln-7322"></a><span class="kt">logical </span><span class="n">tab</span><span class="w"></span>
@@ -8467,7 +8467,7 @@
             <p class="text-right">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-04-23 22:13              </p>
+ on 2023-05-28 00:43              </p>
           </div>
         </div>
         <br>
