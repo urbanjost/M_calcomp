@@ -1285,11 +1285,11 @@ end subroutine circl
 !!
 !!    program demo_dashl
 !!    use m_calcomp
+!!    implicit none
 !!    character(len=28) :: ichr1
 !!    character(len=26) :: ichr2
 !!    character(len=10) :: lbcd1,lbcd2
-!!    real :: xarray, yarray
-!!    dimension xarray(62),yarray(62)
+!!    real :: xarray(62),yarray(62)
 !!    real :: deltax
 !!    integer :: j, inteq
 !!    ichr1='PLOTTED ON A CALCOMP PLOTTER'
@@ -4966,7 +4966,7 @@ subroutine mset(mode)
 ! DATE: 3/85
 !
    character(len=*),intent(in) :: mode
-   character l_mode*8
+   character(len=8) :: l_mode
 !
    l_mode=mode
 !
@@ -6302,9 +6302,9 @@ end subroutine plots
 !!    program demo_scale
 !!    use M_calcomp
 !!    implicit none
-!!    character*28 ichr1
-!!    character*26 ichr2
-!!    character*10 lbcd1, lbcd2
+!!    character(len=28) :: ichr1
+!!    character(len=26) :: ichr2
+!!    character(len=10) :: lbcd1, lbcd2
 !!    real :: xarray, yarray
 !!    dimension xarray(62), yarray(62)
 !!    real :: deltax
@@ -6513,7 +6513,7 @@ end subroutine scale
 !!  For example, the following call to SYMBOL will result in the characters TITLE
 !!  10 being output beginning at the X and Y coordinates of 1.0 .
 !!
-!!     character grlbl*8
+!!     character(len=8) :: grlbl
 !!     grlbl='title 10'
 !!     call symbol(1.0,1.0,0.14,grlbl,999,0.0,8)
 !!
@@ -7316,7 +7316,7 @@ subroutine cntour (am,xx,yy,totx,toty,hgt,cv,cvn,tab,ndimyy)
 ! ident_31="@(#) m_calcomp cntour(3f) draw a contour plot"
 
 integer xx,yy,cvn
-character encxde*9
+character(len=9) :: encxde
 integer :: ndimyy
 real am(ndimyy,*),totx(*),toty(*),cv(*),hgt
 logical tab

@@ -11,24 +11,33 @@ keywords = ["fortran", "Calcomp", "plot", "graph", "draw"]
 homepage = "https://github.com/urbanjost/M_calcomp"
 
 [install]
-library = true
+   library = true
 
 [build]
-link = "X11"
-#module-naming = true
+   link = "X11"
+   auto-executables = true
+   auto-tests = true
+   auto-examples = true
+   module-naming = false
+
+[fortran]
+   implicit-typing = false
+   implicit-external = false
+   source-form = "free"
 
 [library]
-source-dir="src"
+   source-dir="src"
 
 [dependencies]
-M_draw = { git = "https://github.com/urbanjost/M_draw.git" }
-M_strings = { git = "https://github.com/urbanjost/M_strings.git" }
+   M_draw = { git = "https://github.com/urbanjost/M_draw.git" }
+   M_strings = { git = "https://github.com/urbanjost/M_strings.git" }
 
 [dev-dependencies]
 
 [[test]]
-name="test_suite_M_calcomp"
-source-dir="test"
-main="test_suite_M_calcomp.f90"
-[test.dependencies]
-M_framework = { git = "https://github.com/urbanjost/M_framework.git" }
+   name="test_suite_M_calcomp"
+   source-dir="test"
+   main="test_suite_M_calcomp.f90"
+   [test.dependencies]
+   M_framework = { git = "https://github.com/urbanjost/M_framework.git" }
+

@@ -1,10 +1,10 @@
      program demo_dashl
      use m_calcomp
+     implicit none
      character(len=28) :: ichr1
      character(len=26) :: ichr2
      character(len=10) :: lbcd1,lbcd2
-     real :: xarray, yarray
-     dimension xarray(62),yarray(62)
+     real :: xarray(62),yarray(62)
      real :: deltax
      integer :: j, inteq
      ichr1='PLOTTED ON A CALCOMP PLOTTER'
