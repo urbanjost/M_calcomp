@@ -1,3 +1,5 @@
+<!-- -*- mode: jinja2 -*- -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,77 +12,53 @@
 
     <title>curvy &ndash; M_calcomp</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
       <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-         <script src="../js/jquery-2.1.3.min.js"></script>
-         <script src="../js/svg-pan-zoom.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
           <a class="navbar-brand" href="../index.html">M_calcomp </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
-              <a href="#" class="dropdown-toggle"
-                 data-toggle="dropdown" role="button"
-                 aria-haspopup="true"
-                 aria-expanded="false">
-                 Contents <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                    <li><a href="../lists/files.html">Source Files</a></li>
-                  <li><a href="../lists/modules.html">Modules</a></li>
-                  <li><a href="../lists/procedures.html">Procedures</a></li>
-                  <li><a href="../lists/programs.html">Programs</a></li>
-              </ul>
-            </li>
-                <li class="visible-xs hidden-sm visible-lg">
-                  <a href="../lists/files.html">Source Files</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
                 </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/modules.html">Modules</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/procedures.html">Procedures</a>
-              </li>
-              <li class="visible-xs hidden-sm visible-lg">
-                <a href="../lists/programs.html">Programs</a>
-              </li>
-          </ul>
-            <form action="../search.html" class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
               </div>
-              <!--
-                  <button type="submit" class="btn btn-default">Submit</button>
-                  -->
-            </form>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
 
     <div class="container">
   <div class="row">
@@ -88,33 +66,37 @@
       <small>Subroutine</small>
       
     </h1>
-      <div class="row" id="info-bar">
-    <div class="col-lg-12">
-      <div class="well well-sm">
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
-          <li id="statements"><i class="fa fa-list-ol"></i>
-            <a data-toggle="tooltip"
-               data-placement="bottom" data-html="true"
-               title=" 1.5% of total for procedures.">39 statements</a>
-          </li>
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.5% of total for procedures.">39 statements</a>
+            </li>
 
-            <li id="source-file">
+            <li class="list-inline-item" id="source-file">
               <i class="fa fa-code"></i>
               <a href="../src/M_calcomp.F90"> Source File</a>
             </li>
         </ul>
-        <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.F90</a></li>
-              <li><a href='../module/m_calcomp.html'>M_calcomp</a></li>
-          <li class="active">curvy</li>
-        </ol>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+            <li class="breadcrumb-item active" aria-current="page">curvy</li>
+          </ol>
+        </nav>
       </div>
     </div>
   </div>
   <script>
     $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-bs-toggle="tooltip"]').tooltip()
     })
   </script>
 
@@ -125,22 +107,21 @@
       <div id="sidebar">
       <h3>Contents</h3>
   
-      <div class="panel panel-primary">
-      <div class="panel-heading text-left">
-        <h3 class="panel-title">
-          <a data-toggle="collapse" href="#vars-0">Variables</a>
-        </h3>
-      </div>
-      <div id="vars-0" class="panel-collapse collapse">
-        <div class="list-group">
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
             <a class="list-group-item" href="../proc/curvy.html#variable-dlt~2">dlt</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-dy~3">dy</a>
+            <a class="list-group-item" href="../proc/curvy.html#variable-dy~4">dy</a>
             <a class="list-group-item" href="../proc/curvy.html#variable-i3~2">i3</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-iv~3">iv</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-n~4">n</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-x~6">x</a>
+            <a class="list-group-item" href="../proc/curvy.html#variable-iv~4">iv</a>
+            <a class="list-group-item" href="../proc/curvy.html#variable-n~8">n</a>
+            <a class="list-group-item" href="../proc/curvy.html#variable-x~13">x</a>
             <a class="list-group-item" href="../proc/curvy.html#variable-xfct~2">xfct</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-y~6">y</a>
+            <a class="list-group-item" href="../proc/curvy.html#variable-y~12">y</a>
         </div>
       </div>
     </div>
@@ -162,8 +143,9 @@
   
   
   
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
       <div class="list-group">
         <a class="list-group-item" href="../proc/curvy.html#src">curvy</a>
       </div>
@@ -212,49 +194,49 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
 <p>If Y is zero or negative, errors may be generated.</p>
 <h2 id="example">EXAMPLE</h2>
 <p>Sample program</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">program</span> <span class="nv">demo_curvx</span>
-<span class="nv">use</span> <span class="nv">M_calcomp</span>
-<span class="nv">implicit</span> <span class="nv">none</span>
-<span class="o">!</span> <span class="nv">based</span> <span class="nv">on</span> <span class="nv">concepts</span> <span class="nv">of</span> <span class="nv">CALIFORNIA</span> <span class="nv">COMPUTER</span> <span class="nv">PRODUCTS</span>, <span class="mi">1968</span>
-<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">50</span><span class="ss">)</span> :: <span class="nv">ibcd</span>
-<span class="nv">integer</span>           :: <span class="nv">inteq</span>
-<span class="o">!</span> <span class="nv">INITIALIZE</span> <span class="nv">GRAPHICS</span>
-   <span class="k">call</span> <span class="nl">plots</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span>.<span class="mi">0</span><span class="ss">)</span>
-<span class="o">!</span> <span class="nv">DRAW</span> <span class="nv">FRAME</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">7</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">7</span>.<span class="mi">0</span>,<span class="mi">9</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">9</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
-<span class="o">!</span> <span class="nv">COMMENTS</span> <span class="nv">ARE</span> <span class="nv">INSERTED</span>
-   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">SAMPLE OF SCIENTIFIC SUBROUTINES PACKAGE</span><span class="s1">&#39;</span>
-   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">7</span>,<span class="mi">8</span>.<span class="mi">5</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">40</span><span class="ss">)</span>
-   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">USING CURVY SUBROUTINE</span><span class="s1">&#39;</span>
-   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">7</span>,<span class="mi">4</span>.<span class="mi">25</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">23</span><span class="ss">)</span>
-   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">USING CURVX SUBROUTINE</span><span class="s1">&#39;</span>
-   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">7</span>,<span class="mi">8</span>.<span class="mi">25</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">23</span><span class="ss">)</span>
-<span class="o">!</span> <span class="nv">TWO</span> <span class="nv">PAIRS</span> <span class="nv">OF</span> <span class="nv">AXES</span> <span class="nv">ARE</span> <span class="nv">DRAWN</span>
-   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>,<span class="o">-</span><span class="mi">1</span>,<span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>, <span class="mi">1</span>,<span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">90</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>,<span class="o">-</span><span class="mi">1</span>,<span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>, <span class="mi">1</span>,<span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">90</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
-<span class="o">!</span> <span class="nv">CURVX</span> <span class="nv">IS</span> <span class="nv">DRAWN</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">curvx</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">1</span>,<span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">2</span>.<span class="mi">40</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="mi">2</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">525</span>,<span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">075</span>,<span class="mi">4</span>.<span class="mi">0</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">4</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
-<span class="o">!</span> <span class="nv">CURVY</span> <span class="nv">IS</span> <span class="nv">DRAWN</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">curvy</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">1</span>,<span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">9</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">26</span>,<span class="o">-</span><span class="mi">6</span>.<span class="mi">0</span>,<span class="mi">2</span>.<span class="mi">52</span>,<span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">3</span>.<span class="mi">78</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
-<span class="o">!</span> <span class="nv">EQUATIONS</span> <span class="nv">ARE</span> <span class="nv">DRAWN</span>
-   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">Y=0.075X**4-0.525X**3+0.75X**2+2.40</span><span class="s1">&#39;</span>
-   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">7</span>.<span class="mi">75</span>,<span class="mi">0</span>.<span class="mi">09</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">35</span><span class="ss">)</span>
-   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">X=Y**3.78-6Y**2.52+9Y**1.26</span><span class="s1">&#39;</span>
-   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">3</span>.<span class="mi">90</span>,<span class="mi">0</span>.<span class="mi">09</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">27</span><span class="ss">)</span>
-   <span class="k">call</span> <span class="nl">nframe</span><span class="ss">()</span>
-<span class="o">!</span>  <span class="nv">CLOSE</span> <span class="nv">GRAPHICS</span>
-   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">11</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">999</span><span class="ss">)</span>
-<span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_curvx</span>
+<div class="codehilite"><pre><span></span><code><span class="nx">program</span><span class="w"> </span><span class="nx">demo_curvx</span>
+<span class="nx">use</span><span class="w"> </span><span class="nx">M_calcomp</span>
+<span class="nx">implicit</span><span class="w"> </span><span class="nx">none</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">based</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">concepts</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">CALIFORNIA</span><span class="w"> </span><span class="nx">COMPUTER</span><span class="w"> </span><span class="nx">PRODUCTS</span><span class="p">,</span><span class="w"> </span><span class="mi">1968</span>
+<span class="nx">character</span><span class="p">(</span><span class="nx">len</span><span class="p">=</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nx">ibcd</span>
+<span class="nx">integer</span><span class="w">           </span><span class="o">::</span><span class="w"> </span><span class="nx">inteq</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">INITIALIZE</span><span class="w"> </span><span class="nx">GRAPHICS</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plots</span><span class="p">(</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">10.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">10.0</span><span class="p">)</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">DRAW</span><span class="w"> </span><span class="nx">FRAME</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">7.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">7.0</span><span class="p">,</span><span class="m m-Double">9.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">9.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">COMMENTS</span><span class="w"> </span><span class="nx">ARE</span><span class="w"> </span><span class="nx">INSERTED</span>
+<span class="w">   </span><span class="nx">ibcd</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">SAMPLE</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">SCIENTIFIC</span><span class="w"> </span><span class="nx">SUBROUTINES</span><span class="w"> </span><span class="nx">PACKAGE</span><span class="err">&#39;</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">symbol</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="p">,</span><span class="m m-Double">8.5</span><span class="p">,</span><span class="m m-Double">0.14</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="nx">inteq</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">ibcd</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">USING</span><span class="w"> </span><span class="nx">CURVY</span><span class="w"> </span><span class="nx">SUBROUTINE</span><span class="err">&#39;</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">symbol</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="p">,</span><span class="m m-Double">4.25</span><span class="p">,</span><span class="m m-Double">0.14</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="nx">inteq</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">23</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">ibcd</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">USING</span><span class="w"> </span><span class="nx">CURVX</span><span class="w"> </span><span class="nx">SUBROUTINE</span><span class="err">&#39;</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">symbol</span><span class="p">(</span><span class="m m-Double">0.7</span><span class="p">,</span><span class="m m-Double">8.25</span><span class="p">,</span><span class="m m-Double">0.14</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="nx">inteq</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">23</span><span class="p">)</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">TWO</span><span class="w"> </span><span class="nx">PAIRS</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">AXES</span><span class="w"> </span><span class="nx">ARE</span><span class="w"> </span><span class="nx">DRAWN</span>
+<span class="w">   </span><span class="nx">ibcd</span><span class="p">=</span><span class="err">&#39;&#39;</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">axis</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">4.75</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="m m-Double">5.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">1.0</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">axis</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">4.75</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="m m-Double">3.0</span><span class="p">,</span><span class="m m-Double">90.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">1.0</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">axis</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">0.75</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="m m-Double">5.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">1.0</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">axis</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">0.75</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="m m-Double">3.0</span><span class="p">,</span><span class="m m-Double">90.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">1.0</span><span class="p">)</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">CURVX</span><span class="w"> </span><span class="nx">IS</span><span class="w"> </span><span class="nx">DRAWN</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">4.75</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">curvx</span><span class="p">(</span><span class="m m-Double">0.1</span><span class="p">,</span><span class="m m-Double">5.0</span><span class="p">,</span><span class="m m-Double">2.40</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">0.75</span><span class="p">,</span><span class="m m-Double">2.0</span><span class="p">,</span><span class="o">-</span><span class="m m-Double">0.525</span><span class="p">,</span><span class="m m-Double">3.0</span><span class="p">,</span><span class="m m-Double">0.075</span><span class="p">,</span><span class="m m-Double">4.0</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="o">-</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="o">-</span><span class="m m-Double">4.75</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">CURVY</span><span class="w"> </span><span class="nx">IS</span><span class="w"> </span><span class="nx">DRAWN</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">0.75</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">curvy</span><span class="p">(</span><span class="m m-Double">0.1</span><span class="p">,</span><span class="m m-Double">3.0</span><span class="p">,</span><span class="m m-Double">9.0</span><span class="p">,</span><span class="m m-Double">1.26</span><span class="p">,</span><span class="o">-</span><span class="m m-Double">6.0</span><span class="p">,</span><span class="m m-Double">2.52</span><span class="p">,</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="m m-Double">3.78</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="o">-</span><span class="m m-Double">1.0</span><span class="p">,</span><span class="o">-</span><span class="m m-Double">0.75</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">!</span><span class="w"> </span><span class="nx">EQUATIONS</span><span class="w"> </span><span class="nx">ARE</span><span class="w"> </span><span class="nx">DRAWN</span>
+<span class="w">   </span><span class="nx">ibcd</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">Y</span><span class="p">=</span><span class="m m-Double">0.075</span><span class="nx">X</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="m m-Double">0.525</span><span class="nx">X</span><span class="o">**</span><span class="mi">3</span><span class="o">+</span><span class="m m-Double">0.75</span><span class="nx">X</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="m m-Double">2.40</span><span class="err">&#39;</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">symbol</span><span class="p">(</span><span class="m m-Double">3.0</span><span class="p">,</span><span class="m m-Double">7.75</span><span class="p">,</span><span class="m m-Double">0.09</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="nx">inteq</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">35</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">ibcd</span><span class="p">=</span><span class="err">&#39;</span><span class="nx">X</span><span class="p">=</span><span class="nx">Y</span><span class="o">**</span><span class="m m-Double">3.78</span><span class="o">-</span><span class="mi">6</span><span class="nx">Y</span><span class="o">**</span><span class="m m-Double">2.52</span><span class="o">+</span><span class="mi">9</span><span class="nx">Y</span><span class="o">**</span><span class="m m-Double">1.26</span><span class="err">&#39;</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">symbol</span><span class="p">(</span><span class="m m-Double">3.0</span><span class="p">,</span><span class="m m-Double">3.90</span><span class="p">,</span><span class="m m-Double">0.09</span><span class="p">,</span><span class="nx">ibcd</span><span class="p">,</span><span class="nx">inteq</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">27</span><span class="p">)</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">nframe</span><span class="p">()</span>
+<span class="p">!</span><span class="w">  </span><span class="nx">CLOSE</span><span class="w"> </span><span class="nx">GRAPHICS</span>
+<span class="w">   </span><span class="nx">call</span><span class="w"> </span><span class="nx">plot</span><span class="p">(</span><span class="m m-Double">11.0</span><span class="p">,</span><span class="m m-Double">0.0</span><span class="p">,</span><span class="mi">999</span><span class="p">)</span>
+<span class="nx">end</span><span class="w"> </span><span class="nx">program</span><span class="w"> </span><span class="nx">demo_curvx</span>
 </code></pre></div>
 
 <h2 id="license">LICENSE</h2>
@@ -266,16 +248,16 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         <table class="table table-striped varlist">
     <thead>
       <tr>
-        <th>Type</th>
-<th>Intent</th><th>Optional</th>        <th>Attributes</th>
-        <th></th>
-        <th>Name</th>
-        <th></th>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
     </thead>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-y0"></span>
+              <span class="anchor" id="variable-y0~3"></span>
               real
             </td>
 <td></td>
@@ -290,7 +272,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yf"></span>
+              <span class="anchor" id="variable-yf~2"></span>
               real
             </td>
 <td></td>
@@ -305,7 +287,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~3"></span>
+              <span class="anchor" id="variable-a~4"></span>
               real
             </td>
 <td></td>
@@ -335,7 +317,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-b~2"></span>
+              <span class="anchor" id="variable-b~4"></span>
               real
             </td>
 <td></td>
@@ -365,7 +347,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-c~2"></span>
+              <span class="anchor" id="variable-c~3"></span>
               real
             </td>
 <td></td>
@@ -395,7 +377,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-d~2"></span>
+              <span class="anchor" id="variable-d~4"></span>
               real
             </td>
 <td></td>
@@ -428,68 +410,17 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
 
     <br>
 
-    <section class="visible-xs visible-sm hidden-md">
-        <h3>Contents</h3>
-  
-      <div class="panel panel-primary">
-      <div class="panel-heading text-left">
-        <h3 class="panel-title">
-          <a data-toggle="collapse" href="#vars-1">Variables</a>
-        </h3>
-      </div>
-      <div id="vars-1" class="panel-collapse collapse">
-        <div class="list-group">
-            <a class="list-group-item" href="../proc/curvy.html#variable-dlt~2">dlt</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-dy~3">dy</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-i3~2">i3</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-iv~3">iv</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-n~4">n</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-x~6">x</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-xfct~2">xfct</a>
-            <a class="list-group-item" href="../proc/curvy.html#variable-y~6">y</a>
-        </div>
-      </div>
-    </div>
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <div class="panel panel-primary">
-      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-      <div class="list-group">
-        <a class="list-group-item" href="../proc/curvy.html#src">curvy</a>
-      </div>
-    </div>
-
-
-    </section>
-    <br class="visible-xs visible-sm hidden-md">
-
 
     <section>    
       <h2>Variables</h2>
       <table class="table table-striped varlist">
     <thead>
       <tr>
-        <th>Type</th>
-<th>Visibility</th>        <th>Attributes</th>
-        <th></th>
-        <th>Name</th>
-<th></th><th>Initial</th>        <th></th>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
     </thead>
     <tbody>
         <tr>
@@ -511,7 +442,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-dy~3"></span>
+              <span class="anchor" id="variable-dy~4"></span>
               real,
             </td>
               <td>public</td>
@@ -545,7 +476,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iv~3"></span>
+              <span class="anchor" id="variable-iv~4"></span>
               integer,
             </td>
               <td>public</td>
@@ -562,7 +493,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~4"></span>
+              <span class="anchor" id="variable-n~8"></span>
               integer,
             </td>
               <td>public</td>
@@ -579,7 +510,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~6"></span>
+              <span class="anchor" id="variable-x~13"></span>
               real,
             </td>
               <td>public</td>
@@ -613,7 +544,7 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~6"></span>
+              <span class="anchor" id="variable-y~12"></span>
               real,
             </td>
               <td>public</td>
@@ -640,10 +571,11 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
     
 
 
+
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">curvy</span><span class="w">  </span><span class="p">(</span><span class="n">y0</span><span class="p">,</span><span class="n">yf</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">h</span><span class="p">)</span><span class="w"></span>
+    <div class="hl codehilite"><pre><span></span><span class="k">subroutine </span><span class="n">curvy</span><span class="w">  </span><span class="p">(</span><span class="n">y0</span><span class="p">,</span><span class="n">yf</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
 
 <span class="c">! ident_10=&quot;@(#) M_calcomp curvy(3f) plots a function of Y over a given range&quot;</span>
 
@@ -658,52 +590,52 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
 <span class="c">!                                      POLYNOMIAL.</span>
 <span class="c">! EARLIER VERSION OF THIS SUBROUTINE WAS</span>
 <span class="c">!     SUBROUTINE CURVEY (Y0,YF,A,E,B,F,C,G,D,H)</span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">c</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dlt</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dy</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">e</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">g</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">h</span><span class="w"></span>
-<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i3</span><span class="w"></span>
-<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iv</span><span class="w"></span>
-<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xfct</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y0</span><span class="w"></span>
-<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">yf</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">c</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dlt</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dy</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">e</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">f</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">g</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">h</span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i3</span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iv</span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xfct</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y0</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">yf</span>
 <span class="c">!     INITIALIZATION -</span>
 <span class="c">!     GET LINE LENGTH</span>
-<span class="w">      </span><span class="n">dy</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">yf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y0</span><span class="w"></span>
-<span class="w">      </span><span class="n">i3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">      </span><span class="n">dy</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">yf</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y0</span>
+<span class="w">      </span><span class="n">i3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
 <span class="c">!     DEVELOP FACTORED DELTA</span>
-<span class="w">      </span><span class="k">call where</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">xfct</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y0</span><span class="w"></span>
-<span class="w">      </span><span class="n">dlt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="o">/</span><span class="n">xfct</span><span class="w"></span>
+<span class="w">      </span><span class="k">call where</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">xfct</span><span class="p">)</span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y0</span>
+<span class="w">      </span><span class="n">dlt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="o">/</span><span class="n">xfct</span>
 <span class="c">!     CHECK LINE LENGTH (IF ZERO RETURN)</span>
-<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span>
 <span class="c">!     IF NEGATIVE MAKE DELTA LIKEWISE</span>
 <span class="mi">10</span><span class="w">    </span><span class="k">continue</span>
-<span class="k">      </span><span class="n">dlt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">dlt</span><span class="w"></span>
+<span class="k">      </span><span class="n">dlt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">dlt</span>
 <span class="c">!     COMPUTE NUMBER OF LINE POINTS</span>
 <span class="mi">15</span><span class="w">    </span><span class="k">continue</span>
-<span class="k">      </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dy</span><span class="o">/</span><span class="n">dlt</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0</span><span class="p">)</span><span class="w"></span>
+<span class="k">      </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dy</span><span class="o">/</span><span class="n">dlt</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0</span><span class="p">)</span>
 <span class="c">!     CURVE FITTING PLOT LOOP</span>
-<span class="w">      </span><span class="k">do </span><span class="n">iv</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="w"></span>
-<span class="w">         </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">g</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">h</span><span class="w"></span>
-<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i3</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dlt</span><span class="w"></span>
-<span class="w">         </span><span class="n">i3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-<span class="w">      </span><span class="k">enddo</span><span class="w"></span>
+<span class="w">      </span><span class="k">do </span><span class="n">iv</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="n">n</span>
+<span class="w">         </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">g</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="n">h</span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i3</span><span class="p">)</span>
+<span class="w">         </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dlt</span>
+<span class="w">         </span><span class="n">i3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">      </span><span class="k">enddo</span>
 <span class="c">!     PLOT EXPLICIT FINAL POINT AND RETURN</span>
-<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">g</span><span class="w"> </span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">h</span><span class="w"></span>
-<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">yf</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">g</span><span class="w"> </span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="n">yf</span><span class="o">**</span><span class="n">h</span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">yf</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="mi">20</span><span class="w">    </span><span class="k">continue</span>
-<span class="k">end subroutine </span><span class="n">curvy</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">curvy</span>
 </pre></div>
 
     </section>
@@ -716,32 +648,27 @@ EXP1,EXP2,EXP3,EXP4  are the exponents of the polynomial that defines
     </div> <!-- /container -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-xs-6 col-md-6"><p>M_calcomp was developed by John S. Urban<br>&copy; 2023 
+        <div class="row justify-content-between">
+          <div class="col"><p>M_calcomp was developed by John S. Urban<br>&copy; 2024 
 </p>
           </div>
-          <div class="col-xs-6 col-md-6">
-            <p class="text-right">
+          <div class="col">
+            <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-05-28 00:43              </p>
+ on 2024-03-29 03:39              </p>
           </div>
         </div>
         <br>
       </div> <!-- /container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript
-         ================================================== -->
-         <!-- Placed at the end of the document so the pages load faster -->
-    <!--
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        -->
-        <script src="../js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
 
-        <!-- MathJax JavaScript
+    <!-- MathJax JavaScript
              ================================================== -->
              <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/x-mathjax-config">
