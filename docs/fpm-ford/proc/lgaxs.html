@@ -1,0 +1,1242 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="General Purpose Fortran project">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>lgaxs &ndash; M_calcomp</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">M_calcomp </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>lgaxs
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 4.4% of total for procedures.">115 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/M_calcomp.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+            <li class="breadcrumb-item active" aria-current="page">lgaxs</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-ai">ai</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-bcdx">bcdx</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-bcdy">bcdy</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-blen">blen</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-blmn">blmn</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-blog">blog</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-cist">cist</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-cost">cost</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-d1~2">d1</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-d2~2">d2</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-d3~2">d3</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-d4">d4</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-d5">d5</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-d6">d6</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-eto10">eto10</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-fj">fj</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-fxmn">fxmn</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-i~21">i</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-inteq~8">inteq</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-k~7">k</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-nc">nc</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-sint">sint</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-size">size</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-size1">size1</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-sont">sont</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-th~3">th</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-x~22">x</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-x0~5">x0</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-y~19">y</a>
+            <a class="list-group-item" href="../proc/lgaxs.html#variable-y0~5">y0</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/lgaxs.html#src">lgaxs</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine lgaxs(xo, yo, ibcd, n, dist, theta, vorg, delta)  
+</h2>
+    
+
+    <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code>lgaxs(3f) - [M_calcomp:scientific] draw logarithmic axis
+(LICENSE:PD)
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code>    subroutine lgaxs(xpage,ypage,ibcd,+-nchar,axlen,angle,firstv,deltav)
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>LGAXS(3f) is a FORTRAN subroutine which draws a logarithmic axis
+  with annotation in powers of ten. LGAXS(3f) is similar in operation
+  to AXIS(3f).</p>
+<h2 id="options">OPTIONS</h2>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="nt">XPAGE</span><span class="o">,</span><span class="nt">YPAGE</span><span class="w">  </span><span class="nt">are</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">coordinates</span><span class="o">,</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">inches</span><span class="o">,</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="nt">starting</span><span class="w"></span>
+<span class="w">              </span><span class="nt">point</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="nt">IBCD</span><span class="w">         </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">character</span><span class="w"> </span><span class="nt">data</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">be</span><span class="w"> </span><span class="nt">used</span><span class="w"> </span><span class="nt">as</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="nt">title</span><span class="w"> </span><span class="o">(</span><span class="nt">may</span><span class="w"></span>
+<span class="w">              </span><span class="nt">be</span><span class="w"> </span><span class="nt">one</span><span class="w"> </span><span class="nt">or</span><span class="w"> </span><span class="nt">more</span><span class="w"> </span><span class="nt">characters</span><span class="o">).</span><span class="w"> </span><span class="nt">It</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">centered</span><span class="w"> </span><span class="nt">and</span><span class="w"></span>
+<span class="w">              </span><span class="nt">positioned</span><span class="w"> </span><span class="nt">parallel</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="nt">NCHAR</span><span class="w">        </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">characters</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="nt">title</span><span class="o">.</span><span class="w"></span>
+
+<span class="w">              </span><span class="nt">if</span><span class="w"> </span><span class="nt">NCHAR</span><span class="w"> </span><span class="nt">is</span><span class="o">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="nt">o</span><span class="w"> </span><span class="nt">negative</span><span class="o">,</span><span class="w"> </span><span class="nt">annotation</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">placed</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">clockwise</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">side</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="o">(</span><span class="nt">normally</span><span class="w"> </span><span class="nt">used</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">X</span><span class="w"> </span><span class="nt">axis</span><span class="o">);</span><span class="w"></span>
+
+<span class="w">                </span><span class="nt">o</span><span class="w"> </span><span class="nt">positive</span><span class="o">,</span><span class="w"> </span><span class="nt">annotation</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">placed</span><span class="w"> </span><span class="nt">on</span><span class="w"> </span><span class="nt">the</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">counterclockwise</span><span class="w"> </span><span class="nt">side</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="o">(</span><span class="nt">normally</span><span class="w"> </span><span class="nt">used</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">for</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">Y</span><span class="w"> </span><span class="nt">axis</span><span class="o">).</span><span class="w"></span>
+
+<span class="w"> </span><span class="nt">AXLEN</span><span class="w">        </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">length</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="o">,</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">inches</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="nt">ANGLE</span><span class="w">        </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">angle</span><span class="o">,</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">degrees</span><span class="o">,</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">which</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">be</span><span class="w"></span>
+<span class="w">              </span><span class="nt">drawn</span><span class="o">.</span><span class="w"> </span><span class="o">(</span><span class="nt">The</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">rotated</span><span class="w"> </span><span class="nt">about</span><span class="w"> </span><span class="nt">XPAGE</span><span class="o">,</span><span class="nt">YPAGE</span><span class="o">).</span><span class="w"> </span><span class="nt">The</span><span class="w"> </span><span class="nt">X</span><span class="w"></span>
+<span class="w">              </span><span class="nt">axis</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">degrees</span><span class="o">;</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">Y</span><span class="w"> </span><span class="nt">axis</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">90</span><span class="w"> </span><span class="nt">degrees</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="nt">FIRSTV</span><span class="w">       </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">value</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">annotation</span><span class="w"> </span><span class="nt">at</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">beginning</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">axis</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="nt">DELTAV</span><span class="w">       </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">log</span><span class="w"> </span><span class="nt">cycles</span><span class="w"> </span><span class="nt">per</span><span class="w"> </span><span class="nt">inch</span><span class="w"> </span><span class="o">(</span><span class="nt">the</span><span class="w"> </span><span class="nt">reciprocal</span><span class="w"> </span><span class="nt">of</span><span class="w"></span>
+<span class="w">              </span><span class="nt">the</span><span class="w"> </span><span class="nt">length</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">one</span><span class="w"> </span><span class="nt">cycle</span><span class="o">,</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">inches</span><span class="o">).</span><span class="w"></span>
+
+<span class="w">              </span><span class="nt">Equivalently</span><span class="w"> </span><span class="nt">this</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">reciprocal</span><span class="w"> </span><span class="nt">of</span><span class="w"></span>
+<span class="w">              </span><span class="nt">the</span><span class="w"> </span><span class="nt">length</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">one</span><span class="w"> </span><span class="nt">cycle</span><span class="o">.</span><span class="w"></span>
+
+<span class="w">              </span><span class="nt">if</span><span class="w"> </span><span class="nt">SCALOG</span><span class="o">()</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">used</span><span class="w"> </span><span class="nt">to</span><span class="w"> </span><span class="nt">scale</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">logarithmic</span><span class="w"> </span><span class="nt">array</span><span class="o">,</span><span class="w"> </span><span class="nt">VARRAY</span><span class="o">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">then</span><span class="w"> </span><span class="nt">FIRSTV</span><span class="o">=</span><span class="nt">VARRAY</span><span class="o">(</span><span class="nt">NV</span><span class="o">*</span><span class="nt">K</span><span class="o">+</span><span class="nt">1</span><span class="o">),</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">DELTAV</span><span class="o">=</span><span class="nt">VARRAY</span><span class="o">(</span><span class="nt">NV</span><span class="o">*</span><span class="nt">K</span><span class="o">+</span><span class="nt">K</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span><span class="w"></span>
+<span class="w">              </span><span class="nt">where</span><span class="w"> </span><span class="nt">NV</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">number</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">values</span><span class="w"> </span><span class="nt">used</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="nt">K</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">repeat</span><span class="w"> </span><span class="nt">cycle</span><span class="w"></span>
+<span class="w">              </span><span class="nt">of</span><span class="w"> </span><span class="nt">location</span><span class="w"> </span><span class="nt">of</span><span class="w"> </span><span class="nt">values</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">array</span><span class="o">,</span><span class="w"> </span><span class="nt">as</span><span class="w"> </span><span class="nt">described</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">SCALOG</span><span class="o">().</span><span class="w"></span>
+</code></pre></div>
+
+<p>COMMENTS</p>
+<p>A tick mark is placed on the axis for each power of ten and for each
+  of the nine integer values between.</p>
+<p>Annotation is placed at the tick marks as follows:</p>
+<div class="codehilite"><pre><span></span><code> <span class="nv">o</span> <span class="k">If</span> <span class="nv">a</span> <span class="nv">cycle</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">less</span> <span class="nv">than</span> <span class="nv">two</span> <span class="nv">inches</span> <span class="nv">long</span>, <span class="nv">the</span> <span class="nv">integer</span> <span class="nv">tick</span> <span class="nv">marks</span>
+   <span class="nv">are</span> <span class="nv">annotated</span>.
+
+ <span class="nv">o</span> <span class="nv">The</span> <span class="nv">power</span><span class="o">-</span><span class="nv">of</span><span class="o">-</span><span class="nv">ten</span> <span class="nv">tick</span> <span class="nv">marks</span> <span class="nv">are</span> <span class="nv">annotated</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">form</span> <span class="mi">10</span><span class="o">**</span><span class="nv">N</span>.
+</code></pre></div>
+
+<h2 id="example">EXAMPLE</h2>
+<p>Sample program:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">program</span> <span class="nv">demo_lgaxs</span>
+<span class="nv">use</span> <span class="nv">M_calcomp</span>
+<span class="nv">implicit</span> <span class="nv">none</span>
+<span class="o">!</span> <span class="nv">based</span> <span class="nv">on</span> <span class="nv">concepts</span> <span class="nv">of</span> <span class="nv">CALIFORNIA</span> <span class="nv">COMPUTER</span> <span class="nv">PRODUCTS</span>, <span class="mi">1968</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">50</span><span class="ss">)</span> :: <span class="nv">ibcd</span>
+<span class="nv">integer</span>           :: <span class="nv">i</span>, <span class="nv">k</span>
+<span class="nv">integer</span>           :: <span class="nv">inteq</span>
+<span class="nv">real</span>              :: <span class="nv">a</span>
+<span class="nv">real</span>              :: <span class="nv">angl</span>
+<span class="nv">real</span>              :: <span class="nv">angle</span><span class="ss">(</span><span class="mi">19</span><span class="ss">)</span>
+<span class="nv">real</span>              :: <span class="nv">bang</span>
+<span class="nv">real</span>              :: <span class="nv">beta</span>
+<span class="nv">real</span>              :: <span class="nv">r</span><span class="ss">(</span><span class="mi">19</span><span class="ss">)</span>
+<span class="nv">real</span>              :: <span class="nv">theta</span>
+<span class="nv">real</span>              :: <span class="nv">x</span>
+<span class="nv">real</span>              :: <span class="nv">xx</span>
+<span class="nv">real</span>              :: <span class="nv">xa</span>,<span class="nv">ya</span>, <span class="nv">xb</span>,<span class="nv">yb</span>, <span class="nv">xc</span>,<span class="nv">yc</span>, <span class="nv">xd</span>,<span class="nv">yd</span>
+<span class="nv">real</span>              :: <span class="nv">xar</span><span class="ss">(</span><span class="mi">8</span><span class="ss">)</span><span class="o">=</span> [ <span class="mi">1</span>.<span class="mi">00</span>, <span class="mi">2</span>.<span class="mi">00</span>, <span class="mi">3</span>.<span class="mi">00</span>, <span class="mi">4</span>.<span class="mi">00</span>, <span class="mi">5</span>.<span class="mi">00</span>, <span class="mi">6</span>.<span class="mi">00</span>       , <span class="mi">0</span>.<span class="mi">0</span>, <span class="mi">0</span>.<span class="mi">0</span> ]
+<span class="nv">real</span>              :: <span class="nv">yar</span><span class="ss">(</span><span class="mi">8</span><span class="ss">)</span><span class="o">=</span> [ <span class="mi">250</span>.<span class="mi">0</span>, <span class="mi">110</span>.<span class="mi">0</span>, <span class="mi">500</span>.<span class="mi">0</span>, <span class="mi">900</span>.<span class="mi">0</span>, <span class="mi">200</span>.<span class="mi">0</span>, <span class="mi">140</span>.<span class="mi">0</span> , <span class="mi">0</span>.<span class="mi">0</span>, <span class="mi">1</span>.<span class="mi">0</span> ]
+   <span class="k">call</span> <span class="nl">plots</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span>.<span class="mi">0</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">DRAW</span> <span class="nv">FRAME</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">7</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">7</span>.<span class="mi">0</span>,<span class="mi">9</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">9</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">DRAW</span> <span class="nv">COMMENTS</span>
+   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">USING SCALG, LGAXS, AND LGLIN SUBROUTINES</span><span class="s1">&#39;</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">7</span>,<span class="mi">8</span>.<span class="mi">25</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">42</span><span class="ss">)</span>
+   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">USING POLAR SUBROUTINE</span><span class="s1">&#39;</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">7</span>,<span class="mi">3</span>.<span class="mi">80</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">22</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">AXIS</span> <span class="nv">IS</span> <span class="nv">DRAWN</span>
+   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">ALTITUDE</span><span class="s1">&#39;</span>
+   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>,<span class="o">-</span><span class="mi">8</span>,<span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">25</span>.<span class="mi">0</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">scalg</span><span class="ss">(</span><span class="nv">yar</span>,<span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">6</span>,<span class="mi">1</span><span class="ss">)</span>
+   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">TEMPERATURE</span><span class="s1">&#39;</span>
+   <span class="k">call</span> <span class="nl">lgaxs</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>,<span class="mi">11</span>,<span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">90</span>.<span class="mi">0</span>,<span class="nv">yar</span><span class="ss">(</span><span class="mi">7</span><span class="ss">)</span>,<span class="nv">yar</span><span class="ss">(</span><span class="mi">8</span><span class="ss">))</span>
+   <span class="k">call</span> <span class="nl">scale</span><span class="ss">(</span><span class="nv">xar</span>,<span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">6</span>,<span class="mi">1</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">lglin</span><span class="ss">(</span><span class="nv">xar</span>,<span class="nv">yar</span>,<span class="mi">6</span>,<span class="mi">1</span>,<span class="mi">0</span>,<span class="mi">1</span>,<span class="mi">1</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">4</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">POLAR</span> <span class="nv">SUBROUTINE</span> <span class="nv">IS</span> <span class="nv">USED</span>
+   <span class="nv">x</span><span class="o">=</span><span class="mi">0</span>.<span class="mi">0</span>
+   <span class="k">do</span> <span class="nv">k</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">19</span>
+      <span class="nv">theta</span><span class="o">=</span><span class="nv">x</span><span class="o">*</span><span class="mi">0</span>.<span class="mi">0174533</span>
+      <span class="nv">r</span><span class="ss">(</span><span class="nv">k</span><span class="ss">)</span><span class="o">=</span><span class="mi">2</span>.<span class="mi">0</span><span class="o">*</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">cos</span><span class="ss">(</span><span class="nv">theta</span><span class="ss">))</span>
+      <span class="nv">angle</span><span class="ss">(</span><span class="nv">k</span><span class="ss">)</span><span class="o">=</span><span class="nv">theta</span>
+      <span class="nv">x</span><span class="o">=</span><span class="nv">x</span><span class="o">+</span><span class="mi">10</span>.<span class="mi">0</span>
+   <span class="nv">enddo</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">polar</span><span class="ss">(</span><span class="nv">r</span>,<span class="nv">angle</span>,<span class="mi">19</span>,<span class="mi">1</span>,<span class="mi">0</span>,<span class="mi">1</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
+   <span class="nv">angl</span> <span class="o">=</span><span class="mi">30</span>.<span class="mi">0</span>
+   <span class="nv">a</span><span class="o">=</span><span class="mi">1</span>.<span class="mi">0</span>
+   <span class="k">do</span>  <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">5</span>
+      <span class="nv">theta</span><span class="o">=</span><span class="nv">angl</span> <span class="o">*</span><span class="mi">0</span>.<span class="mi">0174533</span>
+      <span class="nv">xa</span><span class="o">=</span><span class="nv">cos</span><span class="ss">(</span><span class="nv">theta</span><span class="ss">)</span>
+      <span class="nv">ya</span><span class="o">=</span><span class="nv">sin</span><span class="ss">(</span><span class="nv">theta</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">xa</span>,<span class="nv">ya</span>,<span class="mi">3</span><span class="ss">)</span>
+      <span class="nv">xb</span><span class="o">=</span><span class="mi">1</span>.<span class="mi">1</span><span class="o">*</span><span class="nv">xa</span>
+      <span class="nv">yb</span><span class="o">=</span><span class="mi">1</span>.<span class="mi">1</span><span class="o">*</span><span class="nv">ya</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">xb</span>,<span class="nv">yb</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="nv">xc</span><span class="o">=</span><span class="nv">xb</span><span class="o">+</span><span class="mi">0</span>.<span class="mi">05</span><span class="o">*</span><span class="nv">xa</span>
+      <span class="nv">yc</span><span class="o">=</span><span class="nv">yb</span><span class="o">+</span><span class="mi">0</span>.<span class="mi">05</span><span class="o">*</span><span class="nv">ya</span>
+      <span class="k">if</span><span class="ss">((</span><span class="nv">i</span><span class="o">-</span><span class="mi">3</span><span class="ss">)</span>.<span class="nv">gt</span>.<span class="mi">0</span><span class="ss">)</span><span class="k">then</span>
+         <span class="nv">a</span><span class="o">=</span><span class="mi">1</span>.<span class="mi">5</span>
+      <span class="k">endif</span>
+      <span class="nv">beta</span><span class="o">=</span><span class="mi">1</span>.<span class="mi">570797</span><span class="o">-</span><span class="nv">theta</span>
+      <span class="nv">xd</span><span class="o">=</span><span class="nv">xc</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">105</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">cos</span><span class="ss">(</span><span class="nv">beta</span><span class="ss">)</span>
+      <span class="nv">yd</span><span class="o">=</span><span class="nv">yc</span><span class="o">+</span><span class="mi">0</span>.<span class="mi">105</span><span class="o">*</span><span class="nv">a</span><span class="o">*</span><span class="nv">sin</span><span class="ss">(</span><span class="nv">beta</span><span class="ss">)</span>
+      <span class="nv">bang</span><span class="o">=</span><span class="mi">270</span>.<span class="mi">0</span><span class="o">+</span><span class="nv">angl</span>
+      <span class="k">call</span> <span class="nl">number</span><span class="ss">(</span><span class="nv">xd</span>,<span class="nv">yd</span>,<span class="mi">0</span>.<span class="mi">105</span>,<span class="nv">angl</span>, <span class="nv">bang</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+      <span class="nv">angl</span> <span class="o">=</span><span class="nv">angl</span> <span class="o">+</span><span class="mi">30</span>.<span class="mi">0</span>
+   <span class="nv">enddo</span>
+   <span class="nv">xx</span><span class="o">=</span><span class="mi">0</span>.<span class="mi">0</span>
+   <span class="k">do</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">19</span>
+      <span class="nv">angle</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">=</span> <span class="nv">xx</span><span class="o">*</span><span class="mi">0</span>.<span class="mi">0174533</span>
+      <span class="nv">r</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span> <span class="o">=</span> <span class="mi">1</span>.<span class="mi">0</span>
+      <span class="nv">xx</span><span class="o">=</span><span class="nv">xx</span><span class="o">+</span><span class="mi">10</span>.<span class="mi">0</span>
+   <span class="nv">enddo</span>
+   <span class="k">call</span> <span class="nl">polar</span><span class="ss">(</span><span class="nv">r</span>,<span class="nv">angle</span>,<span class="mi">19</span>,<span class="mi">1</span>,<span class="mi">0</span>,<span class="mi">1</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="o">-</span><span class="mi">5</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">75</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">AXIS</span> <span class="nv">IS</span> <span class="nv">DRAWN</span>
+   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>,<span class="o">-</span><span class="mi">1</span>,<span class="mi">4</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">axis</span><span class="ss">(</span><span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">75</span>,<span class="nv">ibcd</span>,<span class="o">-</span><span class="mi">1</span>,<span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span><span class="ss">)</span>
+   <span class="nv">ibcd</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">RADIUS=2*(1-COS(ANGLE))</span><span class="s1">&#39;</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">75</span>,<span class="mi">3</span>.<span class="mi">5</span>,<span class="mi">0</span>.<span class="mi">09</span>,<span class="nv">ibcd</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">23</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">11</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">999</span><span class="ss">)</span>
+<span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_lgaxs</span>
+</code></pre></div>
+
+<h2 id="license">LICENSE</h2>
+<div class="codehilite"><pre><span></span><code>Public Domain
+</code></pre></div>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xo"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xo</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yo"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>yo</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ibcd~6"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ibcd</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~12"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dist"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dist</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-theta~5"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>theta</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vorg"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>vorg</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-delta"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>delta</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+
+
+    <section>    
+      <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ai"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ai</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bcdx"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bcdx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bcdy"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bcdy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-blen"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>blen</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-blmn"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>blmn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-blog"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(10)
+            </td>
+            <td>::</td>
+            <td><strong>blog</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cist"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>cist</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cost"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cost</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d1~2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>d1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d2~2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>d2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d3~2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>d3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>d4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d5"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>d5</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d6"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>d6</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eto10"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>eto10</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fj"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fj</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fxmn"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fxmn</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~21"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inteq~8"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>inteq</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~7"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nc"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sint"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sint</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-size"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>size</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-size1"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>size1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sont"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>sont</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-th~3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>th</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~22"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x0~5"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x0</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~19"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y0~5"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y0</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">subroutine </span><span class="n">lgaxs</span><span class="p">(</span><span class="n">xo</span><span class="p">,</span><span class="n">yo</span><span class="p">,</span><span class="n">ibcd</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">dist</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">vorg</span><span class="p">,</span><span class="n">delta</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">! ident_12=&quot;@(#) M_calcomp lgaxs(3f) draw logarithmic axis&quot;</span>
+
+<span class="c">! EARLIER VERSION OF THIS SUBROUTINE WAS</span>
+
+<span class="c">!     SUBROUTINE LGAXIS(XO,YO,IBCD,N,DIST,THETA,VORG,DELTA)</span>
+
+<span class="w">      </span><span class="k">DIMENSION </span><span class="n">BLOG</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  THE VARIABLE &#39;IBCD&#39; HAS BEEN CHANGED TO CHARACTER TYPE TO MAKE</span>
+<span class="c">!  IT COMPATIBLE WITH THE VERSION OF THE &#39;SYMBOL&#39; ROUTINE AVAILABLE</span>
+<span class="c">!  ON THE CRAY.</span>
+<span class="c">!</span>
+<span class="c">!  THE VARIABLE &#39;INTEQ&#39; IS ALSO USED IN THE CALL TO THE &#39;SYMBOL&#39;</span>
+<span class="c">!  ROUTINE. &#39;INTEQ&#39; IS THE INTEGER EQUIVALENT OF THE SYMBOL TO BE</span>
+<span class="c">!  DRAWN. IF &#39;INTEQ&#39; HAS A VALUE BETWEEN 0 AND 91 INCLUSIVE, A</span>
+<span class="c">!  SYMBOL IS DRAWN EVEN IF A TITLE HAS BEEN SPECIFIED. TO PREVENT</span>
+<span class="c">!  THIS FROM HAPPENING IN THIS SUBROUTINE, &#39;INTEQ&#39; IS INITIALIZED</span>
+<span class="c">!  TO THE VALUE 999 (WHICH HAS NO SIGNIFICANCE FOR &#39;SYMBOL&#39;).</span>
+<span class="c">!</span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">ai</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">bcdx</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">bcdy</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">blen</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">blmn</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">blog</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">cist</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">cost</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d1</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d2</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d3</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d4</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d5</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">d6</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">delta</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dist</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">eto10</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">fj</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">fxmn</span><span class="w"></span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">inteq</span><span class="w"></span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k</span><span class="w"></span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nc</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">sint</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">size1</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">sont</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">th</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">theta</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">vorg</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">x0</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xo</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y0</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">yo</span><span class="w"></span>
+<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ibcd</span><span class="w"></span>
+<span class="w">      </span><span class="k">save </span><span class="n">inteq</span><span class="p">,</span><span class="n">sont</span><span class="p">,</span><span class="n">cist</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="n">d4</span><span class="p">,</span><span class="n">d5</span><span class="p">,</span><span class="n">d6</span><span class="w"></span>
+<span class="w">      </span><span class="k">data </span><span class="n">inteq</span><span class="o">/</span><span class="mi">999</span><span class="o">/</span><span class="p">,</span><span class="n">sont</span><span class="p">,</span><span class="n">cist</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="n">d4</span><span class="p">,</span><span class="n">d5</span><span class="p">,</span><span class="n">d6</span><span class="o">/</span><span class="mi">8</span><span class="o">*</span><span class="mf">0.0</span><span class="o">/</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  SAVE ARGUMENTS IN X, Y, NC, SIZE.</span>
+<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xo</span><span class="w"></span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yo</span><span class="w"></span>
+<span class="w">      </span><span class="n">nc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="w">      </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dist</span><span class="w"></span>
+<span class="c">!  CONVERT DEGREES TO RADIANS, STORING IN TH.</span>
+<span class="w">      </span><span class="n">th</span><span class="o">=</span><span class="mf">0.01745329</span><span class="o">*</span><span class="n">theta</span><span class="w"></span>
+<span class="c">!  STORE LOGS OF INTEGERS 2-10</span>
+<span class="w">      </span><span class="n">eto10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.4342945</span><span class="w"></span>
+<span class="w">      </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="w"></span>
+<span class="w">         </span><span class="n">blog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eto10</span><span class="o">*</span><span class="nb">log</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">enddo</span><span class="w"></span>
+<span class="c">!  SET FXMN TO GREATEST INTEGER POWER OF TEN LESS THAN OR EQUAL TO LOG</span>
+<span class="c">!     OF XMIN.</span>
+<span class="w">      </span><span class="n">fxmn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="p">(</span><span class="n">eto10</span><span class="o">*</span><span class="nb">log</span><span class="p">(</span><span class="n">vorg</span><span class="p">)</span><span class="o">+</span><span class="mi">10</span><span class="mf">0.0001</span><span class="p">)</span><span class="o">-</span><span class="mi">100</span><span class="w"></span>
+<span class="c">!  CALCULATE LENGTH FROM BEGINNING OF CYCLE CONTAINING VORG TO BEGINNING</span>
+<span class="c">!     OF AXIS, PLUS FACTOR PREVENTING ROUND-OFF ERROR, STORING IN BLMN.</span>
+<span class="w">      </span><span class="n">blmn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">eto10</span><span class="o">*</span><span class="nb">log</span><span class="p">(</span><span class="n">vorg</span><span class="p">)</span><span class="o">-</span><span class="n">fxmn</span><span class="p">)</span><span class="o">/</span><span class="n">delta</span><span class="o">-</span><span class="mf">0.0001</span><span class="w"></span>
+<span class="c">!  STORE SIN AND COS OF TH.</span>
+<span class="w">      </span><span class="n">sint</span><span class="o">=</span><span class="nb">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">cost</span><span class="o">=</span><span class="nb">cos</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="w"></span>
+<span class="c">!  SET OFFSET CONSTANTS OF ANNOTATION, DEPENDING ON SIGN OF NC.</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">nc</span><span class="p">)</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">30</span><span class="w"></span>
+<span class="mi">20</span><span class="w">    </span><span class="n">d1</span><span class="o">=</span><span class="mf">0.24</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">d2</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.24</span><span class="p">)</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">d3</span><span class="o">=</span><span class="mf">0.12</span><span class="o">*</span><span class="n">sint</span><span class="o">-</span><span class="n">d2</span><span class="w"></span>
+<span class="w">      </span><span class="n">d4</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.12</span><span class="p">)</span><span class="o">*</span><span class="n">cost</span><span class="o">+</span><span class="n">d1</span><span class="w"></span>
+<span class="w">      </span><span class="n">d5</span><span class="o">=</span><span class="mf">0.2</span><span class="o">*</span><span class="n">sint</span><span class="o">-</span><span class="mf">0.03</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">d6</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">)</span><span class="o">*</span><span class="n">cost</span><span class="o">-</span><span class="mf">0.03</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">nc</span><span class="o">=-</span><span class="n">nc</span><span class="w"></span>
+<span class="w">      </span><span class="n">sont</span><span class="o">=</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">cist</span><span class="o">=</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">bcdx</span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="mf">0.12</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">nc</span><span class="p">))</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="n">cost</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.48</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">bcdy</span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="mf">0.12</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">nc</span><span class="p">))</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="n">sint</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.48</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="mi">40</span><span class="w"></span>
+<span class="mi">30</span><span class="w">    </span><span class="n">d1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">d2</span><span class="o">=</span><span class="mf">0.1</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">d3</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.22</span><span class="p">)</span><span class="o">*</span><span class="n">sint</span><span class="o">+</span><span class="mf">0.24</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">sont</span><span class="o">=-</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">cist</span><span class="o">=-</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">d4</span><span class="o">=</span><span class="mf">0.22</span><span class="o">*</span><span class="n">cost</span><span class="o">+</span><span class="mf">0.24</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">d5</span><span class="o">=</span><span class="n">d1</span><span class="o">-</span><span class="mf">0.03</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">d6</span><span class="o">=</span><span class="n">d2</span><span class="o">-</span><span class="mf">0.03</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">bcdx</span><span class="o">=</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="mf">0.12</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">nc</span><span class="p">))</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="n">cost</span><span class="o">-</span><span class="mf">0.34</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">      </span><span class="n">bcdy</span><span class="o">=</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="mf">0.12</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">nc</span><span class="p">))</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="n">sint</span><span class="o">+</span><span class="mf">0.34</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="c">!  CALCULATE COORDINATES OF START OF CYCLE CONTAINING VORG,</span>
+<span class="c">!     AND STORE IN X0, Y0 .</span>
+<span class="mi">40</span><span class="w">    </span><span class="n">x0</span><span class="o">=</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="n">blmn</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">      </span><span class="n">y0</span><span class="o">=</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="n">blmn</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="c">!  CALCULATE LENGTH OF AXIS PLUS LENGTH OF CYCLE PRECEDING AXIS PLUS</span>
+<span class="c">!     ROUND-OFF ERROR FACTOR, AND STORE IN SIZE1 .</span>
+<span class="w">      </span><span class="n">size1</span><span class="o">=</span><span class="n">size</span><span class="o">+</span><span class="n">blmn</span><span class="o">+</span><span class="mf">0.0002</span><span class="w"></span>
+<span class="c">!  INITIALIZE CYCLE COUNTER FJ.</span>
+<span class="w">      </span><span class="n">fj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="c">!  MOVE PEN TO START OF AXIS.</span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="c">!  LOOP THRU CYCLE.</span>
+<span class="c">!  AI DETERMINES HEIGHT OF TIC MARK, LARGE TIC MARK FOR 10**N AXIS VALUE</span>
+<span class="mi">55</span><span class="w">    </span><span class="n">ai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.14</span><span class="w"></span>
+<span class="w">      </span><span class="k">do </span><span class="mi">60</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="w"></span>
+<span class="c">!  CALCULATE NEW BLEN, LENGTH TO NEXT TIC MARK.</span>
+<span class="w">         </span><span class="n">blen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">blog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="n">fj</span><span class="p">)</span><span class="o">/</span><span class="n">delta</span><span class="w"></span>
+<span class="c">!  IF TIC MARK IS BEFORE START OF AXIS, GO TO NEXT TIC MARK.</span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">blen</span><span class="o">-</span><span class="n">blmn</span><span class="p">)</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">56</span><span class="w"></span>
+<span class="c">!  IF TIC MARK IS BEYOND END OF AXIS, GO TO DRAW LINE TO END OF AXIS.</span>
+<span class="mi">56</span><span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">blen</span><span class="o">-</span><span class="n">size1</span><span class="p">)</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">70</span><span class="w"></span>
+<span class="c">!  CALCULATE COORDINATES OF TIC MARK AND PLOT IT.</span>
+<span class="mi">57</span><span class="w">       </span><span class="n">x</span><span class="o">=</span><span class="n">x0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">cost</span><span class="w"></span>
+<span class="w">         </span><span class="n">y</span><span class="o">=</span><span class="n">y0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">sint</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="w">     </span><span class="n">ai</span><span class="o">*</span><span class="n">sont</span><span class="p">,</span><span class="n">y</span><span class="o">-</span><span class="w">     </span><span class="n">ai</span><span class="o">*</span><span class="n">cist</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="mi">60</span><span class="w">    </span><span class="n">ai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="mi">07</span><span class="w"></span>
+<span class="c">!  INCREMENT FJ TO NEXT CYCLE.</span>
+<span class="w">      </span><span class="n">fj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fj</span><span class="o">+</span><span class="mf">1.0</span><span class="w"></span>
+<span class="c">!  RETURN FOR NEXT CYCLE.</span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="mi">55</span><span class="w"></span>
+<span class="c">!  DRAW LINE TO END OF AXIS.</span>
+<span class="mi">70</span><span class="w">    </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="o">+</span><span class="n">size1</span><span class="o">*</span><span class="n">cost</span><span class="p">,</span><span class="n">y0</span><span class="o">+</span><span class="n">size1</span><span class="o">*</span><span class="n">sint</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="c">!  LOOP BACKWARD THRU CYCLE FOR ANNOTATING TIC MARKS.</span>
+<span class="mi">85</span><span class="w">    </span><span class="k">do </span><span class="mi">110</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="w"></span>
+<span class="w">         </span><span class="n">i</span><span class="o">=</span><span class="mi">10</span><span class="o">-</span><span class="n">k</span><span class="w"></span>
+<span class="c">!  CALCULATE DISTANCE FROM START OF FIRST CYCLE TO TIC MARK.</span>
+<span class="w">         </span><span class="n">blen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">blog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="n">fj</span><span class="p">)</span><span class="o">/</span><span class="n">delta</span><span class="w"></span>
+<span class="c">!  IF TIC MARK IS LOCATED BEFORE START OF AXIS, GO TO DRAW AXIS TITLE.</span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">blen</span><span class="o">-</span><span class="n">blmn</span><span class="p">)</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">86</span><span class="w"></span>
+<span class="c">!  IF TIC MARK IS BEYOND END OF AXIS, GO TO NEXT TIC MARK.</span>
+<span class="mi">86</span><span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">blen</span><span class="o">-</span><span class="n">size1</span><span class="p">)</span><span class="w"> </span><span class="mi">87</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="mi">110</span><span class="w"></span>
+<span class="c">!  IF TIC MARK IS AT INTEGER POWER OF 10, ANNOTATE WITH 10 AND EXPONENT.</span>
+<span class="mi">87</span><span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="w"></span>
+<span class="mi">90</span><span class="w">       </span><span class="k">call </span><span class="n">number</span><span class="p">(</span><span class="n">x0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">cost</span><span class="o">+</span><span class="n">d1</span><span class="p">,</span><span class="n">y0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">sint</span><span class="o">+</span><span class="n">d2</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="mi">1</span><span class="mf">0.0</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">number</span><span class="p">(</span><span class="w"> </span><span class="n">x0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">cost</span><span class="o">+</span><span class="n">d3</span><span class="p">,</span><span class="n">y0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">sint</span><span class="o">+</span><span class="n">d4</span><span class="p">,</span><span class="mf">0.07</span><span class="p">,</span><span class="n">fxmn</span><span class="o">+</span><span class="n">fj</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">goto</span><span class="w"> </span><span class="mi">110</span><span class="w"></span>
+<span class="c">!  IF CYCLE LENGTH IS LESS THAN 2 INCHES, GO TO NEXT TIC MARK.</span>
+<span class="mi">100</span><span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">delta</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span><span class="mi">105</span><span class="p">,</span><span class="mi">110</span><span class="w"></span>
+<span class="c">!  ANNOTATE INTERMEDIATE TIC MARK.</span>
+<span class="mi">105</span><span class="w">      </span><span class="k">call </span><span class="n">number</span><span class="p">(</span><span class="n">x0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">cost</span><span class="o">+</span><span class="n">d5</span><span class="p">,</span><span class="n">y0</span><span class="o">+</span><span class="n">blen</span><span class="o">*</span><span class="n">sint</span><span class="w"> </span><span class="o">+</span><span class="n">d6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.105</span><span class="p">,</span><span class="w"> </span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">theta</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="mi">110</span><span class="w">   </span><span class="k">continue</span><span class="w"></span>
+<span class="c">!  DECREMENT CYCLE COUNTER.</span>
+<span class="w">      </span><span class="n">fj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fj</span><span class="o">-</span><span class="mf">1.0</span><span class="w"></span>
+<span class="c">!  GO TO LOOP THRU NEXT CYCLE.</span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="mi">85</span><span class="w"></span>
+<span class="c">!  TEST FOR ANNOTATING AXIS TITLE.</span>
+<span class="mi">120</span><span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">nc</span><span class="p">)</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span><span class="mi">130</span><span class="p">,</span><span class="mi">125</span><span class="w"></span>
+<span class="c">!  DRAW AXIS TITLE.</span>
+<span class="c">!</span>
+<span class="c">!  THE FOLLOWING CALL TO THE &#39;SYMBOL&#39; ROUTINE HAS BEEN MODIFIED TO</span>
+<span class="c">!  CONVERT THIS SUBROUTINE TO THE CRAY. ON THE CRAY, &#39;SYMBOL&#39; HAS</span>
+<span class="c">!  7 ARGUMENTS; ON THE CDC, &#39;SYMBOL&#39; HAS 6 ARGUMENTS. THE ADDITIONAL</span>
+<span class="c">!  ARGUMENT IN THIS CALL IS &#39;INTEQ&#39;.</span>
+<span class="c">!</span>
+<span class="mi">125</span><span class="w">   </span><span class="k">call </span><span class="n">symbol</span><span class="p">(</span><span class="n">bcdx</span><span class="p">,</span><span class="n">bcdy</span><span class="p">,</span><span class="mf">0.14</span><span class="p">,</span><span class="n">ibcd</span><span class="p">,</span><span class="n">inteq</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">nc</span><span class="p">)</span><span class="w"></span>
+<span class="mi">130</span><span class="w">   </span><span class="k">continue</span>
+<span class="k">end subroutine </span><span class="n">lgaxs</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              M_calcomp
+ was developed by John S. Urban<br>              &copy; 2025 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2025-07-11 00:34 +0000             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>

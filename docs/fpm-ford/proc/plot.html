@@ -1,0 +1,954 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="General Purpose Fortran project">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>plot &ndash; M_calcomp</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">M_calcomp </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>plot
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 3.0% of total for procedures.">77 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/M_calcomp.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+            <li class="breadcrumb-item active" aria-current="page">plot</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../proc/plot.html#variable-noend">NOEND</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-dx~8">dx</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-dy~7">dy</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-penx">penx</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-peny">peny</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-x~25">x</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-xlast">xlast</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-xoff">xoff</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-xorg">xorg</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-y~21">y</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-ylast">ylast</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-yorg">yorg</a>
+            <a class="list-group-item" href="../proc/plot.html#variable-ys~3">ys</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/plot.html#src">plot</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine plot(xpag, ypag, ipen)  
+</h2>
+    
+
+    <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code>plot(3f) - [M_calcomp:basic] move with pen up or down or start new origin or terminate plotting
+(LICENSE:PD)
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code>    subroutine plot(xpage,ypage,+-ipen)
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>The PLOT subroutine is used to move the pen in a straight line
+  to a new position, with the pen either up or down during the movement.</p>
+<p>Another function of PLOT is to establish a new reference point
+  (origin) for the current plot frame. This must be done if any draws
+  or moves use values which are negative relative to the ORIGINAL
+  frame origin.</p>
+<p>PLOT also is used to terminate CALCOMP plotting, and must be
+  called once and only once at the end of plotting calls in each CALCOMP
+  application.</p>
+<h2 id="options">OPTIONS</h2>
+<div class="codehilite"><pre><span></span><code><span class="nv">XPAGE</span>, <span class="nv">YPAGE</span>  <span class="nv">are</span> <span class="nv">the</span> <span class="nv">X</span>, <span class="nv">Y</span> <span class="nv">coordinates</span> <span class="nv">in</span> <span class="nv">CALCOMP</span> <span class="nv">inches</span>. <span class="nv">The</span> <span class="nv">values</span>
+              <span class="nv">are</span> <span class="nv">measured</span> <span class="nv">relative</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">current</span> <span class="nv">frame</span> <span class="nv">reference</span>
+              <span class="ss">(</span><span class="nv">origin</span><span class="ss">)</span>.
+
+              <span class="nv">An</span> <span class="nv">origin</span> <span class="ss">(</span><span class="nv">where</span> <span class="nv">both</span> <span class="nv">X</span>, <span class="nv">Y</span> <span class="nv">equal</span> <span class="nv">zero</span><span class="ss">)</span> <span class="nv">may</span> <span class="nv">be</span>
+              <span class="nv">established</span> <span class="nv">anywhere</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">plotting</span> <span class="nv">surface</span> <span class="nv">by</span> <span class="nv">using</span>
+              <span class="nv">negative</span> <span class="nv">IPEN</span> <span class="nv">values</span>, <span class="nv">as</span> <span class="nv">explained</span> <span class="nv">below</span>.
+
+              <span class="nv">Because</span> <span class="nv">CALCOMP</span> <span class="nv">routines</span> <span class="nv">are</span> <span class="nv">interfaced</span> <span class="nv">to</span> <span class="nv">write</span> <span class="nv">a</span> <span class="nv">TEMPLATE</span>
+              <span class="nv">PDF</span>, <span class="nv">some</span> <span class="nv">limits</span> <span class="nv">on</span> <span class="nv">X</span> <span class="nv">and</span> <span class="nv">Y</span> <span class="nv">coordinates</span> <span class="nv">were</span> <span class="nv">required</span>.
+              <span class="nv">All</span> <span class="nv">coordinate</span> <span class="nv">values</span> <span class="ss">(</span><span class="nv">XPAGE</span>, <span class="nv">YPAGE</span><span class="ss">)</span> <span class="nv">should</span> <span class="nv">be</span>
+              <span class="nv">greater</span> <span class="nv">than</span> <span class="nv">or</span> <span class="nv">equal</span> <span class="nv">to</span> <span class="nv">zero</span> <span class="nv">and</span> <span class="nv">less</span> <span class="nv">than</span> <span class="mi">100</span> <span class="nv">inches</span>.
+              <span class="k">If</span> <span class="nv">negative</span> <span class="nv">values</span> <span class="nv">are</span> <span class="nv">necessary</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">frame</span> <span class="nv">origin</span> <span class="nv">must</span>
+              <span class="nv">be</span> <span class="nv">set</span> <span class="nv">so</span> <span class="nv">the</span> <span class="nv">negative</span> <span class="nv">values</span> <span class="nv">are</span> <span class="nv">positive</span> <span class="nv">relative</span> <span class="nv">to</span>
+              <span class="nv">the</span> <span class="nv">ORIGINAL</span> <span class="nv">frame</span> <span class="nv">origin</span>.
+
+                    <span class="mi">0</span> <span class="o">&lt;</span> <span class="nv">XPAGE</span><span class="o">+</span><span class="nv">origin</span> <span class="nv">x</span><span class="o">-</span><span class="nv">offset</span> <span class="o">&lt;</span> <span class="mi">100</span>
+                    <span class="mi">0</span> <span class="o">&lt;</span> <span class="nv">YPAGE</span><span class="o">+</span><span class="nv">origin</span> <span class="nv">y</span><span class="o">-</span><span class="nv">offset</span> <span class="o">&lt;</span> <span class="mi">100</span>
+
+              <span class="nv">The</span> <span class="nv">values</span> <span class="nv">of</span> <span class="nv">XPAGE</span> <span class="nv">and</span> <span class="nv">YPAGE</span> <span class="nv">which</span> <span class="nv">are</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">establish</span>
+              <span class="nv">a</span> <span class="nv">new</span> <span class="nv">origin</span> <span class="nv">must</span> <span class="nv">also</span> <span class="nv">be</span> <span class="nv">considered</span>. <span class="nv">See</span> <span class="nv">the</span> <span class="nv">discussion</span>
+              <span class="nv">under</span> <span class="nv">subroutine</span> <span class="nv">NFRAME</span> <span class="k">for</span> <span class="nv">details</span>.
+
+<span class="o">+-</span><span class="nv">IPEN</span>        <span class="nv">is</span> <span class="nv">a</span> <span class="nv">signed</span> <span class="nv">integer</span> <span class="nv">which</span> <span class="nv">controls</span> <span class="nv">pen</span> <span class="nv">status</span> <span class="ss">(</span><span class="nv">up</span> <span class="nv">or</span>
+              <span class="nv">down</span><span class="ss">)</span>, <span class="nv">and</span> <span class="nv">the</span> <span class="nv">origin</span> <span class="nv">definition</span>.
+
+              <span class="k">If</span> <span class="nv">IPEN</span><span class="o">=</span><span class="mi">2</span>, <span class="nv">the</span> <span class="nv">pen</span> <span class="nv">is</span> <span class="nv">down</span> <span class="nv">during</span> <span class="nv">movement</span>, <span class="nv">thus</span> <span class="nv">drawing</span>
+              <span class="nv">a</span> <span class="nv">visible</span> <span class="nv">line</span>.
+
+              <span class="k">If</span> <span class="nv">IPEN</span><span class="o">=</span><span class="mi">3</span>, <span class="nv">the</span> <span class="nv">pen</span> <span class="nv">is</span> <span class="nv">up</span> <span class="nv">during</span> <span class="nv">movement</span>.
+
+              <span class="k">If</span> <span class="nv">IPEN</span><span class="o">=</span> <span class="o">-</span><span class="mi">2</span>, <span class="nv">or</span> <span class="o">-</span><span class="mi">3</span>, <span class="nv">a</span> <span class="nv">new</span> <span class="nv">origin</span> <span class="nv">is</span> <span class="nv">defined</span> <span class="nv">at</span> <span class="ss">(</span><span class="nv">XPAGE</span>,<span class="nv">YPAGE</span><span class="ss">)</span>
+              <span class="nv">after</span> <span class="nv">the</span> <span class="nv">movement</span> <span class="nv">is</span> <span class="nv">completed</span> <span class="nv">as</span> <span class="k">if</span> <span class="nv">IPEN</span> <span class="nv">were</span> <span class="nv">positive</span>.
+
+              <span class="nv">That</span> <span class="nv">is</span>, <span class="nv">the</span> <span class="nv">X</span>,<span class="nv">Y</span> <span class="nv">coordinates</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">pen</span> <span class="nv">position</span> <span class="nv">are</span>
+              <span class="nv">set</span> <span class="nv">equal</span> <span class="nv">to</span> <span class="nv">zero</span>. <span class="nv">This</span> <span class="nv">position</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">reference</span> <span class="nv">point</span>
+              <span class="k">for</span> <span class="nv">succeeding</span> <span class="nv">pen</span> <span class="nv">movements</span>.
+
+              <span class="k">If</span> <span class="nv">IPEN</span><span class="o">=</span><span class="mi">999</span> <span class="nv">the</span> <span class="nv">metalanguage</span> <span class="nv">file</span> <span class="nv">is</span> <span class="nv">closed</span>. <span class="ss">(</span><span class="nv">Note</span> <span class="nv">this</span>
+              <span class="nv">must</span> <span class="nv">be</span> <span class="nv">the</span> <span class="nv">last</span> <span class="k">call</span> <span class="nl">made</span> <span class="nv">by</span> <span class="nv">the</span> <span class="nv">plotting</span> <span class="nv">application</span><span class="ss">)</span>.
+</code></pre></div>
+
+<h2 id="example">EXAMPLE</h2>
+<p>Sample program:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">program</span> <span class="nv">demo_plot</span>
+<span class="nv">use</span> <span class="nv">m_calcomp</span>
+<span class="nv">implicit</span> <span class="nv">none</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">10</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr1</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">WIDTH (FT)</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">14</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr2</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">THICKNESS (IN)</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">14</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr3</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">PRESSURE (PSI)</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">5</span><span class="ss">)</span>,<span class="nv">parameter</span>  :: <span class="nv">ichr4</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">THK= </span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">4</span><span class="ss">)</span>,<span class="nv">parameter</span>  :: <span class="nv">ichr5</span><span class="o">=</span><span class="s1">&#39;</span><span class="s"> IN.</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">5</span><span class="ss">)</span>,<span class="nv">parameter</span>  :: <span class="nv">ichr6</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">WTH= </span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">4</span><span class="ss">)</span>,<span class="nv">parameter</span>  :: <span class="nv">ichr7</span><span class="o">=</span><span class="s1">&#39;</span><span class="s"> FT.</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">29</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr8</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">CRITICAL BUCKLING PRESSURE OF</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">32</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr9</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">HYPERBOLIC PARABOLOID SHELLS FOR</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">32</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr10</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">FIXED WIDTH VS VARYING THICKNESS</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">32</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr11</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">FIXED THICKNESS VS VARYING WIDTH</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">32</span><span class="ss">)</span>,<span class="nv">parameter</span> :: <span class="nv">ichr12</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">PREPARED ON A CALCOMP PLOTTER</span><span class="s1">&#39;</span>
+<span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=</span><span class="mi">1</span><span class="ss">)</span>            :: <span class="nv">ibcd</span>
+<span class="nv">integer</span>                     :: <span class="nv">i</span>,<span class="nv">j</span>
+<span class="nv">integer</span>                     :: <span class="nv">inteq</span>
+<span class="nv">real</span>                        :: <span class="nv">x</span>,<span class="nv">y</span>
+<span class="nv">real</span>                        :: <span class="nv">psi</span>
+<span class="nv">real</span>                        :: <span class="nv">thick</span>, <span class="nv">wdth</span>
+<span class="nv">real</span>                        :: <span class="nv">tsqr</span>, <span class="nv">wsqr</span>
+<span class="nv">real</span>                        :: <span class="nv">tx</span>, <span class="nv">wx</span>
+   <span class="k">call</span> <span class="nl">plots</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">24</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">12</span>.<span class="mi">0</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">ESTABLISH</span> <span class="nv">AN</span> <span class="nv">ORIGIN</span> <span class="nv">SO</span> <span class="nv">NEGATIVE</span> <span class="nv">VALUES</span> <span class="nv">UP</span> <span class="nv">TO</span> <span class="o">-</span><span class="mi">0</span>.<span class="mi">5</span> <span class="nv">MAY</span> <span class="nv">BE</span> <span class="nv">USED</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">5</span>,<span class="mi">0</span>.<span class="mi">5</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">PLOT</span> <span class="nv">X</span><span class="o">-</span><span class="nv">AXIS</span> <span class="k">FOR</span> <span class="nv">WIDTH</span>
+   <span class="nv">x</span><span class="o">=</span><span class="mi">0</span>.<span class="mi">0</span>
+   <span class="k">do</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">10</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">3</span><span class="ss">)</span>
+      <span class="nv">x</span><span class="o">=</span><span class="nv">x</span><span class="o">+</span><span class="mi">1</span>.<span class="mi">0</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="o">-</span>.<span class="mi">1</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">number</span><span class="ss">(</span><span class="nv">x</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">25</span>,<span class="mi">0</span>.<span class="mi">1</span>,<span class="mi">5</span>.<span class="mi">0</span><span class="o">*</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+   <span class="nv">enddo</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">4</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">40</span>,<span class="mi">0</span>.<span class="mi">12</span>,<span class="nv">ibcd</span>,<span class="mi">1</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">4</span>.<span class="mi">2</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">45</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ichr1</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">5</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">PLOT</span> <span class="nv">X</span><span class="o">-</span><span class="nv">AXIS</span> <span class="k">FOR</span> <span class="nv">THICKNESS</span>
+   <span class="nv">x</span><span class="o">=</span><span class="mi">0</span>.<span class="mi">0</span>
+   <span class="k">do</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">5</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">3</span><span class="ss">)</span>
+      <span class="nv">x</span><span class="o">=</span><span class="nv">x</span><span class="o">+</span><span class="mi">1</span>.<span class="mi">0</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="o">-</span>.<span class="mi">1</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="nv">x</span><span class="o">=</span><span class="nv">x</span><span class="o">+</span><span class="mi">1</span>.<span class="mi">0</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>,<span class="o">-</span>.<span class="mi">1</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">number</span><span class="ss">(</span><span class="nv">x</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">25</span>,<span class="mi">0</span>.<span class="mi">1</span>,<span class="nv">x</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+   <span class="nv">enddo</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">7</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">40</span>,<span class="mi">0</span>.<span class="mi">12</span>,<span class="nv">ibcd</span>,<span class="mi">7</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">4</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">0</span>.<span class="mi">45</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ichr2</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">14</span><span class="ss">)</span>
+<span class="o">!</span> <span class="nv">PLOT</span> <span class="nv">Y</span><span class="o">-</span><span class="nv">AXIS</span>
+   <span class="nv">y</span><span class="o">=</span><span class="mi">0</span>.<span class="mi">0</span>
+   <span class="k">do</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">9</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="nv">y</span>,<span class="mi">3</span><span class="ss">)</span>
+      <span class="nv">y</span><span class="o">=</span><span class="nv">y</span><span class="o">+</span><span class="mi">1</span>.<span class="mi">0</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="nv">y</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="o">-</span>.<span class="mi">1</span>,<span class="nv">y</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">number</span><span class="ss">(</span><span class="o">-</span>.<span class="mi">15</span>,<span class="nv">y</span><span class="o">-</span>.<span class="mi">2</span>,<span class="mi">0</span>.<span class="mi">1</span>,<span class="mi">1000</span>.<span class="o">*</span><span class="nv">y</span>,<span class="mi">90</span>.<span class="mi">0</span>,<span class="mi">0</span><span class="ss">)</span>
+   <span class="nv">enddo</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">30</span>,<span class="mi">3</span>.<span class="mi">5</span>,<span class="mi">0</span>.<span class="mi">14</span>,<span class="nv">ichr3</span>,<span class="nv">inteq</span>,<span class="mi">90</span>.<span class="mi">0</span>,<span class="mi">14</span><span class="ss">)</span>
+   <span class="nv">thick</span><span class="o">=</span><span class="mi">3</span>.<span class="mi">0</span>
+   <span class="nv">wdth</span><span class="o">=</span><span class="mi">25</span>.<span class="mi">0</span>
+   <span class="k">do</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="mi">3</span>
+      <span class="nv">tsqr</span><span class="o">=</span><span class="nv">thick</span><span class="o">*</span><span class="nv">thick</span>
+      <span class="nv">wsqr</span><span class="o">=</span><span class="nv">wdth</span><span class="o">*</span><span class="nv">wdth</span>
+      <span class="nv">psi</span><span class="o">=</span><span class="mi">100</span>.<span class="mi">99</span><span class="o">*</span><span class="nv">tsqr</span>
+      <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">6</span>,<span class="nv">psi</span><span class="o">/</span><span class="mi">1000</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">1</span>,<span class="nv">ichr4</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">5</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">number</span><span class="ss">(</span><span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">10</span>,<span class="nv">thick</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">10</span>,<span class="nv">ichr5</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">4</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span> <span class="mi">2</span>.<span class="mi">0</span>, <span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">12</span>,<span class="nv">ibcd</span>,<span class="mi">1</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+      <span class="k">do</span> <span class="nv">j</span><span class="o">=</span><span class="mi">10</span>,<span class="mi">50</span>
+         <span class="nv">wx</span><span class="o">=</span><span class="nv">real</span><span class="ss">(</span><span class="nv">j</span><span class="ss">)</span>
+         <span class="nv">psi</span><span class="o">=</span><span class="mi">10099</span>.<span class="mi">0</span><span class="o">*</span><span class="nv">tsqr</span><span class="o">/</span><span class="ss">(</span><span class="nv">wx</span><span class="o">*</span><span class="nv">wx</span><span class="ss">)</span>
+         <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">wx</span><span class="o">/</span><span class="mi">5</span>.<span class="mi">0</span>,<span class="nv">psi</span><span class="o">/</span><span class="mi">1000</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="nv">enddo</span>
+      <span class="nv">psi</span><span class="o">=</span><span class="mi">10099</span>.<span class="mi">0</span><span class="o">*</span><span class="mi">81</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">wsqr</span>
+      <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">9</span>.<span class="mi">2</span>,<span class="nv">psi</span><span class="o">/</span><span class="mi">1000</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">1</span>,<span class="nv">ichr6</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">5</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">number</span><span class="ss">(</span><span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">10</span>,<span class="nv">wdth</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">10</span>,<span class="nv">ichr7</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">4</span><span class="ss">)</span>
+      <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span> <span class="mi">9</span>.<span class="mi">0</span>, <span class="mi">999</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">12</span>,<span class="nv">ibcd</span>,<span class="mi">7</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>
+      <span class="k">do</span> <span class="nv">j</span><span class="o">=</span><span class="mi">5</span>,<span class="mi">50</span>
+         <span class="nv">tx</span><span class="o">=</span><span class="ss">(</span><span class="mi">50</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">real</span><span class="ss">(</span><span class="nv">j</span><span class="ss">))</span><span class="o">/</span><span class="mi">5</span>.<span class="mi">0</span>
+         <span class="nv">psi</span><span class="o">=</span><span class="mi">10099</span>.<span class="mi">0</span><span class="o">*</span><span class="nv">tx</span><span class="o">*</span><span class="nv">tx</span><span class="o">/</span><span class="nv">wsqr</span>
+         <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">tx</span>,<span class="nv">psi</span><span class="o">/</span><span class="mi">1000</span>.<span class="mi">0</span>,<span class="mi">2</span><span class="ss">)</span>
+      <span class="nv">enddo</span>
+      <span class="nv">thick</span><span class="o">=</span><span class="nv">thick</span><span class="o">+</span><span class="mi">3</span>.<span class="mi">0</span>
+      <span class="nv">wdth</span><span class="o">=</span><span class="nv">wdth</span><span class="o">-</span><span class="mi">5</span>.<span class="mi">0</span>
+   <span class="nv">enddo</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">3</span>,<span class="mi">8</span>.<span class="mi">5</span>,.<span class="mi">14</span>,<span class="nv">ichr8</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">29</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">1</span>,<span class="mi">8</span>.<span class="mi">2</span>,.<span class="mi">14</span>,<span class="nv">ichr9</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">32</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">1</span>,<span class="mi">7</span>.<span class="mi">9</span>,.<span class="mi">14</span>,<span class="nv">ichr10</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">32</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">1</span>,<span class="mi">7</span>.<span class="mi">6</span>,.<span class="mi">14</span>,<span class="nv">ichr11</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">32</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">symbol</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">3</span>,<span class="mi">7</span>.<span class="mi">0</span>,.<span class="mi">14</span>,<span class="nv">ichr12</span>,<span class="nv">inteq</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">29</span><span class="ss">)</span>
+   <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">999</span><span class="ss">)</span>
+<span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_plot</span>
+</code></pre></div>
+
+<h2 id="license">LICENSE</h2>
+<div class="codehilite"><pre><span></span><code>Public Domain
+</code></pre></div>
+
+<p>GOTO (1001,1002,1003,1004,1005,1006,1007,1008),IPEN-1000</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xpag"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xpag</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ypag"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ypag</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ipen~4"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ipen</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+
+
+    <section>    
+      <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-noend"></span>
+              logical,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>NOEND</strong></td>
+<td> =</td>
+                <td>.false.</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dx~8"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>dx</strong></td>
+<td> =</td>
+                <td>1.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dy~7"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>dy</strong></td>
+<td> =</td>
+                <td>1.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-penx"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>penx</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-peny"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>peny</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~25"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xlast"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>xlast</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xoff"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>xoff</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xorg"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>xorg</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~21"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ylast"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>ylast</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yorg"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>yorg</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ys~3"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>ys</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">subroutine </span><span class="n">plot</span><span class="p">(</span><span class="n">xpag</span><span class="p">,</span><span class="w"> </span><span class="n">ypag</span><span class="p">,</span><span class="w"> </span><span class="n">ipen</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">! ident_25=&quot;@(#) M_calcomp plot(3f) move with pen up or down or start new origin or terminate plotting&quot;</span>
+
+<span class="c">!</span>
+<span class="c">!  SUBROUTINE DESCRIPTION -</span>
+<span class="c">!</span>
+<span class="c">!       THIS SUBROUTINE PLOTS LINE SEGMENTS. THE LINE SEGMENT</span>
+<span class="c">!       BEGINS AT THE CURRENT PEN POSITION (DEFINED IN THE LAST</span>
+<span class="c">!       CALL TO THIS SUBROUTINE) AND ENDS AT THE POSITION</span>
+<span class="c">!       SPECIFIED BY THE CALLING ARGUMENTS. THE PEN MAY BE</span>
+<span class="c">!       EITHER &quot;UP&quot; OR &quot;DOWN&quot; DURING THE MOVE TO THE NEW</span>
+<span class="c">!       COORDINATES.</span>
+<span class="c">!</span>
+<span class="c">!  SUBROUTINES CALLED -</span>
+<span class="c">!</span>
+<span class="c">!       primitive__frend         GRAPHICS PRIMITIVE; TERMINATES THE CURRENT PLOT FRAME</span>
+<span class="c">!       primitive__draw_line     GRAPHICS PRIMITIVE; DRAWS A STRAIGHT LINE BETWEEN THE SPECIFIED POINTS</span>
+<span class="c">!       primitive__end_plotting  GRAPHICS PRIMITIVE; TERMINATES THE GRAPHICS METALANGUAGE FILE</span>
+<span class="c">!</span>
+<span class="c">!  FUNCTIONS CALLED -</span>
+<span class="c">!</span>
+<span class="c">!       ABS      SYSTEM FUNCTION; CALCULATES THE ABSOLUTE VALUE OF A REAL NUMBER</span>
+<span class="c">!</span>
+<span class="c">!  CALLING ARGUMENTS -</span>
+<span class="c">!</span>
+<span class="c">!       IPEN     INTEGER SPECIFYING WHETHER THE PEN IS TO</span>
+<span class="c">!                BE &quot;UP&quot; OR &quot;DOWN&quot; DURING THE MOVE</span>
+<span class="c">!                TO THE SPECIFIED COORDINATES; AN</span>
+<span class="c">!                ABSOLUTE VALUE OF 2 INDICATES THAT</span>
+<span class="c">!                THE PEN IS &quot;DOWN&quot;; AN ABSOLUTE VALUE</span>
+<span class="c">!                OF 3 INDICATES THAT THE PEN IS &quot;UP&quot;</span>
+<span class="c">!</span>
+<span class="c">!       XPAG     REAL VARIABLE CONTAINING THE X COORDINATE</span>
+<span class="c">!                TO WHICH THE PEN IS TO BE MOVED</span>
+<span class="c">!</span>
+<span class="c">!       YPAG     REAL VARIABLE CONTAINING THE Y COORDINATE</span>
+<span class="c">!                TO WHICH THE PEN IS TO BE MOVED</span>
+<span class="c">!</span>
+<span class="c">!</span>
+<span class="c">!  VARIABLE NAMES USED -</span>
+<span class="c">!</span>
+<span class="c">!       DX       SCALING FACTOR FOR X DIRECTION</span>
+<span class="c">!</span>
+<span class="c">!       DY       SCALING FACTOR FOR Y DIRECTION</span>
+<span class="c">!</span>
+<span class="c">!       IPEN     *** CALLING ARGUMENT ***</span>
+<span class="c">!</span>
+<span class="c">!       NOEND    LOGICAL VARIABLE INDICATING WHETHER</span>
+<span class="c">!                THE CURRENT PLOT FRAME HAS BEEN</span>
+<span class="c">!                TERMINATED VIA THE &#39;primitive__frend&#39; PRIMITIVE</span>
+<span class="c">!</span>
+<span class="c">!       PENX     X COORDINATE TO WHICH THE PEN IS TO BE</span>
+<span class="c">!                MOVED</span>
+<span class="c">!</span>
+<span class="c">!       PENY     Y COORDINATE TO WHICH THE PEN IS TO BE</span>
+<span class="c">!                MOVED</span>
+<span class="c">!</span>
+<span class="c">!       X        X COORDINATE TO WHICH THE PEN IS TO BE</span>
+<span class="c">!                MOVED; SPECIFIED WITH RESPECT TO</span>
+<span class="c">!                THE CURRENTLY DEFINED ORIGIN FOR</span>
+<span class="c">!                THE FRAME; INCLUDES SCALING</span>
+<span class="c">!                FACTOR</span>
+<span class="c">!</span>
+<span class="c">!       XLAST    X COORDINATE OF CURRENT PEN POSITION</span>
+<span class="c">!</span>
+<span class="c">!       XOFF     OFFSET IN X DIRECTION (REQUIRED FOR</span>
+<span class="c">!                DIGP PROCESSING)</span>
+<span class="c">!</span>
+<span class="c">!       XORG     ABSOLUTE X COORDINATE OF CURRENTLY</span>
+<span class="c">!                DEFINED FRAME ORIGIN</span>
+<span class="c">!</span>
+<span class="c">!       XPAG     *** CALLING ARGUMENT ***</span>
+<span class="c">!</span>
+<span class="c">!       Y        Y COORDINATE TO WHICH THE PEN IS TO BE</span>
+<span class="c">!                MOVED; SPECIFIED WITH RESPECT TO</span>
+<span class="c">!                CURRENTLY DEFINED FRAME ORIGIN;</span>
+<span class="c">!                INCLUDES SCALING FACTOR</span>
+<span class="c">!</span>
+<span class="c">!       YLAST    Y COORDINATE OF CURRENT PEN POSITION</span>
+<span class="c">!</span>
+<span class="c">!       YORG     ABSOLUTE Y COORDINATE OF CURRENTLY</span>
+<span class="c">!                DEFINED FRAME ORIGIN</span>
+<span class="c">!</span>
+<span class="c">!       YPAG     *** CALLING ARGUMENT ***</span>
+<span class="c">!</span>
+<span class="c">!       YS       Y VALUE IF THE VALUE LIES BELOW THE</span>
+<span class="c">!                LOWER EDGE OF THE PLOT; RETAINED</span>
+<span class="c">!                FOR USE DURING NEXT CALL TO THIS</span>
+<span class="c">!                SUBROUTINE</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="kt">LOGICAL</span><span class="p">,</span><span class="k">save</span><span class="w"> </span><span class="kd">::</span><span class="w">  </span><span class="n">NOEND</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  INITIALIZE VARIABLES TO BE USED BY SUBROUTINE &#39;PLOT&#39;:</span>
+<span class="c">!       DX    = X SCALING FACTOR = 1.0</span>
+<span class="c">!       DY    = Y SCALING FACTOR = 1.0</span>
+<span class="c">!       PENX  = NEW X COORDINATE = 0.0</span>
+<span class="c">!       PENY  = NEW Y COORDINATE = 0.0</span>
+<span class="c">!       XLAST = LAST X COORDINATE = 0.0</span>
+<span class="c">!       XOFF  = OFFSET IN X DIRECTION = 0.0</span>
+<span class="c">!       XORG  = X COORDINATE OF CURRENT (RELATIVE) ORIGIN = 0.0</span>
+<span class="c">!       YLAST = LAST Y COORDINATE = 0.0</span>
+<span class="c">!       YORG  = Y COORDINATE OF CURRENT (RELATIVE) ORIGIN = 0.0</span>
+<span class="c">!       YS    = OFFSET TO BE APPLIED IN Y DIRECTION DURING NEXT</span>
+<span class="c">!               CALL TO &#39;PLOT&#39; IF CURRENT Y COORDINATE IS BELOW</span>
+<span class="c">!               BOTTOM EDGE OF PLOTTER = 0.0</span>
+<span class="c">!</span>
+<span class="c">!</span>
+<span class="c">!  DETERMINE IF THE VALUE OF &#39;IPEN&#39; IS GREATER THAN 1000. (A</span>
+<span class="c">!  VALUE GREATER THAN 1000 INDICATES A SPECIAL CALL FROM ANOTHER</span>
+<span class="c">!  CALCOMP SUBROUTINE.)  IF SO, TRANSFER PROGRAM CONTROL TO THE</span>
+<span class="c">!  STATEMENT LABELLED 1000. OTHERWISE, SAVE THE NEW X AND Y</span>
+<span class="c">!  COORDINATES SPECIFIED IN THE CALL TO &#39;PLOT&#39;.</span>
+<span class="c">!</span>
+<span class="c">!  THESE VARIABLES ARE NOT TO BE INITIALIZED EACH TIME THAT &#39;PLOT&#39;</span>
+<span class="c">!  IS CALLED, BUT ONLY AT THE BEGINNING OF THE PROGRAM;</span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="mf">1.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="mf">1.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">penx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">peny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xlast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xorg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">ylast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">yorg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ipen</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xpag</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<span class="kt">real</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">ypag</span><span class="w"></span>
+<span class="c">!</span>
+
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ipen</span><span class="p">).</span><span class="n">ge</span><span class="p">.</span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="k">goto</span><span class="w"> </span><span class="mi">1000</span><span class="w"></span>
+<span class="w">      </span><span class="n">penx</span><span class="o">=</span><span class="n">xpag</span><span class="w"></span>
+<span class="w">      </span><span class="n">peny</span><span class="o">=</span><span class="n">ypag</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  CALCULATE THE COORDINATES TO WHICH THE PEN IS TO BE MOVED. THE X</span>
+<span class="c">!  COORDINATE IS SPECIFIED WITH RELATION TO THE CURRENTLY DEFINED</span>
+<span class="c">!  X ORIGIN (XORG) AND IS CONVERTED FROM ITS INPUT VALUE IN INCHES</span>
+<span class="c">!  TO ITS SCALED VALUE. SIMILARLY, THE Y COORDINATE IS SPECIFIED</span>
+<span class="c">!  WITH RELATION TO THE CURRENTLY DEFINED Y ORIGIN (YORG). HOWEVER,</span>
+<span class="c">!  BEFORE THE NEW Y COORDINATE IS SCALED, ANY ADJUSTMENT IN THE Y</span>
+<span class="c">!  DIRECTION REMAINING FROM A PREVIOUS CALL TO &#39;PLOT&#39; MUST BE</span>
+<span class="c">!  FACTORED IN.</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="n">x</span><span class="o">=</span><span class="n">penx</span><span class="o">*</span><span class="n">dx</span><span class="o">+</span><span class="n">xorg</span><span class="w"></span>
+<span class="w">      </span><span class="n">y</span><span class="o">=</span><span class="p">(</span><span class="n">peny</span><span class="o">+</span><span class="n">ys</span><span class="p">)</span><span class="o">*</span><span class="n">dy</span><span class="o">+</span><span class="n">yorg</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  IF THE NEW Y COORDINATE IS BELOW THE BOTTOM EDGE OF THE PLOTTER</span>
+<span class="c">!  (I.E., IF Y IS LESS THAN 0.0), SAVE THE NEW Y COORDINATE FOR</span>
+<span class="c">!  APPLICATION DURING THE NEXT CALL TO &#39;PLOT&#39;, AND SET THE CURRENT</span>
+<span class="c">!  Y COORDINATE TO 0.0 .</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mf">0.0</span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="n">ipen</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         if</span><span class="p">(</span><span class="n">ipen</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="n">ys</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">peny</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="n">y</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="k">endif</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  IF THE VALUE OF &#39;IPEN&#39; IS LESS THAN 0 OR IS EQUAL TO 999, THE</span>
+<span class="c">!  RELATIVE ORIGIN OF THE PLOT IS TO BE REDEFINED TO BE THE NEW</span>
+<span class="c">!  X AND Y COORDINATES. RESET THE RELATIVE ORIGIN (XORG,YORG)</span>
+<span class="c">!  TO THE NEW X AND Y VALUES, THEN SET ANY RESIDUAL Y ADJUSTMENT</span>
+<span class="c">!  TO 0.0 .</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="k">if</span><span class="p">((</span><span class="n">ipen</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="n">ipen</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">999</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         </span><span class="n">xorg</span><span class="o">=</span><span class="n">x</span><span class="w"></span>
+<span class="w">         </span><span class="n">yorg</span><span class="o">=</span><span class="n">y</span><span class="w"></span>
+<span class="w">         </span><span class="n">ys</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="k">endif</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  IF &#39;IPEN&#39; IS SPECIFIED WITH A VALUE OF 999, THE PLOT IS TO BE</span>
+<span class="c">!  TERMINATED. IF THE CURRENT FRAME HAS NOT BEEN ENDED, CALL THE</span>
+<span class="c">!  &#39;primitive__frend&#39; GRAPHICS PRIMITIVE. CALL THE &#39;primitive__end_plotting&#39;</span>
+<span class="c">!  GRAPHICS PRIMITIVE TO TERMINATE PLOTTING.</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">ipen</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">999</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         if</span><span class="p">(</span><span class="n">noend</span><span class="p">)</span><span class="w"> </span><span class="k">call </span><span class="n">primitive__frend</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">call </span><span class="n">primitive__end_plotting</span><span class="w"></span>
+<span class="w">      </span><span class="k">endif</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  IF THE ABSOLUTE VALUE OF &#39;IPEN&#39; IS 2, THE PEN IS TO BE DOWN DURING</span>
+<span class="c">!  THE MOVE TO THE NEW COORDINATES; THEREFORE, CALL THE &#39;primitive__draw_line&#39;</span>
+<span class="c">!  GRAPHICS PRIMITIVE TO DRAW THE DESIRED LINE.</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ipen</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">call </span><span class="n">primitive__draw_line</span><span class="p">(</span><span class="n">xlast</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="n">ylast</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  SAVE THE CURRENT PEN COORDINATES.</span>
+<span class="c">!</span>
+<span class="w">      </span><span class="n">xlast</span><span class="o">=</span><span class="n">x</span><span class="w"></span>
+<span class="w">      </span><span class="n">ylast</span><span class="o">=</span><span class="n">y</span><span class="w"></span>
+<span class="w">      </span><span class="n">noend</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"></span>
+<span class="c">!</span>
+<span class="c">!  CHECK FOR SPECIAL USE OF THIS SUBROUTINE BY OTHER CALCOMP</span>
+<span class="c">!  SUBROUTINES. ALL SPECIAL ENTRIES TO THE &#39;PLOT&#39; SUBROUTINE USE</span>
+<span class="c">!  VALUES OF &#39;IPEN&#39; GREATER THAN 1000. THE COMPUTED GO TO STATEMENT</span>
+<span class="c">!  BELOW INSURES THAT THE PROPER SECTION OF CODE IS USED FOR EACH</span>
+<span class="c">!  SPECIAL CALL.</span>
+<span class="c">!</span>
+<span class="mi">1000</span><span class="w">  </span><span class="k">continue</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="c">!!GOTO (1001,1002,1003,1004,1005,1006,1007,1008),IPEN-1000</span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">select case</span><span class="p">(</span><span class="n">ipen</span><span class="p">)</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1001</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM SUBROUTINE &#39;FACTOR&#39;.</span>
+<span class="w">                 </span><span class="c">! &#39;FACTOR&#39; SETS THE RATIO OF THE DESIRED PLOT SIZE TO THE NORMAL PLOT SIZE.</span>
+<span class="w">      </span><span class="n">dx</span><span class="o">=</span><span class="n">xpag</span><span class="w"></span>
+<span class="w">      </span><span class="n">dy</span><span class="o">=</span><span class="n">ypag</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1002</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM SUBROUTINE &#39;WHERE&#39;. &#39;WHERE&#39; RETURNS</span>
+<span class="w">                 </span><span class="c">!  THE CURRENT PEN COORDINATES AND SCALING FACTOR FOR USE IN USER WRITTEN SUBROUTINES.</span>
+<span class="w">      </span><span class="n">xpag</span><span class="o">=</span><span class="n">penx</span><span class="w"></span>
+<span class="w">      </span><span class="n">ypag</span><span class="o">=</span><span class="n">peny</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1003</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM SUBROUTINE &#39;SYMBOL&#39;. THIS CALL RETURNS THE CURRENT SCALING FACTOR FOR THE PLOT.</span>
+<span class="w">      </span><span class="n">xpag</span><span class="o">=</span><span class="n">dx</span><span class="w"></span>
+<span class="w">      </span><span class="n">ypag</span><span class="o">=</span><span class="n">dy</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1004</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM SUBROUTINE &#39;NEWPEN&#39;. &#39;NEWPEN&#39; INSURES THAT THE PEN IS MOVED TO THE ORIGIN (0.0,0.0)</span>
+<span class="w">      </span><span class="k">call </span><span class="n">primitive__draw_line</span><span class="p">(</span><span class="mf">0.0</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1005</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM SUBROUTINE &#39;SYMBOL&#39;. THIS CALL RETURNS THE CURRENT ORIGIN.</span>
+<span class="w">      </span><span class="n">xpag</span><span class="o">=</span><span class="n">xorg</span><span class="w"></span>
+<span class="w">      </span><span class="n">ypag</span><span class="o">=</span><span class="n">yorg</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1006</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM CALCOMP VERSION OF SUBROUTINE &#39;SYMBOL&#39;. THIS CALL ADVANCES THE PEN POSITION.</span>
+<span class="w">      </span><span class="n">xlast</span><span class="o">=</span><span class="n">xlast</span><span class="o">+</span><span class="n">xpag</span><span class="w"></span>
+<span class="w">      </span><span class="n">ylast</span><span class="o">=</span><span class="n">ylast</span><span class="o">+</span><span class="n">ypag</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1007</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM SUBROUTINE &#39;PLOTS&#39;. THIS CALL INSURES THAT THE PEN IS POSITIONED AT THE</span>
+<span class="w">                 </span><span class="c">! ORIGIN (0.0,0.0) WHEN THE PLOT PACKAGE IS INITIALIZED.</span>
+<span class="w">      </span><span class="k">call </span><span class="n">primitive__draw_line</span><span class="p">(</span><span class="mf">0.0</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="mi">1008</span><span class="p">)</span><span class="w"> </span><span class="c">!  SPECIAL ENTRY FOR CALL FROM ESCC SUBROUTINE &#39;NFRAME&#39;. THE PLOTTING</span>
+<span class="w">                 </span><span class="c">!  OF THE FINAL POINT OF THE GRAPH IS INSURED, THEN &#39;primitive__frend&#39; IS CALLED</span>
+<span class="w">                 </span><span class="c">!  TO PLACE THE END-OF-FRAME MARK IN THE METALANGUAGE FILE. VARIABLES</span>
+<span class="w">                 </span><span class="c">!  USED BY THE &#39;PLOT&#39; SUBROUTINE ARE RE-INITIALIZED, AND THE PEN IS</span>
+<span class="w">                 </span><span class="c">!  MOVED TO THE 0.0,0.0 POINT.</span>
+<span class="w">      </span><span class="k">call </span><span class="n">primitive__draw_line</span><span class="p">(</span><span class="n">xlast</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="n">ylast</span><span class="p">,</span><span class="n">xlast</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="n">ylast</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">primitive__frend</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">xorg</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">yorg</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">xlast</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">ylast</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">penx</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">peny</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">ys</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="w">      </span><span class="n">noend</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">primitive__draw_line</span><span class="p">(</span><span class="mf">0.0</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="o">+</span><span class="n">xoff</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">case </span><span class="n">default</span><span class="w"></span>
+<span class="w">      </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;*plot* ERROR: unknown action value=&#39;</span><span class="p">,</span><span class="n">ipen</span><span class="w"></span>
+<span class="c">!-----------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="w">      </span><span class="k">end select</span>
+<span class="k">end subroutine </span><span class="n">plot</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              M_calcomp
+ was developed by John S. Urban<br>              &copy; 2025 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2025-07-11 00:34 +0000             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>

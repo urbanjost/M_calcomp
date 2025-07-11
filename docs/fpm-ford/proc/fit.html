@@ -1,0 +1,825 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="General Purpose Fortran project">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>fit &ndash; M_calcomp</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">M_calcomp </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>fit
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 3.4% of total for procedures.">87 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/M_calcomp.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/m_calcomp.f90.html'>M_calcomp.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/m_calcomp.html'>M_calcomp</a></li>
+            <li class="breadcrumb-item active" aria-current="page">fit</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../proc/fit.html#variable-a~5">a</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-b~2">b</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-c">c</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-d~2">d</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-dx~3">dx</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-dy~3">dy</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-dz">dz</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-fctr~3">fctr</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-i~15">i</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-ktra">ktra</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-m~2">m</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-ss">ss</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-theta~3">theta</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-x~13">x</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-y~11">y</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-z~2">z</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-z2">z2</a>
+            <a class="list-group-item" href="../proc/fit.html#variable-z3">z3</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/fit.html#src">fit</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine fit(xa, ya, xb, yb, xc, yc)  
+</h2>
+    
+
+    <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code>fit(3f) - [M_calcomp:general] draws a semi-hyperbolic curve through three points
+(LICENSE:PD)
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code>    subroutine fit(xpage1,ypage1,xpage2,ypage2,xpage3,ypage3)
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<p>FIT is a FORTRAN subroutine which draws a semi-hyperbolic curve through three
+  points.</p>
+<h2 id="options">OPTIONS</h2>
+<div class="codehilite"><pre><span></span><code>XPAGE1,YPAGE1   are the X and Y coordinates, in inches, of the three
+XPAGE2,YPAGE2   points through which the curve passes.
+XPAGE3,YPAGE3
+</code></pre></div>
+
+<h2 id="comments">COMMENTS</h2>
+<p>This subroutine generates a semi-hyperbolic fit using the three given points.
+  A set of points for which a fit is not possible is drawn with straight-line
+  segments.</p>
+<h2 id="restrictions">RESTRICTIONS</h2>
+<p>The curve through the three points must be multi-valued in both X and Y.
+  That is, the middle point (XPAGE2,YPAGE2) must be between the endpoints along
+  the X-axis or the Y-axis.</p>
+<div class="codehilite"><pre><span></span><code>    XPAGE1&lt;YPAGE2&lt;XPAGE3 or XPAGE1&gt;XPAGE2&gt;XPAGE3 or
+    YPAGE1&lt;YPAGE2&lt;YPAGE3 or YPAGE1&gt;YPAGE2&gt;YPAGE3
+</code></pre></div>
+
+<h2 id="example">EXAMPLE</h2>
+<p>Sample program:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">program</span> <span class="nv">demo_fit</span>
+<span class="nv">use</span> <span class="nv">M_calcomp</span>, <span class="nv">only</span> : <span class="nv">plots</span>, <span class="nv">plot</span>, <span class="nv">newpen</span>, <span class="nv">width</span>, <span class="nv">fit</span>
+<span class="nv">use</span> <span class="nv">M_calcomp</span>, <span class="nv">only</span> : <span class="nv">black</span> ,<span class="nv">red</span> ,<span class="nv">green</span> ,<span class="nv">yellow</span>
+<span class="nv">use</span> <span class="nv">M_calcomp</span>, <span class="nv">only</span> : <span class="nv">purple</span> ,<span class="nv">magenta</span> ,<span class="nv">cyan</span> ,<span class="nv">white</span>
+<span class="nv">implicit</span> <span class="nv">none</span>
+<span class="nv">integer</span>,<span class="nv">parameter</span>  :: <span class="nv">MOVE</span><span class="o">=</span><span class="mi">3</span>, <span class="nv">DRAW</span><span class="o">=</span><span class="mi">2</span>
+<span class="nv">integer</span>            :: <span class="nv">i</span>
+<span class="nv">real</span>               :: <span class="nv">x</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span><span class="o">=</span>[<span class="o">-</span><span class="mi">3</span>.<span class="mi">0</span>,<span class="mi">1</span>.<span class="mi">0</span>,<span class="mi">4</span>.<span class="mi">4</span>],<span class="nv">y</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span><span class="o">=</span>[<span class="mi">3</span>.<span class="mi">2</span>,<span class="mi">1</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">4</span>.<span class="mi">0</span>]
+<span class="k">call</span> <span class="nl">plots</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">10</span>.<span class="mi">0</span><span class="ss">)</span>      <span class="o">!</span> <span class="nv">initialize</span> <span class="nv">graphics</span>
+<span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">5</span>.<span class="mi">0</span>,<span class="mi">5</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">3</span><span class="ss">)</span>              <span class="o">!</span> <span class="nv">set</span> <span class="nv">origin</span>
+<span class="k">call</span> <span class="nl">newpen</span><span class="ss">(</span><span class="nv">green</span><span class="ss">)</span>
+<span class="k">call</span> <span class="nl">crosshair</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">2</span>.<span class="mi">0</span><span class="ss">)</span>        <span class="o">!</span> <span class="nv">draw</span> <span class="nv">a</span> <span class="nv">crosshair</span> <span class="nv">at</span> <span class="nv">origin</span> <span class="nv">point</span> <span class="o">&lt;</span><span class="mi">0</span>,<span class="mi">0</span><span class="o">&gt;</span>
+<span class="k">call</span> <span class="nl">width</span><span class="ss">(</span><span class="mi">30</span><span class="ss">)</span><span class="c1">; call newpen(red)</span>
+<span class="k">do</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">size</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>                     <span class="o">!</span> <span class="nv">mark</span> <span class="nv">the</span> <span class="nv">points</span>
+   <span class="k">call</span> <span class="nl">crosshair</span><span class="ss">(</span><span class="nv">x</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span>,<span class="mi">0</span>.<span class="mi">2</span><span class="ss">)</span>
+<span class="nv">enddo</span>
+<span class="nv">x</span><span class="o">=</span>[<span class="o">-</span><span class="mi">3</span>.<span class="mi">0</span>, <span class="mi">1</span>.<span class="mi">0</span>, <span class="mi">4</span>.<span class="mi">4</span>]
+<span class="nv">y</span><span class="o">=</span>[ <span class="mi">3</span>.<span class="mi">2</span>, <span class="mi">1</span>.<span class="mi">0</span>,<span class="o">-</span><span class="mi">4</span>.<span class="mi">0</span>]
+<span class="k">call</span> <span class="nl">width</span><span class="ss">(</span><span class="mi">80</span><span class="ss">)</span><span class="c1">; call newpen(yellow)</span>
+<span class="k">call</span> <span class="nl">fit</span><span class="ss">(</span><span class="nv">x</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>,<span class="nv">x</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>,<span class="nv">x</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">1</span><span class="ss">))</span>   <span class="o">!</span> <span class="nv">draw</span> <span class="nv">in</span> <span class="nv">wrong</span> <span class="nv">order</span>
+<span class="k">call</span> <span class="nl">width</span><span class="ss">(</span><span class="mi">40</span><span class="ss">)</span><span class="c1">;call newpen(magenta)</span>
+<span class="k">call</span> <span class="nl">fit</span><span class="ss">(</span><span class="nv">x</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>,<span class="nv">x</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,<span class="nv">x</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">3</span><span class="ss">))</span>   <span class="o">!</span> <span class="nv">draw</span> <span class="nv">in</span> <span class="nv">wrong</span> <span class="nv">order</span>
+<span class="k">call</span> <span class="nl">width</span><span class="ss">(</span><span class="mi">140</span><span class="ss">)</span><span class="c1">; call newpen(green)</span>
+<span class="k">call</span> <span class="nl">fit</span><span class="ss">(</span><span class="nv">x</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>,<span class="nv">x</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>,<span class="nv">x</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>,<span class="nv">y</span><span class="ss">(</span><span class="mi">3</span><span class="ss">))</span>   <span class="o">!</span> <span class="nv">draw</span> <span class="nv">in</span> <span class="nv">right</span> <span class="nv">order</span> <span class="nv">to</span> <span class="nv">get</span> <span class="nv">fit</span>
+<span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">0</span>.<span class="mi">0</span>,<span class="mi">999</span><span class="ss">)</span>                    <span class="o">!</span> <span class="nv">terminate</span> <span class="nv">graphics</span> <span class="nv">and</span> <span class="k">pause</span>
+<span class="nv">contains</span>
+<span class="nv">subroutine</span> <span class="nv">crosshair</span><span class="ss">(</span><span class="nv">x</span>,<span class="nv">y</span>,<span class="nv">s</span><span class="ss">)</span>
+<span class="nv">real</span>,<span class="nv">intent</span><span class="ss">(</span><span class="nv">in</span><span class="ss">)</span> :: <span class="nv">x</span>,<span class="nv">y</span>,<span class="nv">s</span>
+    <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span><span class="o">+</span><span class="nv">s</span>,<span class="nv">y</span>    ,<span class="nv">MOVE</span><span class="ss">)</span>
+    <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span><span class="o">-</span><span class="nv">s</span>,<span class="nv">y</span>    ,<span class="nv">DRAW</span><span class="ss">)</span>
+    <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>    ,<span class="nv">y</span><span class="o">+</span><span class="nv">s</span>,<span class="nv">MOVE</span><span class="ss">)</span>
+    <span class="k">call</span> <span class="nl">plot</span><span class="ss">(</span><span class="nv">x</span>    ,<span class="nv">y</span><span class="o">-</span><span class="nv">s</span>,<span class="nv">DRAW</span><span class="ss">)</span>
+<span class="k">end</span> <span class="nv">subroutine</span> <span class="nv">crosshair</span>
+<span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_fit</span>
+</code></pre></div>
+
+<h2 id="license">LICENSE</h2>
+<p>Public Domain</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xa~3"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xa</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ya~3"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ya</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xb~3"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xb</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yb~3"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>yb</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xc~4"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-yc~4"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>yc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+
+
+    <section>    
+      <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~5"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>a</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              save
+            </td>
+            <td>::</td>
+            <td><strong>b</strong></td>
+<td> =</td>
+                <td>0.0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-d~2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>d</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dx~3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dy~3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dz"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dz</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fctr~3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fctr</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~15"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ktra"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ktra</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-m~2"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>m</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ss"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ss</strong>(8,9)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-theta~3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>theta</strong>(2)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~13"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~11"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z~2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>z</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>z2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>z3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">subroutine </span><span class="n">fit</span><span class="w"> </span><span class="p">(</span><span class="n">xa</span><span class="p">,</span><span class="n">ya</span><span class="p">,</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span><span class="n">xc</span><span class="p">,</span><span class="n">yc</span><span class="p">)</span><span class="w"></span>
+
+<span class="c">! ident_5=&quot;@(#) m_calcomp fit(3f) draws a semi-hyperbolic curve through three points&quot;</span>
+
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">xa</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">ya</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">xb</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">yb</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">xc</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">yc</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="n">theta</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">real</span><span class="p">,</span><span class="k">save</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">m</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">dy</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">dx</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">z3</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">c</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">dz</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">fctr</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">ktra</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">z</span><span class="w"></span>
+<span class="kt">real</span><span class="w">      </span><span class="kd">::</span><span class="w"> </span><span class="n">z2</span><span class="w"></span>
+<span class="w">      </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">      </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yc</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ya</span><span class="w"></span>
+<span class="w">      </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xc</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xa</span><span class="w"></span>
+<span class="w">      </span><span class="n">z3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="n">dy</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">z3</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="w"></span>
+<span class="mi">21</span><span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="w"></span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">dy</span><span class="p">))</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="w"></span>
+<span class="mi">1</span><span class="w">        </span><span class="n">theta</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5708</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nb">atan</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dx</span><span class="o">/</span><span class="n">dy</span><span class="p">))</span><span class="w"></span>
+<span class="w">         </span><span class="k">goto</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="mi">2</span><span class="w">        </span><span class="n">theta</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="nb">atan</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dy</span><span class="o">/</span><span class="n">dx</span><span class="p">))</span><span class="w"></span>
+<span class="mi">3</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">26</span><span class="w"></span>
+<span class="mi">25</span><span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="w"></span>
+<span class="mi">26</span><span class="w">       </span><span class="k">if</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="w"></span>
+<span class="mi">4</span><span class="w">        </span><span class="n">theta</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">theta</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="mi">5</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="w"></span>
+<span class="mi">6</span><span class="w">        </span><span class="n">theta</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">theta</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3.1416</span><span class="w"></span>
+<span class="mi">7</span><span class="w">        </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xb</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xa</span><span class="w"></span>
+<span class="w">         </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yb</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ya</span><span class="w"></span>
+<span class="w">      </span><span class="k">enddo</span>
+<span class="k">      </span><span class="n">z2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">dy</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">theta</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">z2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">22</span><span class="w"></span>
+<span class="mi">22</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xc</span><span class="w"></span>
+<span class="w">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xb</span><span class="w"></span>
+<span class="w">      </span><span class="n">ktra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="mi">13</span><span class="w"></span>
+<span class="mi">16</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ya</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yc</span><span class="w"></span>
+<span class="w">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ya</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yb</span><span class="w"></span>
+<span class="w">      </span><span class="n">ktra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="mi">13</span><span class="w"></span>
+<span class="mi">17</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      call where</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">fctr</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">dz</span><span class="w"> </span><span class="o">=</span><span class="mf">0.01</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">fctr</span><span class="w"></span>
+<span class="w">      </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dz</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">xa</span><span class="p">,</span><span class="n">ya</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">d</span><span class="o">=</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="mi">18</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="n">xa</span><span class="w"></span>
+<span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="n">ya</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dz</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">z3</span><span class="p">)</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">19</span><span class="w"></span>
+<span class="mi">19</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      call </span><span class="n">plot</span><span class="w"> </span><span class="p">(</span><span class="n">xc</span><span class="p">,</span><span class="n">yc</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span>
+<span class="mi">13</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z3</span><span class="w"></span>
+<span class="w">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z3</span><span class="w"></span>
+<span class="w">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z2</span><span class="w"></span>
+<span class="w">      </span><span class="n">ss</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z2</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">solut</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="n">m</span><span class="p">)</span><span class="w"></span>
+<span class="c">! EARLIER VERSION USED</span>
+<span class="c">!     CALL SOLUTN(SS,M)</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w">  </span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">14</span><span class="w"></span>
+<span class="mi">14</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      goto</span><span class="w"> </span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">),</span><span class="n">ktra</span><span class="w"></span>
+<span class="mi">20</span><span class="w">    </span><span class="k">continue</span>
+<span class="k">      call </span><span class="n">plot</span><span class="p">(</span><span class="n">xa</span><span class="p">,</span><span class="n">ya</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">call </span><span class="n">plot</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="mi">19</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">fit</span><span class="w"></span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              M_calcomp
+ was developed by John S. Urban<br>              &copy; 2025 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2025-07-11 00:34 +0000             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>
