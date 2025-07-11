@@ -12,14 +12,29 @@
 
     <title>smoot &ndash; M_calcomp</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
     <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
@@ -72,8 +87,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title=" 8.2% of total for procedures.">212 statements</a>
             </li>
 
@@ -95,9 +109,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -118,12 +134,12 @@
             <a class="list-group-item" href="../proc/smoot.html#variable-ay~2">ay</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-bx~2">bx</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-by~2">by</a>
-            <a class="list-group-item" href="../proc/smoot.html#variable-d~8">d</a>
+            <a class="list-group-item" href="../proc/smoot.html#variable-d~6">d</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-d1~3">d1</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-d2~3">d2</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-d3~3">d3</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-dv~2">dv</a>
-            <a class="list-group-item" href="../proc/smoot.html#variable-i~31">i</a>
+            <a class="list-group-item" href="../proc/smoot.html#variable-i~17">i</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-ipc">ipc</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-irep">irep</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-isw">isw</a>
@@ -132,8 +148,8 @@
             <a class="list-group-item" href="../proc/smoot.html#variable-kc">kc</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-lc">lc</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-mc">mc</a>
-            <a class="list-group-item" href="../proc/smoot.html#variable-n~13">n</a>
-            <a class="list-group-item" href="../proc/smoot.html#variable-nc~4">nc</a>
+            <a class="list-group-item" href="../proc/smoot.html#variable-n~12">n</a>
+            <a class="list-group-item" href="../proc/smoot.html#variable-nc~2">nc</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-pxn">pxn</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-pyn">pyn</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-sx1">sx1</a>
@@ -155,11 +171,11 @@
             <a class="list-group-item" href="../proc/smoot.html#variable-vx3~2">vx3</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-vy2~3">vy2</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-vy3~2">vy3</a>
-            <a class="list-group-item" href="../proc/smoot.html#variable-x~31">x</a>
+            <a class="list-group-item" href="../proc/smoot.html#variable-x~19">x</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-x1~4">x1</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-x2~2">x2</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-x3">x3</a>
-            <a class="list-group-item" href="../proc/smoot.html#variable-y~25">y</a>
+            <a class="list-group-item" href="../proc/smoot.html#variable-y~17">y</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-y1~4">y1</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-y2~2">y2</a>
             <a class="list-group-item" href="../proc/smoot.html#variable-y3">y3</a>
@@ -483,7 +499,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-d~8"></span>
+              <span class="anchor" id="variable-d~6"></span>
               real,
             </td>
               <td>public</td>
@@ -568,7 +584,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-i~31"></span>
+              <span class="anchor" id="variable-i~17"></span>
               integer,
             </td>
               <td>public</td>
@@ -721,7 +737,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~13"></span>
+              <span class="anchor" id="variable-n~12"></span>
               integer,
             </td>
               <td>public</td>
@@ -738,7 +754,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-nc~4"></span>
+              <span class="anchor" id="variable-nc~2"></span>
               integer,
             </td>
               <td>public</td>
@@ -1112,7 +1128,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~31"></span>
+              <span class="anchor" id="variable-x~19"></span>
               real,
             </td>
               <td>public</td>
@@ -1180,7 +1196,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~25"></span>
+              <span class="anchor" id="variable-y~17"></span>
               real,
             </td>
               <td>public</td>
@@ -1503,40 +1519,21 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>M_calcomp was developed by John S. Urban<br>&copy; 2024 
+          <div class="col">
+            <p>
+              M_calcomp
+ was developed by John S. Urban<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-03-30 00:10              </p>
+ on 2025-07-11 01:30 +0000             </p>
           </div>
         </div>
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>

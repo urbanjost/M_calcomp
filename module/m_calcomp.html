@@ -12,14 +12,29 @@
 
     <title>M_calcomp &ndash; M_calcomp</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="../css/pygments.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
     <link href="../css/local.css" rel="stylesheet">
-      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../css/pygments.css" rel="stylesheet">
     <script src="../js/svg-pan-zoom.min.js"></script>
   </head>
 
@@ -72,8 +87,7 @@
         <ul class="list-inline" style="margin-bottom:0px;display:inline">
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
-              <a data-bs-toggle="tooltip"
-                 data-bs-placement="bottom" data-html="true"
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
                  title="100.0% of total for modules and submodules.">2725 statements</a>
             </li>
 
@@ -94,9 +108,11 @@
     </div>
   </div>
   <script>
-    $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip()
-    })
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
   </script>
 
   </div>
@@ -1974,7 +1990,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~18"></span>
+              <span class="anchor" id="variable-x~6"></span>
               real
             </td>
 <td></td>
@@ -1989,7 +2005,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~14"></span>
+              <span class="anchor" id="variable-y~6"></span>
               real
             </td>
 <td></td>
@@ -2004,7 +2020,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~3"></span>
+              <span class="anchor" id="variable-n~2"></span>
               integer
             </td>
 <td></td>
@@ -2019,7 +2035,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~6"></span>
+              <span class="anchor" id="variable-k~2"></span>
               integer
             </td>
 <td></td>
@@ -2060,7 +2076,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~19"></span>
+              <span class="anchor" id="variable-x~7"></span>
               real
             </td>
 <td></td>
@@ -2075,7 +2091,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~15"></span>
+              <span class="anchor" id="variable-y~7"></span>
               real
             </td>
 <td></td>
@@ -2130,7 +2146,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~23"></span>
+              <span class="anchor" id="variable-x~11"></span>
               real
             </td>
 <td></td>
@@ -2145,7 +2161,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~19"></span>
+              <span class="anchor" id="variable-y~11"></span>
               real
             </td>
 <td></td>
@@ -2160,7 +2176,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~3"></span>
+              <span class="anchor" id="variable-h"></span>
               real
             </td>
 <td></td>
@@ -2175,7 +2191,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-w~3"></span>
+              <span class="anchor" id="variable-w"></span>
               real
             </td>
 <td></td>
@@ -2275,7 +2291,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ibcd~18"></span>
+              <span class="anchor" id="variable-ibcd~8"></span>
               character(len=*)
             </td>
 <td></td>
@@ -2320,7 +2336,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-angle~10"></span>
+              <span class="anchor" id="variable-angle"></span>
               real
             </td>
 <td></td>
@@ -2420,7 +2436,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-start_angle~2"></span>
+              <span class="anchor" id="variable-start_angle"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -2450,7 +2466,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-start_radius~2"></span>
+              <span class="anchor" id="variable-start_radius"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -2480,7 +2496,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-dash_code~2"></span>
+              <span class="anchor" id="variable-dash_code"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -2540,7 +2556,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xx~10"></span>
+              <span class="anchor" id="variable-xx~2"></span>
               integer
             </td>
 <td></td>
@@ -2555,7 +2571,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yy~4"></span>
+              <span class="anchor" id="variable-yy"></span>
               integer
             </td>
 <td></td>
@@ -2730,7 +2746,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~10"></span>
+              <span class="anchor" id="variable-a~3"></span>
               real
             </td>
 <td></td>
@@ -2775,7 +2791,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~3"></span>
+              <span class="anchor" id="variable-f"></span>
               real
             </td>
 <td></td>
@@ -2820,7 +2836,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-d~5"></span>
+              <span class="anchor" id="variable-d~3"></span>
               real
             </td>
 <td></td>
@@ -2835,7 +2851,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~4"></span>
+              <span class="anchor" id="variable-h~2"></span>
               real
             </td>
 <td></td>
@@ -2905,7 +2921,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~11"></span>
+              <span class="anchor" id="variable-a~4"></span>
               real
             </td>
 <td></td>
@@ -2950,7 +2966,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-f~4"></span>
+              <span class="anchor" id="variable-f~2"></span>
               real
             </td>
 <td></td>
@@ -2995,7 +3011,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-d~6"></span>
+              <span class="anchor" id="variable-d~4"></span>
               real
             </td>
 <td></td>
@@ -3010,7 +3026,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-h~5"></span>
+              <span class="anchor" id="variable-h~3"></span>
               real
             </td>
 <td></td>
@@ -3080,7 +3096,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-a~8"></span>
+              <span class="anchor" id="variable-a"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -3240,7 +3256,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-xa~6"></span>
+              <span class="anchor" id="variable-xa"></span>
               real
             </td>
 <td></td>
@@ -3255,7 +3271,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ya~6"></span>
+              <span class="anchor" id="variable-ya"></span>
               real
             </td>
 <td></td>
@@ -3270,7 +3286,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xb~6"></span>
+              <span class="anchor" id="variable-xb"></span>
               real
             </td>
 <td></td>
@@ -3285,7 +3301,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yb~6"></span>
+              <span class="anchor" id="variable-yb"></span>
               real
             </td>
 <td></td>
@@ -3300,7 +3316,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-xc~7"></span>
+              <span class="anchor" id="variable-xc~2"></span>
               real
             </td>
 <td></td>
@@ -3315,7 +3331,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yc~7"></span>
+              <span class="anchor" id="variable-yc~2"></span>
               real
             </td>
 <td></td>
@@ -3500,7 +3516,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~28"></span>
+              <span class="anchor" id="variable-x~16"></span>
               real,
             </td>
 <td></td>
@@ -3515,7 +3531,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~23"></span>
+              <span class="anchor" id="variable-y~15"></span>
               real,
             </td>
 <td></td>
@@ -3545,7 +3561,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~8"></span>
+              <span class="anchor" id="variable-k~4"></span>
               integer
             </td>
 <td></td>
@@ -3560,7 +3576,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-j~11"></span>
+              <span class="anchor" id="variable-j~5"></span>
               integer
             </td>
 <td></td>
@@ -3615,7 +3631,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~21"></span>
+              <span class="anchor" id="variable-x~9"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -3630,7 +3646,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~17"></span>
+              <span class="anchor" id="variable-y~9"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -3690,7 +3706,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~5"></span>
+              <span class="anchor" id="variable-n~4"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -3762,7 +3778,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ibcd~15"></span>
+              <span class="anchor" id="variable-ibcd~5"></span>
               character(len=*)
             </td>
 <td></td>
@@ -3777,7 +3793,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~12"></span>
+              <span class="anchor" id="variable-n~11"></span>
               integer
             </td>
 <td></td>
@@ -3807,7 +3823,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-theta~8"></span>
+              <span class="anchor" id="variable-theta~3"></span>
               real
             </td>
 <td></td>
@@ -3923,7 +3939,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-k~10"></span>
+              <span class="anchor" id="variable-k~6"></span>
               integer
             </td>
 <td></td>
@@ -4008,7 +4024,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-xarray~5"></span>
+              <span class="anchor" id="variable-xarray~3"></span>
               real
             </td>
 <td></td>
@@ -4023,7 +4039,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-yarray~5"></span>
+              <span class="anchor" id="variable-yarray~3"></span>
               real
             </td>
 <td></td>
@@ -4038,7 +4054,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-npts~5"></span>
+              <span class="anchor" id="variable-npts~3"></span>
               integer
             </td>
 <td></td>
@@ -4053,7 +4069,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inc~5"></span>
+              <span class="anchor" id="variable-inc~3"></span>
               integer
             </td>
 <td></td>
@@ -4083,7 +4099,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inteq~24"></span>
+              <span class="anchor" id="variable-inteq~10"></span>
               integer
             </td>
 <td></td>
@@ -4303,7 +4319,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-height~3"></span>
+              <span class="anchor" id="variable-height"></span>
               real
             </td>
 <td></td>
@@ -4333,7 +4349,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-angle~11"></span>
+              <span class="anchor" id="variable-angle~2"></span>
               real
             </td>
 <td></td>
@@ -4419,7 +4435,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ipen~5"></span>
+              <span class="anchor" id="variable-ipen~2"></span>
               integer
             </td>
 <td></td>
@@ -4579,7 +4595,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-npts~3"></span>
+              <span class="anchor" id="variable-npts"></span>
               integer
             </td>
 <td></td>
@@ -4594,7 +4610,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inc~3"></span>
+              <span class="anchor" id="variable-inc"></span>
               integer
             </td>
 <td></td>
@@ -4624,7 +4640,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inteq~23"></span>
+              <span class="anchor" id="variable-inteq~9"></span>
               integer
             </td>
 <td></td>
@@ -4694,7 +4710,7 @@ parameter
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~22"></span>
+              <span class="anchor" id="variable-x~10"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -4709,7 +4725,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~18"></span>
+              <span class="anchor" id="variable-y~10"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -4724,7 +4740,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-side_length~2"></span>
+              <span class="anchor" id="variable-side_length"></span>
               real,
             </td>
 <td>intent(in)</td>
@@ -4910,7 +4926,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-npts~6"></span>
+              <span class="anchor" id="variable-npts~4"></span>
               integer
             </td>
 <td></td>
@@ -4925,7 +4941,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inc~6"></span>
+              <span class="anchor" id="variable-inc~4"></span>
               integer
             </td>
 <td></td>
@@ -4998,7 +5014,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-npts~4"></span>
+              <span class="anchor" id="variable-npts~2"></span>
               integer
             </td>
 <td></td>
@@ -5013,7 +5029,7 @@ parameter
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inc~4"></span>
+              <span class="anchor" id="variable-inc~2"></span>
               integer
             </td>
 <td></td>
@@ -5185,7 +5201,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~24"></span>
+              <span class="anchor" id="variable-x~12"></span>
               real
             </td>
 <td></td>
@@ -5200,7 +5216,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~7"></span>
+              <span class="anchor" id="variable-n~6"></span>
               integer
             </td>
 <td></td>
@@ -5270,7 +5286,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-height~4"></span>
+              <span class="anchor" id="variable-height~2"></span>
               real
             </td>
 <td></td>
@@ -5300,7 +5316,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-inteq~26"></span>
+              <span class="anchor" id="variable-inteq~12"></span>
               integer
             </td>
 <td></td>
@@ -5315,7 +5331,7 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-angle~12"></span>
+              <span class="anchor" id="variable-angle~3"></span>
               real
             </td>
 <td></td>
@@ -5476,40 +5492,21 @@ SAVE X2,Y2,D3,UX1,UY1,UX2,UY2,SX1,SY1,SX2,SY2,SX3,SY3</p>
     <footer>
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col"><p>M_calcomp was developed by John S. Urban<br>&copy; 2024 
+          <div class="col">
+            <p>
+              M_calcomp
+ was developed by John S. Urban<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-03-30 00:10              </p>
+ on 2025-07-11 01:30 +0000             </p>
           </div>
         </div>
         <br>
       </div> <!-- /container -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
-
-    <!-- MathJax JavaScript
-             ================================================== -->
-             <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-          });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-          <script src="../tipuesearch/tipuesearch_content.js"></script>
-          <script src="../tipuesearch/tipuesearch_set.js"></script>
-          <script src="../tipuesearch/tipuesearch.js"></script>
-
   </body>
 </html>
